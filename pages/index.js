@@ -40,7 +40,21 @@ export default function Home() {
             <p className="text-center">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
           </Col>
         </Row>
-        <Row className="mb-5">
+        <Row>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+        </Row>
+        <Row className="mt-3 mb-5">
           <Col>
             <Tarjeta/>
           </Col>
