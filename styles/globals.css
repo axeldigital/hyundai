@@ -74,3 +74,40 @@ a {
 .categorias {
   padding: 20px;
 }
+
+.categorias .row {
+  display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-overlay {
+  background: rgba(0,0,0,0.3);
+  margin-right: 90px;
+  margin-left: 0;
+  transition: all 1s;
+}
+
+.card-img-overlay:hover {
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 0 10px #333;
+}
+
+.card-text {
+  font-size: 0.8rem;
+}
+
+.destacados h2 {
+  padding: 50px 0;
+  padding-bottom: 0;
+}
+
+.destacados p {
+  padding-bottom: 50px;
+}

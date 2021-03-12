@@ -12,9 +12,32 @@ export default function Home() {
       <Slider className="mt-3" />
       <Container className="categorias">
         <Row>
-          <Col><Carta/></Col>
-          <Col><Carta/></Col>
-          <Col><Carta/></Col>
+          <Col>
+            <Carta 
+              titulo="Búsqueda Inteligente"
+              imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/kona%20ev%201.jpg"
+            />
+          </Col>
+          <Col>
+            <Carta 
+              titulo="Promociones"
+              imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/banner-02-n.jpg"
+            />
+          </Col>
+          <Col>
+            <Carta 
+              titulo="Promesas"
+              imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/ioniq%203.jpg"
+            />
+          </Col>
+        </Row>
+      </Container>
+      <Container className="destacados">
+        <Row>
+          <Col>
+            <h2 className="text-center">Modelos destacados</h2>
+            <p className="text-center">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
+          </Col>
         </Row>
       </Container>
     </Layout>
