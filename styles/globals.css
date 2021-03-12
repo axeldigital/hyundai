@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Play', sans-serif;
 }
 
 a {
@@ -13,4 +12,65 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.contenedor {
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  text-align: left;
+  padding-left: 30px;
+  bottom: 30%;
+}
+
+.carousel-caption h3 {
+  color: #0C2D5D;
+  font-size: 3rem;
+}
+
+.carousel-caption p {
+  color: #333;
+}
+
+.elfooter {
+  background: #222;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.elfooter div {
+  padding: 10px 5px;
+}
+
+.elfooter h2 {
+  color: #fff;
+}
+
+.elfooter h4 {
+  color: #f2f2f2;
+  font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.elfooter p {
+  color: #ddd;
+  margin: 0;
+  padding: 5px;
+}
+
+.categorias {
+  padding: 20px;
 }
