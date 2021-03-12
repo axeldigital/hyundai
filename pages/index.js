@@ -1,6 +1,7 @@
 import Layout from '../components/layout';
 import Slider from "../components/slider";
 import Carta from "../components/card";
+import Tarjeta from "../components/tarjeta";
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -37,6 +38,20 @@ export default function Home() {
           <Col>
             <h2 className="text-center">Modelos destacados</h2>
             <p className="text-center">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
+          </Col>
+        </Row>
+        <Row className="mb-5">
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
           </Col>
         </Row>
       </Container>

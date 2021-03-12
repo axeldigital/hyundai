@@ -96,7 +96,7 @@ a {
 }
 
 .card {
-  box-shadow: 0 0 10px #333;
+  box-shadow: 0 0 5px #777;
 }
 
 .card-text {
@@ -110,4 +110,17 @@ a {
 
 .destacados p {
   padding-bottom: 50px;
+}
+
+.btn {
+  border-radius: 0;
+  border: 0;
+}
+
+.btn.btn-primary {
+  background: #333;
+}
+
+.destacados .btn {
+  float: right;
 }
