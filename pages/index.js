@@ -68,6 +68,20 @@ export default function Home() {
             <Tarjeta/>
           </Col>
         </Row>
+        <Row className="mt-3 mb-5">
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )
