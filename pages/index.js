@@ -70,7 +70,11 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-      <Banner />
+      <Banner 
+        titulo="¿SABES LO QUE ESTÁS BUSCANDO?"
+        texto="Si conoces el modelo que deseas, por qué no probar nuestra búsqueda por modelo para una selección más rápida y fácil."
+        boton="Búsqueda Inteligente"
+      />
     </Layout>
   )
 }

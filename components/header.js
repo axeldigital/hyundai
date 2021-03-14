@@ -25,7 +25,7 @@ export default function Header(){
           </NavDropdown>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Buscar modelo" className="mr-sm-2" />
+          <FormControl type="text" placeholder="Búsqueda Inteligente" className="mr-sm-2" />
           <Button variant="outline-secondary">
             <span className="lnr lnr-magnifier"></span>
           </Button>

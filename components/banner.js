@@ -1,15 +1,14 @@
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
 
-export default function Banner() {
+export default function Banner({titulo, texto, boton}) {
     return (
         <Jumbotron fluid>
             <Container>
-                <h1>Fluid jumbotron</h1>
-                <p>
-                    This is a modified jumbotron that occupies the entire horizontal space of
-                    its parent.
-    </p>
+                <h1>{titulo}</h1>
+                <p>{texto}</p>
+                <Button variant="secondary">{boton}</Button>
             </Container>
         </Jumbotron>
     )
