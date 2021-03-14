@@ -124,3 +124,7 @@ a {
 .destacados .btn {
   float: right;
 }
+
+.jumbotron {
+  text-align: center;
+}

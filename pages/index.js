@@ -1,11 +1,12 @@
 import Layout from '../components/layout';
-import Slider from "../components/slider";
-import Carta from "../components/card";
-import Tarjeta from "../components/tarjeta";
-
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
+import Slider from "../components/slider";
+import Carta from "../components/card";
+import Tarjeta from "../components/tarjeta";
+import Banner from '../components/banner';
 
 export default function Home() {
   return (
@@ -68,21 +69,8 @@ export default function Home() {
             <Tarjeta/>
           </Col>
         </Row>
-        <Row className="mt-3 mb-5">
-          <Col>
-            <Tarjeta/>
-          </Col>
-          <Col>
-            <Tarjeta/>
-          </Col>
-          <Col>
-            <Tarjeta/>
-          </Col>
-          <Col>
-            <Tarjeta/>
-          </Col>
-        </Row>
       </Container>
+      <Banner />
     </Layout>
   )
 }
