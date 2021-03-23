@@ -10,15 +10,24 @@ export default function Layout({children}) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"></link>
         <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet"></link>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-Regular.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-Medium.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-Bold.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-Italic.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-MediumItalic.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-BoldItalic.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansHead-Light.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansHead-Regular.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansHead-Medium.woff2" as="font" type="font/woff2" crossorigin/>
+        <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansHead-Bold.woff2" as="font" type="font/woff2" crossorigin/>
       </Head>
 
-      <Header />
 
       <main className="contenedor">
         {children}
       </main>
 
-      <footer className="elfooter">
+      <footer className="elfooter d-none">
         <div>
           <h2>SEMINUEVOS HYUNDAI</h2>
           <hr/>

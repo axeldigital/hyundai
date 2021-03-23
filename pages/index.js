@@ -7,6 +7,7 @@ import Slider from "../components/slider";
 import Carta from "../components/card";
 import Tarjeta from "../components/tarjeta";
 import Banner from '../components/banner';
+import Filtros from '../components/filtros';
 
 export default function Home() {
   return (
@@ -34,12 +35,16 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
+      
       <Container className="destacados">
         <Row>
           <Col>
             <h2 className="text-center">Modelos destacados</h2>
-            <p className="text-center">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
+            <p className="text-center mb-0 pb-3">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
           </Col>
+        </Row>
+        <Row>
+          <Filtros/>
         </Row>
         <Row>
           <Col>
