@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row'
@@ -23,7 +24,10 @@ export default function Tarjeta() {
                         <Col className="pr-0 pl-0"><p><b>Satélite</b></p></Col>
                     </Row>
                 </Card.Text>
-                <Button variant="primary">Configúralo</Button>
+                <Link href="/auto">
+                    <Button variant="primary">Configúralo</Button>
+                </Link>
+                
             </Card.Body>
         </Card>
     )
