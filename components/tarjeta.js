@@ -23,6 +23,10 @@ export default function Tarjeta() {
                         <Col className="pr-1 pl-0"><p><b><span class="lnr lnr-chevron-right"></span> Distribuidor</b></p></Col>
                         <Col className="pr-0 pl-0"><p><b>Satélite</b></p></Col>
                     </Row>
+                    <Row style={{margin: '0 0.5px'}}>
+                        <Col className="pr-1 pl-0"><p><b><span class="lnr lnr-chevron-right"></span> Versión</b></p></Col>
+                        <Col className="pr-0 pl-0"><p><b>HBR7</b></p></Col>
+                    </Row>
                 </Card.Text>
                 <Link href="/auto">
                     <Button variant="primary">Configúralo</Button>
