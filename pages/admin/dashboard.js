@@ -33,13 +33,16 @@ export default function Dashboard() {
                 <Nav.Link eventKey="first"><span className="lnr lnr-arrow-right"></span> AUTOS</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">AGREGAR AUTOS</Nav.Link>
+                <Nav.Link eventKey="second">AGREGAR</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="third">EDITAR</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="fourth">ELIMINAR</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="fifth">SALIR</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -87,6 +90,9 @@ export default function Dashboard() {
                 <p>ugiugiugi</p>
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
+                <p>ugiugiugi</p>
+              </Tab.Pane>
+              <Tab.Pane eventKey="fifth">
                 <p>ugiugiugi</p>
               </Tab.Pane>
             </Tab.Content>
