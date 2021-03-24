@@ -9,6 +9,7 @@ export default function Layout({children}) {
         <title>HYUNDAI SEMINUEVOS | INNOCEAN MÉXICO</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"></link>
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"></link>
         <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet"></link>
         <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-Regular.woff2" as="font" type="font/woff2" crossorigin/>
         <link rel="preload" href="http://www.hyundai.com.mx/etc.clientlibs/hyundai/common/clientlibs/clientlib-dependencies/resources/fonts/HyundaiSansText-Medium.woff2" as="font" type="font/woff2" crossorigin/>

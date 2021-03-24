@@ -43,7 +43,7 @@ export default function Home() {
             <p className="text-center mb-0 pb-3">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
           </Col>
         </Row>
-        <Row>
+        <Row style={{margin: '10px', marginBottom: '20px'}}>
           <Filtros/>
         </Row>
         <Row>

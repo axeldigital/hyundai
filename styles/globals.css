@@ -156,7 +156,6 @@ a {
 .filtros {
   background: #f2f2f2;
   padding: 10px;
-  margin: 15px;
   border-radius: 5px;
   box-shadow: 0 0 5px #f3f3f3;
 }
@@ -175,4 +174,17 @@ a {
 .categorias .detalles {
   padding: 20px;
   background: #f2f2f2;
+}
+.tab-content>.active {
+  padding: 10px;
+  background: #f2f2f2;
+  font-family: 'HyundaiSansHead-Medium',Arial,sans-serif;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #0c2d5d;
 }

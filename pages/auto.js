@@ -44,12 +44,18 @@ export default function Auto(){
             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
               <Tab eventKey="Ficha" title="Ficha Técnica">
                 <h2>Ficha técnica</h2>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nisi in purus tristique luctus. Proin nec condimentum leo, sit amet eleifend elit. Cras id nisl euismod, condimentum ante non, luctus diam. Mauris tincidunt vestibulum leo id mattis. Mauris pharetra dapibus pulvinar. Ut non pharetra leo, sit amet tincidunt diam. Nulla et dictum urna, et congue felis. Pellentesque at urna sed nibh tristique finibus. Nam eu est felis.</p>
               </Tab>
-              <Tab eventKey="profile" title="Profile">
+              <Tab eventKey="profile" title="Detalles">
                 <h2>Detalles</h2>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nisi in purus tristique luctus. Proin nec condimentum leo, sit amet eleifend elit. Cras id nisl euismod, condimentum ante non, luctus diam. Mauris tincidunt vestibulum leo id mattis. Mauris pharetra dapibus pulvinar. Ut non pharetra leo, sit amet tincidunt diam. Nulla et dictum urna, et congue felis. Pellentesque at urna sed nibh tristique finibus. Nam eu est felis.</p>
               </Tab>
-              <Tab eventKey="contact" title="Contact">
-                <h2>Espacios</h2>
+              <Tab eventKey="contact" title="KIA Experience">
+                <h2>KIA Experience</h2>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nisi in purus tristique luctus. Proin nec condimentum leo, sit amet eleifend elit. Cras id nisl euismod, condimentum ante non, luctus diam. Mauris tincidunt vestibulum leo id mattis. Mauris pharetra dapibus pulvinar. Ut non pharetra leo, sit amet tincidunt diam. Nulla et dictum urna, et congue felis. Pellentesque at urna sed nibh tristique finibus. Nam eu est felis.</p>
               </Tab>
             </Tabs>
           </Col>
