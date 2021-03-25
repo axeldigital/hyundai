@@ -29,7 +29,7 @@ export default function Home() {
           </Col>
           <Col>
             <Carta 
-              titulo="Promesas"
+              titulo="Condiciones"
               imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/ioniq%203.jpg"
             />
           </Col>
