@@ -25,7 +25,6 @@ export default function Auto(){
             <hr/>
             <h1>Grand i10 Sedán GL TM</h1>
             <h2>$209,500 MXN</h2>
-            <h7><i>"Sé el primero en evolucionar"</i></h7>
             <hr/>
             <ul>
               <li>Motor: 1.2L</li>
