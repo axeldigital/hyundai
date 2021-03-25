@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Layout from '../components/layout';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -34,26 +35,29 @@ export default function Auto(){
               <li>Potencia (hp @ rpm): 83 @ 6,000</li>
               <li>Torque (lb-ft @ rpm): 84 @ 4,000</li>
             </ul>
+            <hr/>
             <div className="detalles">
-
+              <Link href="/">
+                Solicitar cita
+              </Link>
             </div>
           </Col>
         </Row>
         <Row>
           <Col>
             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-              <Tab eventKey="Ficha" title="Ficha Técnica">
-                <h2>Ficha técnica</h2>
+              <Tab eventKey="Ficha" title="Descripción">
+                <h2>Descripción</h2>
                 <hr/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nisi in purus tristique luctus. Proin nec condimentum leo, sit amet eleifend elit. Cras id nisl euismod, condimentum ante non, luctus diam. Mauris tincidunt vestibulum leo id mattis. Mauris pharetra dapibus pulvinar. Ut non pharetra leo, sit amet tincidunt diam. Nulla et dictum urna, et congue felis. Pellentesque at urna sed nibh tristique finibus. Nam eu est felis.</p>
               </Tab>
-              <Tab eventKey="profile" title="Detalles">
-                <h2>Detalles</h2>
+              <Tab eventKey="profile" title="Especificaciones técnicas">
+                <h2>Especificaciones técnicas</h2>
                 <hr/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nisi in purus tristique luctus. Proin nec condimentum leo, sit amet eleifend elit. Cras id nisl euismod, condimentum ante non, luctus diam. Mauris tincidunt vestibulum leo id mattis. Mauris pharetra dapibus pulvinar. Ut non pharetra leo, sit amet tincidunt diam. Nulla et dictum urna, et congue felis. Pellentesque at urna sed nibh tristique finibus. Nam eu est felis.</p>
               </Tab>
-              <Tab eventKey="contact" title="KIA Experience">
-                <h2>KIA Experience</h2>
+              <Tab eventKey="contact" title="Certificación">
+                <h2>Certificación</h2>
                 <hr/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nisi in purus tristique luctus. Proin nec condimentum leo, sit amet eleifend elit. Cras id nisl euismod, condimentum ante non, luctus diam. Mauris tincidunt vestibulum leo id mattis. Mauris pharetra dapibus pulvinar. Ut non pharetra leo, sit amet tincidunt diam. Nulla et dictum urna, et congue felis. Pellentesque at urna sed nibh tristique finibus. Nam eu est felis.</p>
               </Tab>

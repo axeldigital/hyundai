@@ -6,11 +6,13 @@ body {
 }
 
 .card-title.h5 {
-  color: #333;
-font-size: 1.5rem;
-line-height: 1.875rem;
-font-family: 'HyundaiSansHead-Medium',Arial,sans-serif;
-font-weight: bold;
+  color: #0c2d5d;;
+
+    font-family: "Hyundai Sans Head","Arial",sans-serif;
+    font-size: 1.875rem;
+    font-weight: 900;
+    line-height: 2.25rem;
+    max-width: 100%;
 }
 
 a {
@@ -104,7 +106,7 @@ a {
 }
 
 .card {
-  box-shadow: 0 0 5px #777;
+  border:none;
 }
 
 .card-text {
@@ -156,8 +158,6 @@ a {
 .filtros {
   background: #f2f2f2;
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #f3f3f3;
 }
 
 .filtros h2 {
@@ -171,12 +171,15 @@ a {
   
 }
 
-.categorias .detalles {
-  padding: 20px;
-  background: #f2f2f2;
+.categorias .detalles a {
+  padding: 10px 30px;
+  background: #0c2d5d;
+  color: #fff;
+  text-align: center;
+  float: right;
 }
 .tab-content>.active {
-  padding: 10px;
+  padding: 20px;
   background: #f2f2f2;
   font-family: 'HyundaiSansHead-Medium',Arial,sans-serif;
 }
@@ -192,4 +195,36 @@ a {
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   background-color: #0c2d5d;
+}
+
+.nav-tabs .nav-link, .tab-content h2 {
+  border-radius: 0;
+  font-family: "Hyundai Sans Head","Arial",sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+    max-width: 100%;
+    color: #0c2d5d;
+}
+
+.tab-content h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.filtros.container h2 {
+  font-weight: bold;
+  color: #0c2d5d;
+}
+
+.card-title.h5 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.card-body h5 {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  padding: 5px;
 }
