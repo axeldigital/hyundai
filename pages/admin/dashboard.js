@@ -6,23 +6,23 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
 
-import Filtros from '../../components/filtros';
+import FiltrosDashboard from '../../components/FiltrosDashboard';
 import Tarjeta from "../../components/tarjeta";
 
 export default function Dashboard() {
   return (
-    <Container>
+    <Container fluid={true}>
       <Row>
         <Col>
           <img src="/logo-hyundai.svg" alt="" title="" style={{ width: '200px', padding: '10px' }} />
         </Col>
         <Col>
-          <p style={{ padding: '10px', textAlign: 'right' }}><small><b>USUARIO: </b> Gerardo Lopez Monreal</small></p>
+          <p style={{ padding: '5px', textAlign: 'right', paddingTop: '10px' }}><small><b>USUARIO: </b> Gerardo Lopez Monreal</small></p>
         </Col>
       </Row>
       <Row>
         <Col>
-          <Filtros />
+          <FiltrosDashboard />
         </Col>
       </Row>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
