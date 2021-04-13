@@ -33,6 +33,7 @@ export default function Administrador() {
               }} />
               <Card.Body>
                 <Card.Title>LOGIN DE USUARIOS</Card.Title>
+                <hr/>
                 <Card.Text>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="formBasicEmail">
