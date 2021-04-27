@@ -8,8 +8,7 @@ export default function Filtros(){
     <Container className="filtros">
       <Row>
         <Col>
-        <Form>
-          <Form.Row>
+        <Form className="flex flex-column">
             <Col><h2>Selecciona tu Hyundai:</h2></Col>
             <Col>
               <Form.Control as="select" size="sm" custom>
@@ -37,7 +36,7 @@ export default function Filtros(){
                 <option>SUV's</option>
               </Form.Control>
             </Col>
-          </Form.Row>
+          
         </Form>
         </Col>
       </Row>

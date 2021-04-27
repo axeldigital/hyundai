@@ -8,9 +8,11 @@ export default function Header() {
     <Container className="p-3 menuprincipal">
       <Row>
         <Col md={2}>
-          <img src="logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
-            width: '150px'
-          }} />
+          <Link href="/">
+            <img src="logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
+              width: '150px'
+            }} />
+          </Link>
         </Col>
         <Col md={7} className="flex align-items-center justify-content-center">
           <ul>
@@ -30,15 +32,15 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/categoria">
                 <a>Seminuevos</a>
               </Link>
             </li>
           </ul>
         </Col>
-        <Col md={3}>
-          <p>
-            <span class="lnr lnr-map-marker"></span> Hyundai Coacalco
+        <Col md={3} className="p-0">
+          <p className="text-right pr-0">
+            <span className="lnr lnr-map-marker"></span> Hyundai Coacalco
             <Link href="/">
               <span className="lnr lnr-menu mx-2"></span>
             </Link>

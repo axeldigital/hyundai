@@ -97,13 +97,19 @@ a {
 .elfooter h4 {
   color: #f2f2f2;
   font-size: 0.8rem;
-    font-weight: bold;
+  font-family: "HyundaiBold";
 }
 
 .elfooter p {
   color: #ddd;
   margin: 0;
   padding: 5px;
+}
+
+.elfooter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .categorias {
