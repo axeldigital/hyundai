@@ -2,7 +2,8 @@ import Layout from '../components/layout';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
 import Slider from "../components/slider";
 import Carta from "../components/card";
 import Tarjeta from "../components/tarjeta";
@@ -51,6 +52,24 @@ export default function Home() {
           </Col>
           <Col>
             <Tarjeta/>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="mt-3 mb-5">
+          <Col>
+            <div style={{float: "right"}}>
+              <Link href="/categoria">
+                  <Button variant="primary" className="favoritos">VER TODO EL INVENTARIO</Button>
+              </Link>
+            </div>
+          </Col>
+          <Col>
+            <div style={{float: "left"}}>
+              <Link href="/categoria">
+                  <Button variant="primary" className="favoritos">VER FAVORITOS</Button>
+              </Link>
+            </div>
           </Col>
         </Row>
       </Container>
