@@ -10,22 +10,22 @@ export default function Submenu() {
         <Col className="flex align-items-center justify-content-center">
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/pagina">
                 <a>¿Qué es Hyundai Promise?</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/pagina">
                 <a>Beneficios de Hyundai Promise</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/pagina">
                 <a>La Certificación</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/pagina">
                 <a>Quiero vender mi auto</a>
               </Link>
             </li>

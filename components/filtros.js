@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 
 export default function Filtros() {
   return (
-    <Container className="filtros">
+    <Container className="filtros mb-5">
       <Row>
         <Col>
           <div className="d-flex align-items-center justify-content-between">
