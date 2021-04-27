@@ -25,7 +25,7 @@ export default function Submenu() {
               </Link>
             </li>
             <li>
-              <Link href="/pagina">
+              <Link href="/registro">
                 <a>Quiero vender mi auto</a>
               </Link>
             </li>
