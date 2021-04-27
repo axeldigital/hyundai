@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Layout>
       <Slider className="mt-3" />
-      <Container className="destacados">
+      <Container fluid={true} className="destacados">
         <Row>
           <Col>
             <h3 className="text-center p-3">Modelos</h3>
@@ -32,8 +32,14 @@ export default function Home() {
           <Col>
             <Tarjeta/>
           </Col>
+          <Col>
+            <Tarjeta/>
+          </Col>
         </Row>
         <Row className="mt-3 mb-5">
+          <Col>
+            <Tarjeta/>
+          </Col>
           <Col>
             <Tarjeta/>
           </Col>

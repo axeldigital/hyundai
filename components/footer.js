@@ -59,7 +59,7 @@ export default function Footer() {
         <ul>
           <li>
             <Link href="/">
-wefwefwefwe
+              wefwefwefwe
             </Link>
           </li>
         </ul>
