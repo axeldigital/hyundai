@@ -12,7 +12,6 @@ import Filtros from '../components/filtros';
 export default function Categoria() {
   return (
     <Layout>
-      <Slider className="mt-3" />
       <Container fluid={true} className="destacados">
         <Row>
           <Col>
@@ -50,47 +49,7 @@ export default function Categoria() {
         </Row>
 
       </Container>
-      <div className="bannercontenedor">
-        <h4>Conoce Hyundai Promise</h4>
-        <div className="bannerx">
-          <Banner
-            icono="/iconos/icono_queeselprograma.svg"
-            titulo="¿Qué es el programa Hyundai Promise?"
-            boton="Búsqueda Inteligente"
-          />
-          <div className="linea"></div>
-          <Banner
-            icono="/iconos/icono_beneficiosdelprograma.svg"
-            titulo="Beneficios del programa"
-            boton="Búsqueda Inteligente"
-          />
-          <div className="linea"></div>
-          <Banner
-            icono="/iconos/certificacion.svg"
-            titulo="¿En qué consiste la certificación?"
-            boton="Búsqueda Inteligente"
-          />
-        </div>
-        <div className="bannerx">
-          <Banner
-            icono="/iconos/162puntos.svg"
-            titulo="Revisión de 162 puntos"
-            boton="Búsqueda Inteligente"
-          />
-          <div className="linea"></div>
-          <Banner
-            icono="/iconos/registrar.svg"
-            titulo="Quiero registrar mi auto"
-            boton="Búsqueda Inteligente"
-          />
-          <div className="linea"></div>
-          <Banner
-            icono="/iconos/contacto.svg"
-            titulo="Quiero registrar mi auto"
-            boton="Búsqueda Inteligente"
-          />
-        </div>
-      </div>
+      
     </Layout>
   )
 }
