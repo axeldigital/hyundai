@@ -6,7 +6,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
 
-import FiltrosDashboard from '../../components/FiltrosDashboard';
+//import FiltrosDashboard from '../../components/FiltrosDashboard';
 import Tarjeta from "../../components/tarjeta";
 
 export default function Dashboard() {
@@ -22,7 +22,6 @@ export default function Dashboard() {
       </Row>
       <Row>
         <Col>
-          <FiltrosDashboard />
         </Col>
       </Row>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">

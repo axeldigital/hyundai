@@ -15,7 +15,7 @@ export default function Tarjeta() {
                     <p>Desde $000,000.00</p>
                     <p>00 Modelos</p>
                 </div>
-                <Link href="/auto">
+                <Link href="/categoria">
                     <Button variant="primary">VER MODELOS</Button>
                 </Link>
                 

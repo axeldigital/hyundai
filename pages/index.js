@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Layout>
       <Slider className="mt-3" />
-      <Container fluid={true} className="destacados">
+      <Container className="destacados">
         <Row>
           <Col>
             <h3 className="text-center p-3">Modelos</h3>
