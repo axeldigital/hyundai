@@ -13,38 +13,11 @@ export default function Home() {
   return (
     <Layout>
       <Slider className="mt-3" />
-      <Container className="categorias">
-        <Row>
-          <Col>
-            <Carta 
-              titulo="Búsqueda Inteligente"
-              imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/kona%20ev%201.jpg"
-            />
-          </Col>
-          <Col>
-            <Carta 
-              titulo="Promociones"
-              imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/banner-02-n.jpg"
-            />
-          </Col>
-          <Col>
-            <Carta 
-              titulo="Condiciones"
-              imagen="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/3FAdVwEMPE/ioniq%203.jpg"
-            />
-          </Col>
-        </Row>
-      </Container>
-      
       <Container className="destacados">
         <Row>
           <Col>
-            <h2 className="text-center">Modelos destacados</h2>
-            <p className="text-center mb-0 pb-3">Encuentra entre nuestros modelos disponibles el Hyundai que mejor se adapta a ti, y disfruta con toda tranquilidad del programa DE PROMESAS.</p>
+            <h3 className="text-center p-3">Modelos</h3>
           </Col>
-        </Row>
-        <Row style={{margin: '10px', marginBottom: '20px'}}>
-          <Filtros/>
         </Row>
         <Row>
           <Col>
@@ -75,11 +48,48 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-      <Banner 
-        titulo="¿SABES LO QUE ESTÁS BUSCANDO?"
-        texto="Si conoces el modelo que deseas, por qué no probar nuestra búsqueda por modelo para una selección más rápida y fácil."
-        boton="Búsqueda Inteligente"
-      />
+      <div className="bannercontenedor">
+        <h4>Conoce Hyundai Promise</h4>
+        <div className="bannerx">
+          <Banner 
+            icono="/iconos/icono_queeselprograma.svg"
+            titulo="¿Qué es el programa Hyundai Promise?"
+            boton="Búsqueda Inteligente"
+          />
+          <div className="linea"></div>
+          <Banner 
+            icono="/iconos/icono_beneficiosdelprograma.svg"
+            titulo="Beneficios del programa"
+            boton="Búsqueda Inteligente"
+          />
+          <div className="linea"></div>
+          <Banner 
+            icono="/iconos/certificacion.svg"
+            titulo="¿En qué consiste la certificación?"
+            boton="Búsqueda Inteligente"
+          />
+        </div>
+        <div className="bannerx">
+          <Banner 
+            icono="/iconos/162puntos.svg"
+            titulo="Revisión de 162 puntos"
+            boton="Búsqueda Inteligente"
+          />
+          <div className="linea"></div>
+          <Banner 
+            icono="/iconos/registrar.svg"
+            titulo="Quiero registrar mi auto"
+            boton="Búsqueda Inteligente"
+          />
+          <div className="linea"></div>
+          <Banner 
+            icono="/iconos/contacto.svg"
+            titulo="Quiero registrar mi auto"
+            boton="Búsqueda Inteligente"
+          />
+        </div>
+      </div>
+      
     </Layout>
   )
 }

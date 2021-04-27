@@ -1,8 +1,34 @@
+@font-face {
+  font-family: "HyundaiBold";
+  src: url("/fonts/HyundaiSansHeadOffice-Bold.ttf");
+  font-style: bold;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "HyundaiLight";
+  src: url("/fonts/HyundaiSansHeadOffice-Light.ttf");
+  font-style: light;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "HyundaiMedium";
+  src: url("/fonts/HyundaiSansHeadOffice-Medium.ttf");
+  font-style: medium;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "HyundaiRegular";
+  src: url("/fonts/HyundaiSansHeadOffice-Regular.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'HyundaiSansHead-Medium',Arial,sans-serif;
+  font-family: 'HyundaiRegular', sans-serif;
 }
 
 .card-title.h5 {
@@ -33,7 +59,6 @@ a {
 
 .contenedor {
   z-index: 1;
-  margin-top: 50px;
 }
 
 .carousel-caption {
@@ -219,9 +244,10 @@ a {
 }
 
 .card-title.h5 {
-  text-align: center;
-  font-size: 1.4rem;
+  text-align: left;
+  font-size: 1rem;
   margin-bottom: 0;
+  color: #222;
 }
 
 .card-body h5 {
@@ -234,4 +260,150 @@ a {
 .btn.btn-secondary {
   padding: 10px 20px;
   font-weight: 100;
+}
+
+.menuprincipal ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menuprincipal ul li {
+  position: relative;
+  float: left;
+}
+
+.menuprincipal ul li a {
+  font-family: "HyundaiBold", sans-serif;
+  color: #666666;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.menuprincipal p {
+  font-family: "HyundaiBold", sans-serif;
+  color: #666666;
+  font-size: 0.8rem;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.submenu {
+  background: #f3f3f3;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.submenu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu ul li a {
+  font-size: 0.8rem;
+  margin: 0 30px;
+  transition: all 1s;
+}
+
+.submenu ul li a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card .btn.btn-primary {
+  font-size: 0.7rem;
+  float: left;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-family: "HyundaiMedium";
+  margin: 0;
+  padding: 0;
+}
+
+.detalles {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.detalles p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 0.7rem;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.bannercontenedor {
+  text-align: center;
+  background: #f3f3f3;
+  padding: 20px;
+}
+
+.bannercontenedor h4 {
+  margin-bottom: 55px;
+}
+
+.bannerx {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.bannerx h5 {
+  font-family: "HyundaiMedium";
+  font-size: 1rem;
+}
+
+.bannerx .btn.btn-secondary {
+  background: none;
+  color: #012E5E;
+  font-size: 0.8rem;
+}
+
+.linea {
+  border: 0.1px solid #ddd;
+}
+
+.elfooter p {
+  font-size: 0.7rem;
+}
+
+.legales, .redes, .terminos {
+  background: #222;
+}
+
+.redes ul {
+  margin: 0;
+  padding: 0;
+}
+
+.legales ul {
+  margin: 0;
+  padding: 0;
+}
+
+.terminos p {
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 15px;
+  margin: 0;
 }
