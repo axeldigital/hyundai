@@ -52,7 +52,7 @@ export default function FiltrosProductos() {
               </tr>
             </tbody>
           </table>
-          <div style={{ height: '200px', width: '100%' }}>
+          <div style={{ height: '200px', width: '100%', marginTop: '10px', marginBottom: '30px', background: '#333' }}>
             <GoogleMapReact
               bootstrapURLKeys={{ 
                 key: 'AIzaSyAd3_0xuG0uZkOvA8dX-oPFVn6yR2zh4Hw' 
