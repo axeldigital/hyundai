@@ -427,3 +427,20 @@ table.filtros {
 table.filtros span.gris {
   color: #898989;
 }
+
+.bannercontenedor.producto {
+  background: #fff;
+  width: 100%;
+}
+
+.bannercontenedor.producto .bannerx {
+  margin-bottom: 0;
+}
+
+.bannercontenedor.producto .bannerx p {
+  display: none;
+}
+
+.bannercontenedor.producto .bannerx .btn.btn-secondary {
+  width: 100%;
+}

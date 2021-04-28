@@ -65,10 +65,34 @@ export default function Producto() {
                 <p><small>Descarga ficha técnica</small></p>
               </Col>
               <Col>
+                <p>Ver más modelos</p>
               </Col>
               <Col>
                 <p><small>Compartir</small></p>
               </Col>
+            </Row>
+            <Row>
+              <div className="bannercontenedor producto">
+                <div className="bannerx">
+                  <Banner
+                    icono="/iconos/icono_beneficiosdelprograma.svg"
+                    titulo="Beneficios del programa"
+                    boton="Búsqueda Inteligente"
+                  />
+                  <div className="linea"></div>
+                  <Banner
+                    icono="/iconos/icono_beneficiosdelprograma.svg"
+                    titulo="Beneficios del programa"
+                    boton="Búsqueda Inteligente"
+                  />
+                  <div className="linea"></div>
+                  <Banner
+                    icono="/iconos/icono_beneficiosdelprograma.svg"
+                    titulo="Beneficios del programa"
+                    boton="Búsqueda Inteligente"
+                  />
+                </div>
+              </div>
             </Row>
           </Col>
           <Col md={3} sm={3}>
