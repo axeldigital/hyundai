@@ -1,7 +1,11 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
+import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
+import GoogleMapReact from 'google-map-react';
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function FiltrosProductos() {
   return (
@@ -48,6 +52,24 @@ export default function FiltrosProductos() {
               </tr>
             </tbody>
           </table>
+          <div style={{ height: '200px', width: '100%' }}>
+            <GoogleMapReact
+              bootstrapURLKeys={{ 
+                key: 'AIzaSyAd3_0xuG0uZkOvA8dX-oPFVn6yR2zh4Hw' 
+              }}
+              defaultCenter={59.955413}
+              defaultZoom={30.337844}
+            >
+              <AnyReactComponent
+                lat={59.955413}
+                lng={30.337844}
+                text="MAPA"
+              />
+            </GoogleMapReact>
+          </div>
+          <Link href="/categoria">
+            <Button variant="primary" className="favoritos w-100">Contactar al distribuidor</Button>
+          </Link>
         </Col>
       </Row>
 
