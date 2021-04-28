@@ -417,3 +417,13 @@ a {
 .favoritos {
   font-size: 0.7rem;
 }
+
+table.filtros {
+  font-size: 0.8rem;
+  color: #333;
+  font-family: "HyundaiBold";
+}
+
+table.filtros span.gris {
+  color: #898989;
+}

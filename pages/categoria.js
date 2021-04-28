@@ -19,7 +19,7 @@ export default function Categoria() {
           </Col>
         </Row>
         <Row>
-          <Col md={4} sm={4}>
+          <Col md={3} sm={3}>
             <Filtros />
           </Col>
           <Col>
