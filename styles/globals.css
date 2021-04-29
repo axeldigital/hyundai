@@ -173,6 +173,11 @@ a {
 .btn.btn-primary {
   background: #002c5e;
   padding: 10px 20px;
+  transition: all 1s;
+}
+
+.btn.btn-primary:hover {
+  background: #001022;
 }
 
 .carta p {
@@ -333,6 +338,7 @@ a {
 .card .btn.btn-primary {
   font-size: 0.7rem;
   float: left;
+  transition: all 1s;
 }
 
 .card h3 {

@@ -62,10 +62,10 @@ export default function Producto() {
             <ImageGallery items={images} />
             <Row className="mt-3">
               <Col>
-                <p><small>Descarga ficha técnica</small></p>
+                <p className="text-left"><small>Descarga ficha técnica</small></p>
               </Col>
-              <Col className="text-center">
-                <p>Ver más modelos</p>
+              <Col>
+                <p className="text-center">Ver más modelos</p>
               </Col>
               <Col>
                 <p className="text-right"><small>Compartir</small></p>
