@@ -64,11 +64,11 @@ export default function Producto() {
               <Col>
                 <p><small>Descarga ficha técnica</small></p>
               </Col>
-              <Col>
+              <Col className="text-center">
                 <p>Ver más modelos</p>
               </Col>
               <Col>
-                <p><small>Compartir</small></p>
+                <p className="text-right"><small>Compartir</small></p>
               </Col>
             </Row>
             <Row>
