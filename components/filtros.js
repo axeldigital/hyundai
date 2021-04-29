@@ -37,37 +37,37 @@ export default function Filtros() {
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Año</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100">2021</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">2021</button> 
             <button className="btn btn-default bg-white ml-3 w-100">2020</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">2019</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">2019</button> 
             <button className="btn btn-default bg-white ml-3 w-100">2018</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">2017</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">2017</button> 
             <button className="btn btn-default bg-white ml-3 w-100">2016</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Modelo</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100">TUCSON</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">TUCSON</button> 
             <button className="btn btn-default bg-white ml-3 w-100">CRETA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">SANTA FE</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">SANTA FE</button> 
             <button className="btn btn-default bg-white ml-3 w-100">GRAND I10 HB</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">GRAND I10 SD</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">GRAND I10 SD</button> 
             <button className="btn btn-default bg-white ml-3 w-100">ACCENT SD</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">ACCENT HB</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">ACCENT HB</button> 
             <button className="btn btn-default bg-white ml-3 w-100">ELANTRA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">IONIC</button>
+            <button className="btn btn-default bg-white mr-3 w-100">IONIQ</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Transmisión</small></p>

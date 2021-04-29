@@ -60,14 +60,14 @@ export default function Home() {
           <Col>
             <div style={{float: "right"}}>
               <Link href="/categoria">
-                  <Button variant="primary" className="favoritos">VER TODO EL INVENTARIO</Button>
+                  <Button variant="primary" className="favoritos">Ver todo el inventario</Button>
               </Link>
             </div>
           </Col>
           <Col>
             <div style={{float: "left"}}>
               <Link href="/categoria">
-                  <Button variant="primary" className="favoritos">VER FAVORITOS</Button>
+                  <Button variant="primary" className="favoritos">Ver favoritos</Button>
               </Link>
             </div>
           </Col>

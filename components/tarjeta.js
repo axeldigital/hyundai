@@ -16,7 +16,7 @@ export default function Tarjeta() {
                     <p>00 Modelos</p>
                 </div>
                 <Link href="/categoria">
-                    <Button variant="primary">VER MODELOS</Button>
+                    <Button variant="primary">Ver modelos</Button>
                 </Link>
                 
             </Card.Body>

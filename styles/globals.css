@@ -177,7 +177,8 @@ a {
 }
 
 .btn.btn-primary:hover {
-  background: #001022;
+  background: #f3f3f3;
+  color: #333;
 }
 
 .carta p {
