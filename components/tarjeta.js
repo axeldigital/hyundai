@@ -12,7 +12,7 @@ export default function Tarjeta() {
                 <h3>Hyundai i10</h3>
                 <h3>2021</h3>
                 <div className="detalles">
-                    <p>Desde $000,000.00</p>
+                    <p className="desde">Desde $000,000.00</p>
                     <p>00 Modelos</p>
                 </div>
                 <Link href="/categoria">

@@ -176,6 +176,12 @@ a {
   transition: all 1s;
 }
 
+p.desde {
+  color: #002c5e;
+  font-family: "HyundaiBold";
+  font-size: 1.5rem;
+}
+
 .btn.btn-primary:hover {
   background: #f3f3f3;
   color: #333;
