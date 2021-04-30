@@ -113,6 +113,14 @@ export default function Home() {
             boton="Búsqueda Inteligente"
           />
         </div>
+        <Col className="d-flex politica">
+          <Row>
+            Política de privacidad
+          </Row>
+          <Row>
+            Términos y condiciones
+          </Row>
+        </Col>
       </div>
       
     </Layout>
