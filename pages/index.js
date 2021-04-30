@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
-import Slider from "../components/slider";
+import SliderEntrada from "../components/sliderEntrada";
 import Carta from "../components/card";
 import Tarjeta from "../components/tarjeta";
 import Banner from '../components/banner';
@@ -13,7 +13,7 @@ import Filtros from '../components/filtros';
 export default function Home() {
   return (
     <Layout>
-      <Slider className="mt-3" />
+      <SliderEntrada className="mt-3" />
       <Container className="destacados">
         <Row>
           <Col>

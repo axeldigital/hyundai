@@ -55,16 +55,7 @@ export default function Footer() {
           </ul>
         </div>
       </footer>
-      <div className="redes">
-        <ul>
-          <li>
-            <Link href="/">
-              wefwefwefwe
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="legales">
+      <div className="legales d-none">
         <ul>
           <li>
             <Link href="">

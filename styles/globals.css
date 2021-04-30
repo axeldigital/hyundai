@@ -457,3 +457,47 @@ table.filtros span.gris {
 .bannercontenedor.producto .bannerx .btn.btn-secondary {
   width: 100%;
 }
+
+.entrada.card {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.entrada.card .card-title.h5 {
+  text-align: center;
+  color: #F3F3F3;
+  font-family: "HyundaiRegular";
+  padding: 90px;
+  padding-bottom: 30px;
+  font-size: 3rem;
+  padding-bottom: 120px;
+}
+
+.entrada.card .btn.btn-secondary {
+  background: transparent;
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.card-img-overlay {
+  margin-right: 0;
+}
+
+.favoritos.dos {
+  background: #fff;
+  color: #012E5E;
+}
+
+.entrada.card .col h5 {
+  font-size: 0.8rem;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.entrada.card .col p {
+  margin: 0;
+}
