@@ -49,6 +49,15 @@ const images = [
 ];
 
 export default function Producto() {
+
+  const anterior = () => {
+    console.log("modelo anterior")
+  }
+
+  const siguiente = () => {
+    console.log("modelo siguiente")
+  }
+
   return (
     <Layout>
       <Container fluid={true} className="destacados">
@@ -60,15 +69,17 @@ export default function Producto() {
         <Row>
           <Col md={9} sm={9}>
             <ImageGallery items={images} />
-            <Row className="mt-3">
+            <Row className="mt-3 mb-5">
               <Col>
-                <p className="text-left"><small>Descarga ficha técnica</small></p>
+                <p className="text-left m-0 p-0"><small>Descarga ficha técnica</small></p>
+              </Col>
+              <Col className="d-flex justify-content-center align-items-center">
+                <span className="lnr lnr-chevron-left pr-3" onClick={anterior}></span>
+                <p className="text-center m-0 p-0">Ver más modelos</p>
+                <span className="lnr lnr-chevron-right pl-3" onClick={siguiente}></span>
               </Col>
               <Col>
-                <p className="text-center">Ver más modelos</p>
-              </Col>
-              <Col>
-                <p className="text-right"><small>Compartir</small></p>
+                <p className="text-right m-0 p-0"><small>Compartir</small></p>
               </Col>
             </Row>
             <Row>
