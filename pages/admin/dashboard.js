@@ -28,7 +28,6 @@ export default function Dashboard() {
             <Col sm={3} style={{
               background: '#f2f2f2'
             }}>
-
               <Nav variant="pills" className="flex-column">
                 <Nav.Item>
                   <Nav.Link eventKey="first"><span className="lnr lnr-home"></span> Home</Nav.Link>
