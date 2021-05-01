@@ -3,11 +3,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ImageGallery from 'react-image-gallery';
-import Slider from "../components/slider";
-import Carta from "../components/card";
-import Tarjeta from "../components/tarjeta";
-import Banner from '../components/banner';
-import FiltrosProductos from '../components/filtrosProductos';
+import Banner from '../../components/banner';
+import FiltrosProductos from '../../components/filtrosProductos';
 
 const images = [
   {
