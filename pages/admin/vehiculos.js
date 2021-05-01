@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Header from '../../components/admin/header'
-import RegistroVehiculo from '../../components/admin/RegistroVehiculo'
+import RegistroVehiculo from '../../components/admin/registroVehiculo'
 
 export default function Vehiculos() {
   const [imageSrc, setImageSrc] = useState()
