@@ -8,7 +8,7 @@ import SliderEntrada from "../components/sliderEntrada";
 import Tarjeta from "../components/tarjeta";
 import Banner from '../components/banner';
 
-import { useEntries } from '../lib/swr-hook'
+import { useEntries } from '../lib/swr-hooks'
 
 export default function Home() {
   const { entries, isLoading } = useEntries()
