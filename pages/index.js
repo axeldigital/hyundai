@@ -8,7 +8,12 @@ import SliderEntrada from "../components/sliderEntrada";
 import Tarjeta from "../components/tarjeta";
 import Banner from '../components/banner';
 
+import { useEntries } from '../lib/swr-hook'
+
 export default function Home() {
+  const { entries, isLoading } = useEntries()
+  console.log("loader: " + isLoading)
+  console.log("entradas: " + JSON.stringify(entries))
   return (
     <Layout>
       <SliderEntrada className="mt-3" />
