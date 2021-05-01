@@ -328,7 +328,7 @@ p.desde {
 }
 
 .submenu ul li a {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: 0 30px;
   transition: all 1s;
 }
@@ -463,7 +463,7 @@ table.filtros span.gris {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding-bottom: 90px;
+  padding: 230px;
 }
 
 .entrada.card .card-title.h5 {
@@ -505,4 +505,12 @@ table.filtros span.gris {
 .politica {
   font-size: 0.7rem;
   display: block;
+}
+
+.entrada.banner {
+  background: url('/hero.png') no-repeat center bottom; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -77,19 +77,19 @@ export default function Home() {
         <h4>Conoce Hyundai Promise</h4>
         <div className="bannerx">
           <Banner 
-            icono="/iconos/icono_queeselprograma.svg"
+            icono="iconos/icono_queeselprograma.svg"
             titulo="¿Qué es el programa Hyundai Promise?"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
           <Banner 
-            icono="/iconos/icono_beneficiosdelprograma.svg"
+            icono="iconos/icono_beneficiosdelprograma.svg"
             titulo="Beneficios del programa"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
           <Banner 
-            icono="/iconos/certificacion.svg"
+            icono="iconos/certificacion.svg"
             titulo="¿En qué consiste la certificación?"
             boton="Búsqueda Inteligente"
           />

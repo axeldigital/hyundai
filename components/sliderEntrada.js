@@ -7,8 +7,7 @@ import BannerEntrada from '../components/bannerEntrada';
 
 export default function SliderEntrada() {
   return (
-    <Card className="bg-dark text-white entrada">
-      <Card.Img src="hero.png" alt="Card image" />
+    <Card className="bg-dark text-white entrada banner">
       <Card.ImgOverlay>
         <Card.Title>Hyundai Promise</Card.Title>
         <Card.Text>
@@ -20,21 +19,21 @@ export default function SliderEntrada() {
             </Col>
             <Col>
               <BannerEntrada
-                icono="/iconos/icono_beneficiosdelprograma_bn.svg"
+                icono="iconos/icono_beneficiosdelprograma_bn.svg"
                 titulo="Beneficios del programa"
                 boton="Búsqueda Inteligente"
               />
             </Col>
             <Col>
               <BannerEntrada
-                icono="/iconos/icono_beneficiosdelprograma_bn.svg"
+                icono="iconos/icono_beneficiosdelprograma_bn.svg"
                 titulo="Beneficios del programa"
                 boton="Búsqueda Inteligente"
               />
             </Col>
             <Col>
               <BannerEntrada
-                icono="/iconos/icono_beneficiosdelprograma_bn.svg"
+                icono="iconos/icono_beneficiosdelprograma_bn.svg"
                 titulo="Beneficios del programa"
                 boton="Búsqueda Inteligente"
               />

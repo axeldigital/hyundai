@@ -86,19 +86,19 @@ export default function Producto() {
               <div className="bannercontenedor producto">
                 <div className="bannerx">
                   <Banner
-                    icono="/iconos/icono_beneficiosdelprograma.svg"
+                    icono="iconos/icono_beneficiosdelprograma.svg"
                     titulo="Beneficios del programa"
                     boton="Búsqueda Inteligente"
                   />
                   <div className="linea"></div>
                   <Banner
-                    icono="/iconos/icono_beneficiosdelprograma.svg"
+                    icono="iconos/icono_beneficiosdelprograma.svg"
                     titulo="Beneficios del programa"
                     boton="Búsqueda Inteligente"
                   />
                   <div className="linea"></div>
                   <Banner
-                    icono="/iconos/icono_beneficiosdelprograma.svg"
+                    icono="iconos/icono_beneficiosdelprograma.svg"
                     titulo="Beneficios del programa"
                     boton="Búsqueda Inteligente"
                   />
