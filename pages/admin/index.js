@@ -1,4 +1,4 @@
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 import Layout from '../../components/layout';
 import Container from 'react-bootstrap/Container'
@@ -21,16 +21,41 @@ export default function Administrador() {
 
   return (
     <Layout>
-      <Container>
+      <Container fluid={true}>
+        <Row>
+          <Col className="bgn entrada"></Col>
+          <Col className="d-flex flex-column align-items-center justify-content-center">
+            <h5>Iniciar Sesión</h5>
+            <Card style={{ width: '50%' }}>
+              <Card.Body style={{padding: '30px', background: '#f3f3f3'}}>
+                <Card.Text>
+                  <Form onSubmit={handleSubmit}>
+                    <Form.Group controlId="formBasicEmail">
+                      <Form.Label>Nombre de usuario:</Form.Label>
+                      <Form.Control type="email" placeholder="" />
+                    </Form.Group>
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Contraseña:</Form.Label>
+                      <Form.Control type="password" placeholder="" />
+                    </Form.Group>
+                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
+                    <p><a href="/">Olvidé mi contraseña</a></p>
+                    <Button variant="primary" type="submit" className="w-100">
+                      ENVIAR
+                  </Button>
+                  </Form>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+        {/*
         <Row>
           <Col></Col>
           <Col style={{
             padding: '20px'
           }}>
             <Card style={{ width: '100%' }}>
-              <Card.Img variant="top" src="logo-hyundai.svg" style={{
-                padding: '20px'
-              }} />
               <Card.Body>
                 <Card.Title>LOGIN DE USUARIOS</Card.Title>
                 <hr/>
@@ -61,6 +86,7 @@ export default function Administrador() {
           </Col>
           <Col></Col>
         </Row>
+        */}
       </Container>
     </Layout>
   )

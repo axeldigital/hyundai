@@ -22,16 +22,16 @@ export default function Home() {
         </Row>
         <Row>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
             <Tarjeta/>
@@ -39,19 +39,19 @@ export default function Home() {
         </Row>
         <Row className="mt-3 mb-5">
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
           <Col>
-            <Tarjeta/>
+            <Tarjeta link="categoria"/>
           </Col>
         </Row>
       </Container>

@@ -515,3 +515,12 @@ table.filtros span.gris {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.bgn.entrada {
+  background: url('/hero2.png') no-repeat center bottom; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 390px 0;
+}
