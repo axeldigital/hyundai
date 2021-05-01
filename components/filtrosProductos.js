@@ -53,19 +53,7 @@ export default function FiltrosProductos() {
             </tbody>
           </table>
           <div style={{ height: '200px', width: '100%', marginTop: '10px', marginBottom: '30px', background: '#333' }}>
-            <GoogleMapReact
-              bootstrapURLKeys={{ 
-                key: 'AIzaSyAd3_0xuG0uZkOvA8dX-oPFVn6yR2zh4Hw' 
-              }}
-              defaultCenter={59.955413}
-              defaultZoom={30.337844}
-            >
-              <AnyReactComponent
-                lat={59.955413}
-                lng={30.337844}
-                text="MAPA"
-              />
-            </GoogleMapReact>
+            <img src="/mapa.png" className="img-fluid" alt="" title="" />
           </div>
           <Link href="/categoria">
             <Button variant="primary" className="favoritos w-100">Contactar al distribuidor</Button>

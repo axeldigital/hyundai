@@ -14,7 +14,7 @@ export default function Header() {
             }} />
           </Link>
         </Col>
-        <Col md={7} className="flex align-items-center justify-content-center">
+        <Col md={8} className="flex align-items-center justify-content-center">
           <ul>
             <li>
               <Link href="/">
@@ -38,9 +38,9 @@ export default function Header() {
             </li>
           </ul>
         </Col>
-        <Col md={3} className="p-0">
+        <Col md={2} className="p-0">
           <p className="text-right pr-0">
-            <span className="lnr lnr-map-marker"></span> Hyundai Coacalco
+            <span className="lnr lnr-map-marker"></span> Coacalco
             <Link href="/">
               <span className="lnr lnr-menu mx-2"></span>
             </Link>

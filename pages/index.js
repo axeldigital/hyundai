@@ -113,10 +113,7 @@ export default function Home() {
         </div>
         <Col className="d-flex politica">
           <Row>
-            Política de privacidad
-          </Row>
-          <Row>
-            Términos y condiciones
+            Política de privacidad - Términos y condiciones
           </Row>
         </Col>
       </div>

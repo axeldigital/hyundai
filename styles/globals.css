@@ -523,3 +523,36 @@ table.filtros span.gris {
   background-size: cover;
   padding: 390px 0;
 }
+
+.usuario.row {
+  background-color: #0c2d5d;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.usuario.row p {
+  margin: 0;
+  padding: 20px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.submenu.container-fluid {
+  padding: 10px;
+}
+
+.form-control {
+  border-radius: 0;
+  font-size: 0.8rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 10px 0 0 0;
+  color: #999;
+}

@@ -14,9 +14,9 @@ export default function Dashboard() {
   return (
     <Layout>
       <Container fluid={true}>
-        <Row>
+        <Row className="usuario">
           <Col>
-            <p style={{ padding: '5px', textAlign: 'right', paddingTop: '10px' }}><small><b>USUARIO: </b> Gerardo Lopez Monreal</small></p>
+            <p><small><b>USUARIO: </b> Gerardo Lopez Monreal</small></p>
           </Col>
         </Row>
         <Row>
@@ -81,7 +81,18 @@ export default function Dashboard() {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                  <p>ugiugiugi</p>
+                  <form>
+                    <div className="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <p>ugiugiugi</p>

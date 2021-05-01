@@ -12,7 +12,7 @@ import Filtros from '../components/filtros';
 export default function Pagina() {
   return (
     <Layout>
-      <Slider className="mt-3" />
+      <Slider className="mt-3" imagen="hero.png" />
       <Container>
         <Row>
           <Col md={4}>

@@ -13,7 +13,7 @@ export default function SliderEntrada() {
         <Card.Text>
           <Row>
             <Col>
-              <Link href="/categoria">
+              <Link href="/pagina">
                   <Button variant="primary" className="favoritos dos">Conoce Huyndai Promise</Button>
               </Link>
             </Col>
@@ -39,8 +39,8 @@ export default function SliderEntrada() {
               />
             </Col>
             <Col>
-              <Link href="/categoria">
-                  <Button variant="primary" className="favoritos dos">Quiero vender mi auto</Button>
+              <Link href="/registrar">
+                  <Button variant="primary" className="favoritos dos float-right">Quiero vender mi auto</Button>
               </Link>
             </Col>
           </Row>
