@@ -619,3 +619,19 @@ table.filtros span.gris {
   background-color: #00AAD240;
   color: #fff;
 }
+
+.dashtablas h2 {
+  color: #012E5E;
+  margin: 0;
+  padding: 0;
+}
+
+.dashtablas h3 {
+  color: #898989;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+}
+
+.dashtablas table {
+  font-size: 0.7rem;
+}

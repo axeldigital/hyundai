@@ -17,7 +17,7 @@ export default function Header() {
         <Col md={8} className="flex align-items-center justify-content-center">
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/categoria">
                 <a>Modelos</a>
               </Link>
             </li>
@@ -32,7 +32,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/categoria">
+              <Link href="/admin">
                 <a>Seminuevos</a>
               </Link>
             </li>

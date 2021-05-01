@@ -24,21 +24,21 @@ export default function Header() {
             <p><b>Administrador</b></p>
           </li>
           <li className="menudash">
-            <Nav activeKey="1" onSelect={handleSelect}>
+            <Nav activeKey="1">
               <NavDropdown title="Menú" id="nav-dropdown">
-                <NavDropdown.Item href="/admin" className="d-flex">
+                <NavDropdown.Item href="/admin/dashboard" className="d-flex">
                   <img src="/iconos/home-solid.svg" className="pr-2" alt="" title="" />
                   Home
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/admin" className="d-flex">
+                <NavDropdown.Item href="/admin/dashboard" className="d-flex">
                   <img src="/iconos/tasks-solid.svg" className="pr-2" alt="" title="" />
                   Administrador
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/admin" className="d-flex">
+                <NavDropdown.Item href="/admin/vehiculos" className="d-flex">
                   <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
                   Vehículos
                 </NavDropdown.Item>
-                <NavDropdown.Item eventKey="4.4">
+                <NavDropdown.Item href="/admin/validacion" className="d-flex">
                   <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
                   Validación
                 </NavDropdown.Item>
