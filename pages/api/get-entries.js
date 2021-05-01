@@ -5,7 +5,6 @@ const handler = async (_, res) => {
     const results = await query(`
       SELECT * FROM autos
       ORDER BY id DESC
-      LIMIT 10
   `)
 
     return res.json(results)
