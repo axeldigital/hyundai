@@ -40,7 +40,7 @@ export default function Administrador() {
                     </Form.Group>
                     <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
                     <p><a href="/">Olvidé mi contraseña</a></p>
-                    <Button variant="primary" type="submit" className="w-100">
+                    <Button href="/admin/dashboard" variant="primary" type="submit" className="w-100">
                       ENVIAR
                   </Button>
                   </Form>

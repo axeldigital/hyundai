@@ -5,10 +5,8 @@ import Col from 'react-bootstrap/Col'
 import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import SliderEntrada from "../components/sliderEntrada";
-import Carta from "../components/card";
 import Tarjeta from "../components/tarjeta";
 import Banner from '../components/banner';
-import Filtros from '../components/filtros';
 
 export default function Home() {
   return (

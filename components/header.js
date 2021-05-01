@@ -9,7 +9,7 @@ export default function Header() {
       <Row>
         <Col md={2}>
           <Link href="/">
-            <img src="logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
+            <img src="/logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
               width: '150px'
             }} />
           </Link>
