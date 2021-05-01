@@ -1,3 +1,4 @@
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
@@ -9,6 +10,7 @@ export default function SliderEntrada() {
   return (
     <Card className="bg-dark text-white entrada banner">
       <Card.ImgOverlay>
+        <Container>
         <Card.Title>Hyundai Promise</Card.Title>
         <Card.Text>
           <Row>
@@ -45,6 +47,7 @@ export default function SliderEntrada() {
             </Col>
           </Row>
         </Card.Text>
+        </Container>
       </Card.ImgOverlay>
     </Card>
   )

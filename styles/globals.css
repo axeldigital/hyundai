@@ -521,7 +521,23 @@ table.filtros span.gris {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 390px 0;
+}
+.bgn.entrada .introsub {
+  text-align: center;
+  padding: 90px;
+  padding-bottom: 500px;
+}
+
+.bgn.entrada .introsub img {
+  position: relative;
+  top: 20%;
+}
+
+.bgn.entrada .introsub h2 {
+  color: #fff;
+  font-family: "HyundaiMedium";
+  padding-top: 30px;
+  font-size: 1.7rem;
 }
 
 .usuario.row {
@@ -533,7 +549,7 @@ table.filtros span.gris {
 
 .usuario.row p {
   margin: 0;
-  padding: 20px;
+  padding: 5px 20px;
 }
 
 .container-fluid {
@@ -555,4 +571,51 @@ table.filtros span.gris {
   padding: 0;
   margin: 10px 0 0 0;
   color: #999;
+}
+
+.headdash {
+  padding: 10px;
+}
+
+.headdash ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.headdash p {
+  margin: 0;
+  padding: 0;
+}
+
+.usuario.row p.btn-salir {
+  background: #00AAD2;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.usuario.row p.btn-salir:hover {
+  background: #dedede;
+  color: #333;
+}
+
+.dropdown-menu {
+  background-color: #022040;
+  font-size: 0.8rem;
+  color:#fff;
+}
+
+.dropdown-item {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #00AAD240;
+  color: #fff;
 }

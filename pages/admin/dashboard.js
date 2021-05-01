@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import Header from '../../components/admin/header'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
@@ -14,17 +14,9 @@ export default function Dashboard() {
   return (
     <Layout>
       <Container fluid={true}>
-        <Row className="usuario">
-          <Col>
-            <p><small><b>USUARIO: </b> Gerardo Lopez Monreal</small></p>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-          </Col>
-        </Row>
+        <Header />
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-          <Row>
+          <Row className="m-0 p-0">
             <Col sm={3} style={{
               background: '#f2f2f2'
             }}>

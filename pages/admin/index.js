@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-
+import Link from 'next/link'
 import Layout from '../../components/layout';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -22,8 +22,18 @@ export default function Administrador() {
   return (
     <Layout>
       <Container fluid={true}>
-        <Row>
-          <Col className="bgn entrada"></Col>
+        <Row className="p-0 m-0">
+          <Col className="bgn entrada">
+            <div className="introsub">
+              <Link href="/admin/dashboard">
+                <img src="/logo-hyundai-blanco.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
+                  width: '250px'
+                }} />
+              </Link>
+              <h2>Interfaz administrativa de Hyundai Promise. Seminuevos Certificados</h2>
+            </div>
+            
+          </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center">
             <h5>Iniciar Sesión</h5>
             <Card style={{ width: '50%' }}>
