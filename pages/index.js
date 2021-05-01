@@ -96,19 +96,19 @@ export default function Home() {
         </div>
         <div className="bannerx">
           <Banner 
-            icono="/iconos/162puntos.svg"
+            icono="iconos/162puntos.svg"
             titulo="Revisión de 162 puntos"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
           <Banner 
-            icono="/iconos/registrar.svg"
+            icono="iconos/registrar.svg"
             titulo="Quiero registrar mi auto"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
           <Banner 
-            icono="/iconos/contacto.svg"
+            icono="iconos/contacto.svg"
             titulo="Quiero registrar mi auto"
             boton="Búsqueda Inteligente"
           />

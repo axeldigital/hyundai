@@ -2,9 +2,10 @@
   "name": "seminuevos",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://31.220.62.12/hyundai",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
