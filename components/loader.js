@@ -9,6 +9,7 @@ export default function Loader() {
         <Col>
           <img src="/iconos/loader.gif" alt="hyndai seminuevos" title="hyundai seminuevos"/>
           <br/>
+          <br/>
           <img src="/logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
             width: '250px'
           }} />

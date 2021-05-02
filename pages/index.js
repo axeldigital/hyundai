@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -20,8 +20,8 @@ export default function Home() {
     setAutos(entries)
   }, [entries])
 
-  if(!autos || isLoading){
-    return(
+  if (!autos || isLoading) {
+    return (
       <Loader />
     )
   }
@@ -36,33 +36,33 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-              {autos.map(auto => (
-                <Col key={auto.id} md={3}>
-                  <Tarjeta 
-                    link="/categoria" 
-                    modelo={auto.modelo}
-                    precio={auto.precio} 
-                    kilometros={auto.kilometros}
-                    anio={auto.anio}
-                    imagen={auto.imagen}
-                  />
-                </Col>
-              ))}
-            </Row>
+          {autos.map(auto => (
+            <Col key={auto.id} md={3}>
+              <Tarjeta
+                link="/categoria"
+                modelo={auto.modelo}
+                precio={auto.precio}
+                kilometros={auto.kilometros}
+                anio={auto.anio}
+                imagen={auto.imagen}
+              />
+            </Col>
+          ))}
+        </Row>
       </Container>
       <Container>
         <Row className="mt-3 mb-5">
           <Col>
-            <div style={{float: "right"}}>
+            <div style={{ float: "right" }}>
               <Link href="/categoria">
-                  <Button variant="primary" className="favoritos">Ver todo el inventario</Button>
+                <Button variant="primary" className="favoritos">Ver todo el inventario</Button>
               </Link>
             </div>
           </Col>
           <Col>
-            <div style={{float: "left"}}>
+            <div style={{ float: "left" }}>
               <Link href="/categoria">
-                  <Button variant="primary" className="favoritos">Ver favoritos</Button>
+                <Button variant="primary" className="favoritos">Ver favoritos</Button>
               </Link>
             </div>
           </Col>
@@ -71,38 +71,38 @@ export default function Home() {
       <div className="bannercontenedor">
         <h4>Conoce Hyundai Promise</h4>
         <div className="bannerx">
-          <Banner 
+          <Banner
             icono="iconos/icono_queeselprograma.svg"
             titulo="¿Qué es el programa Hyundai Promise?"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
-          <Banner 
+          <Banner
             icono="iconos/icono_beneficiosdelprograma.svg"
             titulo="Beneficios del programa"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
-          <Banner 
+          <Banner
             icono="iconos/certificacion.svg"
             titulo="¿En qué consiste la certificación?"
             boton="Búsqueda Inteligente"
           />
         </div>
         <div className="bannerx">
-          <Banner 
+          <Banner
             icono="iconos/162puntos.svg"
             titulo="Revisión de 162 puntos"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
-          <Banner 
+          <Banner
             icono="iconos/registrar.svg"
             titulo="Quiero registrar mi auto"
             boton="Búsqueda Inteligente"
           />
           <div className="linea"></div>
-          <Banner 
+          <Banner
             icono="iconos/contacto.svg"
             titulo="Quiero registrar mi auto"
             boton="Búsqueda Inteligente"
@@ -114,7 +114,7 @@ export default function Home() {
           </Row>
         </Col>
       </div>
-      
+
     </Layout>
   )
 }

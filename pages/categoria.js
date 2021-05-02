@@ -1,5 +1,4 @@
-import {useEffect, useState} from 'react'
-import useSWR from 'swr'
+import { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import BreadCrumb from '../components/breadCrumb'
 import Container from 'react-bootstrap/Container'
@@ -22,10 +21,23 @@ export default function Categoria() {
     setAutos(entries)
   }, [entries])
 
-  if(!autos || isLoading){
-    return(
+  if (!autos || isLoading) {
+    return (
       <Loader />
     )
+  }
+
+  const filtroPrecio = (price) => {
+    let lastNum = 1000000
+    
+    if(lastNum > precio){
+      setPrecio(precio + 20000)
+    } else {
+      setPrecio(precio - 20000)
+    }
+    
+    let filtraPrecio = autos.filter(filterprecio => filterprecio.precio > precio );
+    setAutos(filtraPrecio)
   }
 
   return (
@@ -34,8 +46,8 @@ export default function Categoria() {
         <BreadCrumb />
         <Row className="m-0 p-0">
           <Col md={3} sm={3}>
-            <Filtros 
-              contador={() => setPrecio(precio + 1000)} 
+            <Filtros
+              contador={() => filtroPrecio(precio)}
               precio={precio}
               loskilometros={() => setKilometros(kilometros + 10000)}
               kilometros={kilometros}
@@ -47,10 +59,10 @@ export default function Categoria() {
             <Row>
               {autos.map(auto => (
                 <Col key={auto.id} md={4}>
-                  <Tarjeta 
-                    link="/producto" 
+                  <Tarjeta
+                    link="/producto"
                     modelo={auto.modelo}
-                    precio={auto.precio} 
+                    precio={auto.precio}
                     kilometros={auto.kilometros}
                     anio={auto.anio}
                     imagen={auto.imagen}
@@ -58,12 +70,9 @@ export default function Categoria() {
                 </Col>
               ))}
             </Row>
-            
           </Col>
         </Row>
-
       </Container>
-      
     </Layout>
   )
 }
