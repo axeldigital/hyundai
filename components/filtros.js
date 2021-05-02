@@ -16,7 +16,9 @@ export default function Filtros(
     loskilometros, 
     kilometros,
     elAnio,
-    anio
+    anio,
+    elModelo,
+    modelo
   }) {
   return (
     <Container className="filtros mb-5">
@@ -49,7 +51,7 @@ export default function Filtros(
             </Form.Group>
           </Form>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Año: <span className="font-bold">{anio}</span></small></p>
+          <p className="p-0 m-0 pl-2 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button 
               className="btn btn-default bg-white mr-3 w-100"
@@ -93,25 +95,25 @@ export default function Filtros(
             </button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Modelo</small></p>
+          <p className="p-0 m-0 pl-2 mb-2"><small>Modelo {modelo}</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100">TUCSON</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">CRETA</button>
+            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('TUCSON')}>TUCSON</button> 
+            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('CRETA')}>CRETA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">SANTA FE</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">GRAND I10 HB</button>
+            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button> 
+            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('GRAND I10 HB')}>GRAND I10 HB</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">GRAND I10 SD</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">ACCENT SD</button>
+            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button> 
+            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('ACCENT SD')}>ACCENT SD</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">ACCENT HB</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">ELANTRA</button>
+            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button> 
+            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">IONIQ</button>
+            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('IONIQ')}>IONIQ</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Transmisión</small></p>

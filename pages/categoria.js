@@ -15,7 +15,8 @@ export default function Categoria() {
   const { entries, isLoading } = useEntries()
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState(0)
-  const [anio, setAnio] = useState(2015)
+  const [anio, setAnio] = useState()
+  const [modelo, setModelo] = useState("")
 
   useEffect(() => {
     setAutos(entries)
@@ -29,7 +30,7 @@ export default function Categoria() {
 
   const filtroPrecio = (price) => {
     let lastNum = 1000000
-    
+
     if(lastNum > precio){
       setPrecio(precio + 20000)
     } else {
@@ -53,6 +54,8 @@ export default function Categoria() {
               kilometros={kilometros}
               elAnio={(par) => setAnio(par)}
               anio={anio}
+              elModelo={(par) => setModelo(par)}
+              modelo={modelo}
             />
           </Col>
           <Col>

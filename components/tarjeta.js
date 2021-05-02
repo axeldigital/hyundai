@@ -10,6 +10,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
     const cuantos = Math.round(Math.random() * 100)
+    let kms = kilometros.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     return (
         <Card className="mb-4">
             <Link href={link ? link : ""}>
@@ -27,7 +28,7 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                 <h3>{anio}</h3>
                 <div className="detalles">
                     <p className="desde">Desde {formatter.format(precio)}</p>
-                    <p>{kilometros === 0 ? '' : `${kilometros} Kilometraje`}</p>
+                    <p>{kms === 0 ? '' : `${kms} Kilometros`}</p>
                     <p>{cuantos} Modelos</p>
                 </div>
                 <Link href={link ? link : ""} className="w-100">
