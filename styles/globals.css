@@ -346,6 +346,12 @@ p.desde {
   font-size: 0.7rem;
   float: left;
   transition: all 1s;
+  transition: all 0.5s;
+}
+
+.card .btn.btn-primary:hover {
+  background: #ccc;
+  color: #333;
 }
 
 .card h3 {
@@ -653,4 +659,8 @@ table.filtros span.gris {
   font-size: 0.7rem;
   background: #022040;
   color: #fff;
+}
+
+.btn.btn-secondary {
+  font-size: 0.8rem;
 }

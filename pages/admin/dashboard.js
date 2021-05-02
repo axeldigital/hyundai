@@ -38,12 +38,6 @@ export default function Dashboard() {
                 <RowTabla />
                 <RowTabla />
                 <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
               </tbody>
             </Table>
           </Col>
@@ -51,6 +45,15 @@ export default function Dashboard() {
             <h3>Vehículos alertados</h3>
             <Table striped bordered hover size="sm">
               <tbody>
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
+                <RowCampana />
                 <RowCampana />
               </tbody>
             </Table>

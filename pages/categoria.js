@@ -11,7 +11,7 @@ export default function Categoria() {
     <Layout>
       <Container fluid={true} className="destacados">
         <BreadCrumb />
-        <Row>
+        <Row className="m-0 p-0">
           <Col md={3} sm={3}>
             <Filtros />
           </Col>

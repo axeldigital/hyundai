@@ -15,8 +15,8 @@ export default function Tarjeta(props) {
                     <p className="desde">Desde $000,000.00</p>
                     <p>00 Modelos</p>
                 </div>
-                <Link href={props.link ? props.link : ""}>
-                    <Button variant="primary">Ver modelos</Button>
+                <Link href={props.link ? props.link : ""} className="w-100">
+                    <Button variant="primary" className="float-right">Ver modelo</Button>
                 </Link>
             </Card.Body>
         </Card>

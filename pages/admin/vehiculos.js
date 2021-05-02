@@ -25,7 +25,7 @@ export default function Vehiculos() {
       </Container>
       <Container className="p-0 pt-4 pb-4 dashtablas">
         <Row>
-          <Col md={4}>
+          <Col md={3}>
             <h3>Registrar nuevo vehículo</h3>
             <RegistroVehiculo />
           </Col>
