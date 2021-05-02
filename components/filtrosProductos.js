@@ -62,7 +62,7 @@ export default function FiltrosProductos() {
               </tr>
             </tbody>
           </table>
-          <div style={{ height: '200px', width: '100%', marginTop: '10px', marginBottom: '30px'}}>
+          <div style={{ height: '200px', width: '100%', marginTop: '10px'}}>
             <img src="/mapa.png" className="img-fluid" alt="" title="" onClick={handleShowMapa} />
           </div>
           <Button variant="primary" className="favoritos w-100" onClick={handleShow}>Contactar al distribuidor</Button>

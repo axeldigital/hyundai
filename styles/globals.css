@@ -636,6 +636,6 @@ table.filtros span.gris {
   font-size: 0.7rem;
 }
 
-..modal-content {
+.modal-content {
   border-radius: 0;
 }

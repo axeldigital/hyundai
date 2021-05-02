@@ -30,7 +30,7 @@ export default function Administrador() {
                   width: '250px'
                 }} />
               </Link>
-              <h2>Interfaz administrativa de Hyundai Promise. Seminuevos Certificados</h2>
+              <h2>Interfaz administrativa de Hyundai Promise. Seminuevos Certificados.</h2>
             </div>
             
           </Col>

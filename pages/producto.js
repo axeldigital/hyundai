@@ -64,8 +64,7 @@ export default function Producto() {
         <Row className="p-0 m-0">
           <Col>
             <h3 className="text-center pt-3 pb-3" style={{
-              background: '#002c5e',
-              color: '#fff'
+              color: '#002c5e'
             }}>Modelo <i>HNX 2022</i></h3>
           </Col>
         </Row>
