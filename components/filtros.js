@@ -78,7 +78,7 @@ export default function Filtros({contador, precio, loskilometros, kilometros}) {
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Transmisión</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100">Manual</button> -
+            <button className="btn btn-default bg-white mr-3 w-100">Manual</button> 
             <button className="btn btn-default bg-white ml-3 w-100">Automática</button>
           </div>
           <hr />

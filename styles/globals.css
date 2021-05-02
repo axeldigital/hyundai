@@ -664,3 +664,12 @@ table.filtros span.gris {
 .btn.btn-secondary {
   font-size: 0.8rem;
 }
+
+.filtros .btn.btn-default {
+  transition: all 1s;
+}
+
+.filtros .btn.btn-default:hover {
+  background: #022040 !important;
+  color: #fff;
+}
