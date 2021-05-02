@@ -9,7 +9,15 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 2
 })
 
-export default function Filtros({contador, precio, loskilometros, kilometros}) {
+export default function Filtros(
+  {
+    contador, 
+    precio, 
+    loskilometros, 
+    kilometros,
+    elAnio,
+    anio
+  }) {
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -41,18 +49,48 @@ export default function Filtros({contador, precio, loskilometros, kilometros}) {
             </Form.Group>
           </Form>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Año</small></p>
+          <p className="p-0 m-0 pl-2 mb-2"><small>Año: <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100">2021</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">2020</button>
+            <button 
+              className="btn btn-default bg-white mr-3 w-100"
+              onClick={() => elAnio(2021)}  
+            >
+                2021
+            </button> 
+            <button 
+              className="btn btn-default bg-white ml-3 w-100"
+              onClick={() => elAnio(2020)}
+              >
+                2020
+            </button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">2019</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">2018</button>
+          <button 
+              className="btn btn-default bg-white mr-3 w-100"
+              onClick={() => elAnio(2019)}  
+            >
+                2019
+            </button> 
+            <button 
+              className="btn btn-default bg-white ml-3 w-100"
+              onClick={() => elAnio(2018)}
+              >
+                2018
+            </button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100">2017</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">2016</button>
+          <button 
+              className="btn btn-default bg-white mr-3 w-100"
+              onClick={() => elAnio(2017)}  
+            >
+                2017
+            </button> 
+            <button 
+              className="btn btn-default bg-white ml-3 w-100"
+              onClick={() => elAnio(2016)}
+              >
+                2016
+            </button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Modelo</small></p>

@@ -10,6 +10,7 @@ import Filtros from "../components/filtros"
 export default function Categoria() {
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState(0)
+  const [anio, setAnio] = useState(2015)
   return (
     <Layout>
       <Container fluid={true} className="destacados">
@@ -21,6 +22,8 @@ export default function Categoria() {
               precio={precio}
               loskilometros={() => setKilometros(kilometros + 10000)}
               kilometros={kilometros}
+              elAnio={(par) => setAnio(par)}
+              anio={anio}
             />
           </Col>
           <Col>
