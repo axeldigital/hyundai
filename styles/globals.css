@@ -432,7 +432,7 @@ p.desde {
   transition: all 0.5s;
 }
 
-.btn.btn-primary:hover {
+.btn.btn-primary:hover, .btn.btn-secondary:hover {
   background: #002c5e;
   color: #fff;
 }
