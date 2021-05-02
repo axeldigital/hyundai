@@ -10,9 +10,14 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function FiltrosProductos() {
   const [show, setShow] = useState(false);
+  const [showMapa, setShowMapa] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseMapa = () => setShowMapa(false);
+  const handleShowMapa = () => setShowMapa(true);
+
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -58,7 +63,7 @@ export default function FiltrosProductos() {
             </tbody>
           </table>
           <div style={{ height: '200px', width: '100%', marginTop: '10px', marginBottom: '30px'}}>
-            <img src="/mapa.png" className="img-fluid" alt="" title="" />
+            <img src="/mapa.png" className="img-fluid" alt="" title="" onClick={handleShowMapa} />
           </div>
           <Button variant="primary" className="favoritos w-100" onClick={handleShow}>Contactar al distribuidor</Button>
         </Col>
@@ -77,6 +82,23 @@ export default function FiltrosProductos() {
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Enviar mensaje
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showMapa} onHide={handleCloseMapa}>
+        <Modal.Header closeButton>
+          <Modal.Title>Ubicación del distribuidor</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.565832118309!2d-99.21426838444779!3d19.431156345760506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201f59f3fbcd3%3A0xfd31bf8284286906!2sInnocean%20Worldwide%20Mexico!5e0!3m2!1ses!2smx!4v1619917241336!5m2!1ses!2smx" height="450" className="w-100" style={{border: '0'}}></iframe>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseMapa}>
+            Cerrar
+          </Button>
+          <Button variant="primary" onClick={handleCloseMapa}>
+            Agregar dirección
           </Button>
         </Modal.Footer>
       </Modal>
