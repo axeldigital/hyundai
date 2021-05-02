@@ -8,23 +8,30 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2
 })
 
-export default function Tarjeta(props) {
+export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
     const cuantos = Math.round(Math.random() * 100)
     return (
-        <Card>
-            <Link href={props.link ? props.link : ""}>
-                <Card.Img variant="top" src="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/UqfXuhelB/i10-newest.png" />
+        <Card className="mb-4">
+            <Link href={link ? link : ""}>
+                <div style={{
+                    height: '150px', 
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <Card.Img variant="top" src={imagen} />
+                </div>
             </Link>
             <Card.Body>
-                <h3>Hyundai i10</h3>
-                <h3>2021</h3>
+                <h3>{modelo}</h3>
+                <h3>{anio}</h3>
                 <div className="detalles">
-                    <p className="desde">Desde {formatter.format(props.precio)}</p>
-                    <p>{props.kilometros === 0 ? '' : `${props.kilometros} Kilometraje`}</p>
+                    <p className="desde">Desde {formatter.format(precio)}</p>
+                    <p>{kilometros === 0 ? '' : `${kilometros} Kilometraje`}</p>
                     <p>{cuantos} Modelos</p>
                 </div>
-                <Link href={props.link ? props.link : ""} className="w-100">
-                    <Button variant="primary" className="float-right">Ver modelo</Button>
+                <Link href={link ? link : ""} className="w-100">
+                    <Button variant="primary">Ver modelo</Button>
                 </Link>
             </Card.Body>
         </Card>

@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import useSWR from 'swr'
 import Layout from '../components/layout'
 import BreadCrumb from '../components/breadCrumb'
 import Container from 'react-bootstrap/Container'
@@ -14,12 +15,11 @@ export default function Categoria() {
   const [kilometros, setKilometros] = useState(0)
   const [anio, setAnio] = useState(2015)
 
+  const { data, error } = useSWR('https://hyundai-seminuevos-default-rtdb.firebaseio.com/autos.json')
+
   useEffect(() => {
     setIsLoading(true)
-    fetch(
-      'https://hyundai-seminuevos-default-rtdb.firebaseio.com/autos.json'
-    ).then((response) => response.json())
-    .then(data => {
+    if(data){
       const transformedAutos = []
       for(const key in data){
         transformedAutos.push({
@@ -28,26 +28,25 @@ export default function Categoria() {
           anio: data[key].anio,
           precio: data[key].precio,
           kilometros: data[key].kilometros,
+          imagen: data[key].imagen,
         })
       }
       setAutos(transformedAutos)
       setIsLoading(false)
-    })
-  }, [])
+    }
+  }, [data])
 
-  if(isLoading){
+  if(error){
     return(
-      <p>....Loading</p>
+      <p>No hay datos</p>
     )
   }
 
-  if(!autos){
+  if(!data || isLoading){
     return(
-      <p>....Loading</p>
+      <p>Cargando</p>
     )
   }
-
-  console.log(autos)
 
   return (
     <Layout>
@@ -66,58 +65,20 @@ export default function Categoria() {
           </Col>
           <Col>
             <Row>
-              
               {autos.map(auto => (
                 <Col key={auto.id} md={4}>
-                  <Tarjeta link="/producto" precio={auto.precio} kilometros={auto.kilometros} />
+                  <Tarjeta 
+                    link="/producto" 
+                    modelo={auto.modelo}
+                    precio={auto.precio} 
+                    kilometros={auto.kilometros}
+                    anio={auto.anio}
+                    imagen={auto.imagen}
+                  />
                 </Col>
               ))}
-              
             </Row>
-            <Row>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-            </Row>
-            <Row className="mt-3 mb-5">
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-            </Row>
-            <Row className="mt-3 mb-5">
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-            </Row>
-            <Row className="mt-3 mb-5">
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
-              </Col>
-            </Row>
+            
           </Col>
         </Row>
 

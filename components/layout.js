@@ -4,7 +4,7 @@ import Submenu from './submenu'
 import Footer from './footer'
 import styles from '../styles/Home.module.css'
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,33 +13,33 @@ export default function Layout({children}) {
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"></link>
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"></link>
         <link
-            rel="preload"
-            href="/hyundai/fonts/HyundaiSansHeadOffice-Bold.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/hyundai/fonts/HyundaiSansHeadOffice-Light.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/hyundai/fonts/HyundaiSansHeadOffice-Medium.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/hyundai/fonts/HyundaiSansHeadOffice-Regular.ttf"
-            as="font"
-            crossOrigin=""
-          />
+          rel="preload"
+          href="/hyundai/fonts/HyundaiSansHeadOffice-Bold.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/hyundai/fonts/HyundaiSansHeadOffice-Light.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/hyundai/fonts/HyundaiSansHeadOffice-Medium.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/hyundai/fonts/HyundaiSansHeadOffice-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
       <Header />
       <Submenu />
-      
+
       <main className="contenedor">
         {children}
       </main>

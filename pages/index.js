@@ -1,21 +1,62 @@
-import Layout from '../components/layout';
+import {useEffect, useState} from 'react'
+import useSWR from 'swr'
+import Layout from '../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Link from 'next/link';
-import Button from 'react-bootstrap/Button';
-import SliderEntrada from "../components/sliderEntrada";
-import Tarjeta from "../components/tarjeta";
-import Banner from '../components/banner';
+import Link from 'next/link'
+import Button from 'react-bootstrap/Button'
+import SliderEntrada from "../components/sliderEntrada"
+import Tarjeta from "../components/tarjeta"
+import Banner from '../components/banner'
 
 import { useEntries } from '../lib/swr-hooks'
 
 export default function Home() {
+  const [autos, setAutos] = useState()
+  const [isLoader, setIsLoading] = useState(false)
   const { entries, isLoading } = useEntries()
-  console.log("loader: " + isLoading)
-  console.log("entradas: " + JSON.stringify(entries))
+
+  const { data, error } = useSWR('https://hyundai-seminuevos-default-rtdb.firebaseio.com/autos.json')
+
+  const { dataSQL, errorSQL } = useSWR('api/get-entries')
+
+  console.log('SQL: ' + dataSQL)
+  console.log('ENTRADAS: ' + entries)
+
+  useEffect(() => {
+    setIsLoading(true)
+    if(data){
+      const transformedAutos = []
+      for(const key in data){
+        transformedAutos.push({
+          id: key, 
+          modelo: data[key].modelo,
+          anio: data[key].anio,
+          precio: data[key].precio,
+          kilometros: data[key].kilometros,
+          imagen: data[key].imagen,
+        })
+      }
+      setAutos(transformedAutos)
+      setIsLoading(false)
+    }
+  }, [data])
+
+  if(error){
+    return(
+      <p>No hay datos</p>
+    )
+  }
+
+  if(!data || isLoader || !autos){
+    return(
+      <p>Cargando</p>
+    )
+  }
+
   return (
-    <Layout>
+    <Layout titulo="">
       <SliderEntrada className="mt-3" />
       <Container className="destacados">
         <Row>
@@ -24,39 +65,19 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta/>
-          </Col>
-        </Row>
-        <Row className="mt-3 mb-5">
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-          <Col>
-            <Tarjeta link="categoria"/>
-          </Col>
-        </Row>
+              {autos.map(auto => (
+                <Col key={auto.id} md={3}>
+                  <Tarjeta 
+                    link="/producto" 
+                    modelo={auto.modelo}
+                    precio={auto.precio} 
+                    kilometros={auto.kilometros}
+                    anio={auto.anio}
+                    imagen={auto.imagen}
+                  />
+                </Col>
+              ))}
+            </Row>
       </Container>
       <Container>
         <Row className="mt-3 mb-5">
