@@ -1,4 +1,4 @@
-export default function RowTablaCampana() {
+export default function RowCampana() {
   return (
     <tr>
       <td className="text-center">

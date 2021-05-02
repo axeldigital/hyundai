@@ -1,6 +1,6 @@
 import Layout from '../../components/layout'
 import RowTabla from "./rowTabla"
-import RowTablaCampana from "./rowTablaCampana"
+import RowCampana from "./rowCampana"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -51,28 +51,7 @@ export default function Dashboard() {
             <h3>Vehículos alertados</h3>
             <Table striped bordered hover size="sm">
               <tbody>
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
-                <RowTablaCampana />
+                <RowCampana />
               </tbody>
             </Table>
           </Col>
