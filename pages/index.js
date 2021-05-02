@@ -19,9 +19,6 @@ export default function Home() {
 
   const { data, error } = useSWR('https://hyundai-seminuevos-default-rtdb.firebaseio.com/autos.json')
 
-  const { dataSQL, errorSQL } = useSWR('api/get-entries')
-
-  console.log('SQL: ' + dataSQL)
   console.log('ENTRADAS: ' + JSON.stringify(entries))
 
   useEffect(() => {
