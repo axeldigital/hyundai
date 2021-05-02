@@ -61,12 +61,15 @@ export default function Producto() {
   return (
     <Layout>
       <Container fluid={true} className="destacados">
-        <Row>
+        <Row className="p-0 m-0">
           <Col>
-            <h3 className="text-center p-3">Modelos</h3>
+            <h3 className="text-center pt-3 pb-3" style={{
+              background: '#002c5e',
+              color: '#fff'
+            }}>Modelo <i>HNX 2022</i></h3>
           </Col>
         </Row>
-        <Row>
+        <Row className="p-0 m-0">
           <Col md={9} sm={9}>
             <ImageGallery items={images} />
             <Row className="mt-3 mb-5">

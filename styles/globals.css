@@ -635,3 +635,7 @@ table.filtros span.gris {
 .dashtablas table {
   font-size: 0.7rem;
 }
+
+..modal-content {
+  border-radius: 0;
+}

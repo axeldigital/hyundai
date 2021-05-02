@@ -1,13 +1,18 @@
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
-import GoogleMapReact from 'google-map-react';
+import Modal from 'react-bootstrap/Modal'
+import FormaDistribuidor from '../components/formaDistribuidor'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function FiltrosProductos() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -52,14 +57,29 @@ export default function FiltrosProductos() {
               </tr>
             </tbody>
           </table>
-          <div style={{ height: '200px', width: '100%', marginTop: '10px', marginBottom: '30px', background: '#333' }}>
+          <div style={{ height: '200px', width: '100%', marginTop: '10px', marginBottom: '30px'}}>
             <img src="/mapa.png" className="img-fluid" alt="" title="" />
           </div>
-          <Link href="/categoria">
-            <Button variant="primary" className="favoritos w-100">Contactar al distribuidor</Button>
-          </Link>
+          <Button variant="primary" className="favoritos w-100" onClick={handleShow}>Contactar al distribuidor</Button>
         </Col>
       </Row>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Contactar al distribuidor</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <FormaDistribuidor />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cerrar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Enviar mensaje
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
     </Container>
   )
