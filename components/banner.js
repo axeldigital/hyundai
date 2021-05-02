@@ -1,8 +1,8 @@
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import Link from 'next/link'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
-export default function Banner({icono, titulo, texto, boton}) {
+export default function Banner({ icono, titulo, texto, boton }) {
     return (
         <Container>
             <div align="center" style={{
@@ -14,7 +14,9 @@ export default function Banner({icono, titulo, texto, boton}) {
             </div>
             <h5>{titulo}</h5>
             <p>{texto}</p>
-            <Button variant="secondary">Ver más</Button>
+            <Link href="/categoria">
+                <Button variant="secondary">Ver más</Button>
+            </Link>
         </Container>
     )
 }
