@@ -5,9 +5,9 @@ import Col from 'react-bootstrap/Col'
 
 export default function Header() {
   return (
-    <Container className="p-3 menuprincipal">
+    <Container className="pt-3 pb-3 menuprincipal">
       <Row>
-        <Col md={2}>
+        <Col md={2} className="m-0 p-0">
           <Link href="/">
             <img src="/logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
               width: '150px'
