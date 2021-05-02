@@ -3,7 +3,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 
-export default function Filtros({contador}) {
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 2
+})
+
+export default function Filtros({contador, precio}) {
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -15,19 +21,19 @@ export default function Filtros({contador}) {
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Precio</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">$ 50,000</button> -
-            <button className="btn btn-default bg-white ml-3">$ 100,000</button>
+            <button className="btn btn-default bg-white mr-3">$50,000</button> -
+            <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
           <Form className="mt-3">
             <Form.Group controlId="formBasicRange">
-              <Form.Control type="range" />
+              <Form.Control type="range" onChange={contador} />
             </Form.Group>
           </Form>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">$ 100,000</button> -
-            <button className="btn btn-default bg-white ml-3">$ 100,000</button>
+            <button className="btn btn-default bg-white mr-3">10,000</button> -
+            <button className="btn btn-default bg-white ml-3">100,000</button>
           </div>
           <Form className="mt-3">
             <Form.Group controlId="formBasicRange">

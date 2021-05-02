@@ -8,7 +8,6 @@ import Tarjeta from "../components/tarjeta"
 import Filtros from "../components/filtros"
 
 export default function Categoria() {
-  const [count, setCount] = useState(0);
   const [precio, setPrecio] = useState(50000)
   return (
     <Layout>
@@ -16,7 +15,7 @@ export default function Categoria() {
         <BreadCrumb />
         <Row className="m-0 p-0">
           <Col md={3} sm={3}>
-            <Filtros contador={() => setPrecio(precio + 1)} precio />
+            <Filtros contador={() => setPrecio(precio + 1000)} precio={precio} />
           </Col>
           <Col>
             <Row>
