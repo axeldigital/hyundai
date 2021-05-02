@@ -22,7 +22,7 @@ export default function Home() {
   const { dataSQL, errorSQL } = useSWR('api/get-entries')
 
   console.log('SQL: ' + dataSQL)
-  console.log('ENTRADAS: ' + entries)
+  console.log('ENTRADAS: ' + JSON.stringify(entries))
 
   useEffect(() => {
     setIsLoading(true)
