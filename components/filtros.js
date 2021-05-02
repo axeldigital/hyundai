@@ -3,19 +3,19 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 
-export default function Filtros() {
+export default function Filtros({contador}) {
   return (
     <Container className="filtros mb-5">
       <Row>
         <Col>
           <div className="d-flex align-items-center justify-content-between">
             <p className="p-0 m-0 pl-2"><small>Favoritos</small></p>
-            <span className="lnr lnr-star"></span>
+            <span className="lnr lnr-star" onClick={contador}></span>
           </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Precio</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">$ 100,000</button> -
+            <button className="btn btn-default bg-white mr-3">$ 50,000</button> -
             <button className="btn btn-default bg-white ml-3">$ 100,000</button>
           </div>
           <Form className="mt-3">
