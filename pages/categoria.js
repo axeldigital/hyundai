@@ -2,7 +2,8 @@ import Layout from '../components/layout';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Tarjeta from "../components/tarjeta";
+import Tarjeta from "../components/tarjeta"
+import Filtros from "../components/filtros"
 
 export default function Categoria() {
   return (
