@@ -41,6 +41,12 @@ export default function Categoria() {
     )
   }
 
+  if(!autos){
+    return(
+      <p>....Loading</p>
+    )
+  }
+
   console.log(autos)
 
   return (
