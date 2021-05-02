@@ -7,44 +7,24 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Tarjeta from "../components/tarjeta"
 import Filtros from "../components/filtros"
+import Loader from '../components/loader'
+
+import { useEntries } from '../lib/swr-hooks'
 
 export default function Categoria() {
   const [autos, setAutos] = useState()
-  const [isLoading, setIsLoading] = useState(false)
+  const { entries, isLoading } = useEntries()
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState(0)
   const [anio, setAnio] = useState(2015)
 
-  const { data, error } = useSWR('https://hyundai-seminuevos-default-rtdb.firebaseio.com/autos.json')
-
   useEffect(() => {
-    setIsLoading(true)
-    if(data){
-      const transformedAutos = []
-      for(const key in data){
-        transformedAutos.push({
-          id: key, 
-          modelo: data[key].modelo,
-          anio: data[key].anio,
-          precio: data[key].precio,
-          kilometros: data[key].kilometros,
-          imagen: data[key].imagen,
-        })
-      }
-      setAutos(transformedAutos)
-      setIsLoading(false)
-    }
-  }, [data])
+    setAutos(entries)
+  }, [entries])
 
-  if(error){
+  if(!autos || isLoading){
     return(
-      <p>No hay datos</p>
-    )
-  }
-
-  if(!data || isLoading){
-    return(
-      <p>Cargando</p>
+      <Loader />
     )
   }
 

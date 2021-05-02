@@ -673,3 +673,16 @@ table.filtros span.gris {
   background: #022040 !important;
   color: #fff;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "HyundaiLight";
+  text-align: center;
+  height: 100vh;
+}
+
+.favoritos.btn.btn-primary {
+  min-width: 300px;
+}

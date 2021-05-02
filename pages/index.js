@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react'
-import useSWR from 'swr'
 import Layout from '../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,46 +8,21 @@ import Button from 'react-bootstrap/Button'
 import SliderEntrada from "../components/sliderEntrada"
 import Tarjeta from "../components/tarjeta"
 import Banner from '../components/banner'
+import Loader from '../components/loader'
 
 import { useEntries } from '../lib/swr-hooks'
 
 export default function Home() {
   const [autos, setAutos] = useState()
-  const [isLoader, setIsLoading] = useState(false)
   const { entries, isLoading } = useEntries()
 
-  const { data, error } = useSWR('https://hyundai-seminuevos-default-rtdb.firebaseio.com/autos.json')
-
-  console.log('ENTRADAS: ' + JSON.stringify(entries))
-
   useEffect(() => {
-    setIsLoading(true)
-    if(data){
-      const transformedAutos = []
-      for(const key in data){
-        transformedAutos.push({
-          id: key, 
-          modelo: data[key].modelo,
-          anio: data[key].anio,
-          precio: data[key].precio,
-          kilometros: data[key].kilometros,
-          imagen: data[key].imagen,
-        })
-      }
-      setAutos(transformedAutos)
-      setIsLoading(false)
-    }
-  }, [data])
+    setAutos(entries)
+  }, [entries])
 
-  if(error){
+  if(!autos || isLoading){
     return(
-      <p>No hay datos</p>
-    )
-  }
-
-  if(!data || isLoader || !autos){
-    return(
-      <p>Cargando</p>
+      <Loader />
     )
   }
 
@@ -65,7 +39,7 @@ export default function Home() {
               {autos.map(auto => (
                 <Col key={auto.id} md={3}>
                   <Tarjeta 
-                    link="/producto" 
+                    link="/categoria" 
                     modelo={auto.modelo}
                     precio={auto.precio} 
                     kilometros={auto.kilometros}
