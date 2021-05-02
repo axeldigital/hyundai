@@ -5,7 +5,9 @@ import Button from 'react-bootstrap/Button';
 export default function Tarjeta(props) {
     return (
         <Card>
-            <Card.Img variant="top" src="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/UqfXuhelB/i10-newest.png" />
+            <Link href={props.link ? props.link : ""}>
+                <Card.Img variant="top" src="https://www.seminuevos.hyundai.es/picserver1/userdata/1/19170/UqfXuhelB/i10-newest.png" />
+            </Link>
             <Card.Body>
                 <h3>Hyundai i10</h3>
                 <h3>2021</h3>

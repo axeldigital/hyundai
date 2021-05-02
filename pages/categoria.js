@@ -1,4 +1,5 @@
-import Layout from '../components/layout';
+import Layout from '../components/layout'
+import BreadCrumb from '../components/breadCrumb'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -9,11 +10,7 @@ export default function Categoria() {
   return (
     <Layout>
       <Container fluid={true} className="destacados">
-        <Row>
-          <Col>
-            <h3 className="text-center p-3">Modelos</h3>
-          </Col>
-        </Row>
+        <BreadCrumb />
         <Row>
           <Col md={3} sm={3}>
             <Filtros />

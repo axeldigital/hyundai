@@ -646,6 +646,11 @@ table.filtros span.gris {
   border-radius: 0;
 }
 
-.favoritos {
-
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  padding: 5px;
+  font-size: 0.7rem;
+  background: #022040;
+  color: #fff;
 }
