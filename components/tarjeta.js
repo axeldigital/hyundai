@@ -20,6 +20,7 @@ export default function Tarjeta(props) {
                 <h3>2021</h3>
                 <div className="detalles">
                     <p className="desde">Desde {formatter.format(props.precio)}</p>
+                    <p>{props.kilometros === 0 ? '' : `${(props.kilometros).toLocaleString()} Kilometraje`}</p>
                     <p>{cuantos} Modelos</p>
                 </div>
                 <Link href={props.link ? props.link : ""} className="w-100">

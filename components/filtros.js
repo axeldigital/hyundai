@@ -9,7 +9,7 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 2
 })
 
-export default function Filtros({contador, precio}) {
+export default function Filtros({contador, precio, loskilometros, kilometros}) {
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -33,10 +33,10 @@ export default function Filtros({contador, precio}) {
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button className="btn btn-default bg-white mr-3">10,000</button> -
-            <button className="btn btn-default bg-white ml-3">100,000</button>
+            <button className="btn btn-default bg-white ml-3">{kilometros}</button>
           </div>
           <Form className="mt-3">
-            <Form.Group controlId="formBasicRange">
+            <Form.Group controlId="formBasicRange" onChange={loskilometros}>
               <Form.Control type="range" />
             </Form.Group>
           </Form>

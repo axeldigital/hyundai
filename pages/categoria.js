@@ -9,57 +9,63 @@ import Filtros from "../components/filtros"
 
 export default function Categoria() {
   const [precio, setPrecio] = useState(50000)
+  const [kilometros, setKilometros] = useState(0)
   return (
     <Layout>
       <Container fluid={true} className="destacados">
         <BreadCrumb />
         <Row className="m-0 p-0">
           <Col md={3} sm={3}>
-            <Filtros contador={() => setPrecio(precio + 1000)} precio={precio} />
+            <Filtros 
+              contador={() => setPrecio(precio + 1000)} 
+              precio={precio}
+              loskilometros={() => setKilometros(kilometros + 10000)}
+              kilometros={kilometros}
+            />
           </Col>
           <Col>
             <Row>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
-              </Col>
-            </Row>
-            <Row className="mt-3 mb-5">
-              <Col>
-                <Tarjeta link="/producto" precio={precio} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} />
-              </Col>
-              <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
             </Row>
             <Row className="mt-3 mb-5">
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
             </Row>
             <Row className="mt-3 mb-5">
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
               <Col>
-                <Tarjeta link="/producto" precio={precio} />
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
+              </Col>
+            </Row>
+            <Row className="mt-3 mb-5">
+              <Col>
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
+              </Col>
+              <Col>
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
+              </Col>
+              <Col>
+                <Tarjeta link="/producto" precio={precio} kilometros={kilometros} />
               </Col>
             </Row>
           </Col>
