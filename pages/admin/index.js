@@ -42,15 +42,15 @@ export default function Administrador() {
                   <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
                       <Form.Label>Nombre de usuario:</Form.Label>
-                      <Form.Control type="email" placeholder="" />
+                      <Form.Control type="email" placeholder="" required="required" />
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
                       <Form.Label>Contraseña:</Form.Label>
-                      <Form.Control type="password" placeholder="" />
+                      <Form.Control type="password" placeholder="" required="required" />
                     </Form.Group>
                     <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
                     <p><a href="/">Olvidé mi contraseña</a></p>
-                    <Button href="/admin/dashboard" variant="primary" type="submit" className="w-100">
+                    <Button /*href="/admin/dashboard"*/ variant="primary" type="submit" className="w-100">
                       ENVIAR
                   </Button>
                   </Form>

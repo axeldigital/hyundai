@@ -46,7 +46,7 @@ export default function Categoria() {
       <Container fluid={true} className="destacados">
         <BreadCrumb />
         <Row className="m-0 p-0">
-          <Col md={3} sm={3}>
+          <Col md={3} sm={3} className="m-0 p-0">
             <Filtros
               contador={() => filtroPrecio(precio)}
               precio={precio}
