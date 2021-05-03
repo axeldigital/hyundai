@@ -4,8 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
-export default function Header() {
-  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
+export default function Header({id, nombre, email}) {
   return (
     <Row className="usuario">
       <Col md={3} className="d-flex justify-content-center align-items-center">
@@ -20,7 +19,7 @@ export default function Header() {
       <Col className="d-flex justify-content-end align-items-center headdash">
         <ul>
           <li>
-            <p><b>Bienvenido: </b> Gerardo Lopez Monreal</p>
+            <p><b>Bienvenido: </b>{email} ({id})</p>
           </li>
           <li>
             <p><b>Administrador</b></p>
@@ -43,6 +42,10 @@ export default function Header() {
                 <NavDropdown.Item href="/admin/validacion" className="d-flex">
                   <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
                   Validación
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/admin/validacion" className="d-flex">
+                  <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
+                  Distribuidores
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

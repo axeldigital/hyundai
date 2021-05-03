@@ -36,9 +36,9 @@ export default function Administrador() {
         setUsuario("Sus datos de ingreso no son correctos")
       } else {
         setUsuario("Ingresando a su cuenta")
-        localStorage.setItem('id', json[0].id);
-        localStorage.setItem('email', json[0].email);
-        localStorage.setItem('nombre', json[0].nombre);
+        sessionStorage.setItem('id', json[0].id);
+        sessionStorage.setItem('email', json[0].email);
+        sessionStorage.setItem('nombre', json[0].nombre);
         router.push('/admin/dashboard')
       }
       //setSubmitting(false)
