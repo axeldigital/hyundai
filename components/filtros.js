@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -20,6 +21,17 @@ export default function Filtros(
     elModelo,
     modelo
   }) {
+
+  const [estado, setEstados] = useState([])
+
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
+    .then(response => response.json())
+    .then(data => 
+      setEstados(data)
+    );
+  }, [])
+
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -125,10 +137,9 @@ export default function Filtros(
           <p className="p-0 m-0 pl-2 mb-2"><small>Localización</small></p>
           <Form.Group>
             <Form.Control as="select">
-              <option>Estado</option>
-            </Form.Control>
-            <Form.Control as="select" className="mt-3">
-              <option>Estado</option>
+              {estado.map(edo => (
+                <option key={edo.code}>{edo.name}</option>
+              ))}
             </Form.Control>
           </Form.Group>
         </Col>
