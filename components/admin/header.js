@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -5,6 +6,13 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 export default function Header({id, nombre, email}) {
+  const [usuario, setUsuario] = useState({})
+  useEffect(() => {
+    const id = sessionStorage.getItem('id');
+    const nombre = sessionStorage.getItem('nombre');
+    const email = sessionStorage.getItem('email');
+    setUsuario({id, nombre, email})
+  }, [usuario])
   return (
     <Row className="usuario">
       <Col md={3} className="d-flex justify-content-center align-items-center">
@@ -19,7 +27,7 @@ export default function Header({id, nombre, email}) {
       <Col className="d-flex justify-content-end align-items-center headdash">
         <ul>
           <li>
-            <p><b>Bienvenido: </b>{email} ({id})</p>
+            <p><b>Bienvenido: </b>{usuario.email} ({usuario.id})</p>
           </li>
           <li>
             <p><b>Administrador</b></p>
@@ -43,7 +51,7 @@ export default function Header({id, nombre, email}) {
                   <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
                   Validación
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/admin/validacion" className="d-flex">
+                <NavDropdown.Item href="/admin/distribuidores" className="d-flex">
                   <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
                   Distribuidores
                 </NavDropdown.Item>
