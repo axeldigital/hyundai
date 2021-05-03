@@ -722,3 +722,9 @@ table.filtros span.gris {
   box-shadow: 5px 5px 1px #f2f2f2;
   border-radius: 0;
 }
+
+a.olvide {
+  color: #022040;
+  font-family: "HyundaiMedium";
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Layout from '../../components/layout';
+import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -10,13 +11,45 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 export default function Administrador() {
-  const router = useRouter();
+  const router = useRouter()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [usuario, setUsuario] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    router.push({
-      pathname: 'admin/dashboard'
-    })
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setSubmitting(true)
+    try {
+      const res = await fetch('/api/get-user', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      })
+      const json = await res.json()
+      if(json.length === 0){
+        setUsuario("Sus datos de ingreso no son correctos")
+      } else {
+        setUsuario("Ingresando a su cuenta")
+        localStorage.setItem('id', json[0].id);
+        localStorage.setItem('email', json[0].email);
+        localStorage.setItem('nombre', json[0].nombre);
+        router.push('/admin/dashboard')
+      }
+      //setSubmitting(false)
+      //if (!res.ok) throw Error(json.message)
+      //Router.push('/')
+    } catch (e) {
+      throw Error(e.message)
+    }
+    //router.push({
+    //  pathname: 'admin/dashboard'
+    //})
   }
 
   return (
@@ -36,23 +69,33 @@ export default function Administrador() {
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center">
             <h5>Iniciar Sesión</h5>
-            <Card style={{ width: '50%' }}>
+            <Card style={{ width: '70%' }}>
               <Card.Body style={{padding: '30px', background: '#f3f3f3'}}>
+                <p className="text-center text-danger">{usuario}</p>
                 <Card.Text>
                   <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
                       <Form.Label>Nombre de usuario:</Form.Label>
-                      <Form.Control type="email" placeholder="" required="required" />
+                      <Form.Control 
+                        type="email" 
+                        name="email"
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
                       <Form.Label>Contraseña:</Form.Label>
-                      <Form.Control type="password" placeholder="" required="required" />
+                      <Form.Control 
+                        type="password"
+                        name="password"
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
                     </Form.Group>
                     <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
-                    <p><a href="/">Olvidé mi contraseña</a></p>
-                    <Button /*href="/admin/dashboard"*/ variant="primary" type="submit" className="w-100">
-                      ENVIAR
-                  </Button>
+                    <p className="d-flex align-items-center"><Form.Check aria-label="option 1" /> Recordarme</p>
+                    <p><a href="/" className="olvide">Olvidé mi contraseña</a></p>
+                    <Button disabled={submitting} /*href="/admin/dashboard"*/ variant="primary" type="submit" className="w-100">
+                      {submitting ? 'ENVIANDO' : 'ENVIAR'}
+                    </Button>
                   </Form>
                 </Card.Text>
               </Card.Body>
