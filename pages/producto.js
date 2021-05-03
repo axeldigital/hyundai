@@ -3,9 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ImageGallery from 'react-image-gallery';
-import Slider from "../components/slider";
-import Carta from "../components/card";
-import Tarjeta from "../components/tarjeta";
+import BreadCrumb from '../components/breadCrumb'
 import Banner from '../components/banner';
 import FiltrosProductos from '../components/filtrosProductos';
 
@@ -61,6 +59,7 @@ export default function Producto() {
   return (
     <Layout>
       <Container fluid={true} className="destacados">
+        <BreadCrumb />
         <Row className="p-0 m-0">
           <Col>
             <h3 className="text-center pt-3 pb-3" style={{

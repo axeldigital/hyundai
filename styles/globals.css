@@ -686,3 +686,30 @@ table.filtros span.gris {
 .favoritos.btn.btn-primary {
   min-width: 300px;
 }
+
+.breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb ul li {
+  position: relative;
+  float: left;
+  padding: 0 5px;
+}
+
+.breadcrumb ul li:nth-child(2){
+  display: none;
+}
+
+.breadcrumb ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumb ul li a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
