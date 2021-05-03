@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import {
+    Magnifier,
+    GlassMagnifier,
+    SideBySideMagnifier,
+    PictureInPictureMagnifier,
+    MOUSE_ACTIVATION,
+    TOUCH_ACTIVATION
+  } from "react-image-magnifiers";
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -20,7 +28,13 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <Card.Img variant="top" src={imagen} />
+                    <GlassMagnifier
+                        imageSrc={imagen}
+                        imageAlt="Example"
+                        largeImageSrc={imagen}
+                        allowOverflow="true"
+                        magnifierSize="70%"
+                    />
                 </div>
             </Link>
             <Card.Body>
@@ -29,7 +43,7 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                 <div className="detalles">
                     <p className="desde">Desde {formatter.format(precio)}</p>
                     <p>{kms === 0 ? '' : `${kms} Kilometros`}</p>
-                    <p>{cuantos} Modelos</p>
+                    <p>{cuantos} Modelos...</p>
                 </div>
                 <Link href={link ? link : ""} className="w-100">
                     <Button variant="primary">Ver modelo</Button>
