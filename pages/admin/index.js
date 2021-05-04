@@ -16,6 +16,7 @@ export default function Administrador() {
   const [password, setPassword] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [usuario, setUsuario] = useState("")
+  const [olvide, setOlvide] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -32,7 +33,7 @@ export default function Administrador() {
         }),
       })
       const json = await res.json()
-      if(json.length === 0){
+      if (json.length === 0) {
         setUsuario("Sus datos de ingreso no son correctos")
       } else {
         setUsuario("Ingresando a su cuenta")
@@ -52,6 +53,14 @@ export default function Administrador() {
     //})
   }
 
+  const olvido = () => {
+    setOlvide(!olvide)
+  }
+
+  async function handleOlvide(e) {
+    e.preventDefault()
+  }
+
   return (
     <Layout>
       <Container fluid={true}>
@@ -65,38 +74,56 @@ export default function Administrador() {
               </Link>
               <h2>Interfaz administrativa de Hyundai Promise. Seminuevos Certificados.</h2>
             </div>
-            
+
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center">
-            <h5>Iniciar Sesión</h5>
+            <h5>{olvide ? 'Restablecer contraseña' : 'Inicicar sesión'}</h5>
             <Card style={{ width: '70%' }}>
-              <Card.Body style={{padding: '30px', background: '#f3f3f3'}}>
+              <Card.Body style={{ padding: '30px', background: '#f3f3f3' }}>
                 <p className="text-center text-danger">{usuario}</p>
                 <Card.Text>
-                  <Form onSubmit={handleSubmit}>
-                    <Form.Group controlId="formBasicEmail">
-                      <Form.Label>Nombre de usuario:</Form.Label>
-                      <Form.Control 
-                        type="email" 
-                        name="email"
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicPassword">
-                      <Form.Label>Contraseña:</Form.Label>
-                      <Form.Control 
-                        type="password"
-                        name="password"
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </Form.Group>
-                    <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
-                    <p className="d-flex align-items-center"><Form.Check aria-label="option 1" /> Recordarme</p>
-                    <p><a href="/" className="olvide">Olvidé mi contraseña</a></p>
-                    <Button disabled={submitting} /*href="/admin/dashboard"*/ variant="primary" type="submit" className="w-100">
-                      {submitting ? 'ENVIANDO' : 'ENVIAR'}
-                    </Button>
-                  </Form>
+                  {olvide ?
+                    <Form onSubmit={handleOlvide}>
+                      <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Correo electrónico:</Form.Label>
+                        <Form.Control
+                          type="email"
+                          name="email"
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="mb-3"
+                        />
+                        <Button disabled={submitting} variant="primary" type="submit" className="w-100">
+                          Recuperar contraseña
+                        </Button>
+                        <p className="btn btn-secondary olvide text-white w-100 mt-3" onClick={olvido}>Volver al inicio de sesión</p>
+                      </Form.Group>
+                    </Form>
+                    :
+                    <Form onSubmit={handleSubmit}>
+                      <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Nombre de usuario:</Form.Label>
+                        <Form.Control
+                          type="email"
+                          name="email"
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
+                      </Form.Group>
+                      <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Contraseña:</Form.Label>
+                        <Form.Control
+                          type="password"
+                          name="password"
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
+                      </Form.Group>
+                      <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
+                      <p className="d-flex align-items-center"><Form.Check aria-label="option 1" /> Recordarme</p>
+                      <p className="olvide" onClick={olvido}>Olvidé mi contraseña</p>
+                      <Button disabled={submitting} /*href="/admin/dashboard"*/ variant="primary" type="submit" className="w-100">
+                        {submitting ? 'ENVIANDO' : 'ENVIAR'}
+                      </Button>
+                    </Form>
+                  }
                 </Card.Text>
               </Card.Body>
             </Card>

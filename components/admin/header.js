@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
-export default function Header({id, nombre, email}) {
+export default function Header() {
   const [usuario, setUsuario] = useState({})
   useEffect(() => {
     const id = sessionStorage.getItem('id');
