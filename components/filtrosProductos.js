@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 import FormaDistribuidor from '../components/formaDistribuidor'
+import Link from 'next/link'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -22,13 +23,15 @@ export default function FiltrosProductos() {
     <Container className="filtros mb-5">
       <Row>
         <Col>
-          <table class="table filtros">
+          <table class="table borderless filtros">
             <tbody>
               <tr>
                 <td><b>Precio</b></td>
                 <td>$150,000.00</td>
               </tr>
-              <tr>
+              <tr style={{
+                borderTop: '1px solid #ccc'
+              }}>
                 <td><b>Modelo</b></td>
                 <td><span className="gris">Grand i10 Sédan</span></td>
               </tr>
@@ -57,7 +60,15 @@ export default function FiltrosProductos() {
                 <td><span className="gris">Hyundai Satélite</span></td>
               </tr>
               <tr>
-                <td><p className="p-0 m-0"><small>Ver más modelos del distribuidor</small></p></td>
+                <td>
+                  <Link href="/categoria">
+                    <p className="p-0 m-0" style={{
+                      cursor: 'pointer'
+                    }}>
+                      <small>Ver más modelos del distribuidor</small>
+                    </p>
+                  </Link>
+                </td>
                 <td><p className="p-0 m-0"><small><span className="gris">Autopista México-Queretaro 2600, Hab Valle de los Pinos 1a sección, 54540 Tlalnepantla</span></small></p></td>
               </tr>
             </tbody>

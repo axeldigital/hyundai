@@ -46,7 +46,7 @@ export default function Categoria() {
       <Container fluid={true} className="destacados">
         <BreadCrumb />
         <Row className="m-0 p-0">
-          <Col md={3} sm={3} className="m-0 p-0">
+          <Col md={2} sm={2} className="m-0 p-0">
             <Filtros
               contador={() => filtroPrecio(precio)}
               precio={precio}
@@ -61,7 +61,7 @@ export default function Categoria() {
           <Col>
             <Row>
               {autos.map(auto => (
-                <Col key={auto.id} md={4}>
+                <Col key={auto.id} md={3}>
                   <Tarjeta
                     link="/producto"
                     modelo={auto.modelo}
