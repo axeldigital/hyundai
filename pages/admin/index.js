@@ -77,7 +77,7 @@ export default function Administrador() {
 
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center">
-            <h5>{olvide ? 'Restablecer contraseña' : 'Inicicar sesión'}</h5>
+            <h5>{olvide ? 'Restablecer contraseña' : 'Iniciar sesión'}</h5>
             <Card style={{ width: '70%' }}>
               <Card.Body style={{ padding: '30px', background: '#f3f3f3' }}>
                 <p className="text-center text-danger">{usuario}</p>
