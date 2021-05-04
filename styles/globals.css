@@ -732,3 +732,29 @@ a.olvide {
 .borderless td, .borderless th {
   border: none;
 }
+
+a.dropdown-toggle.nav-link {
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+a.dropdown-toggle.nav-link:hover {
+  background: #00AAD2;
+  color: #fff;
+}
+
+.adminot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.adminot p.desde {
+  color: #898989;
+  font-size: 0.9rem;
+}
+
+span.oppt {
+  color: #022040;
+  font-family: "HyundaiMedium";
+}

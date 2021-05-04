@@ -85,20 +85,6 @@ export default function Vehiculos() {
             <Row className="mt-5">
               <Col>
                   <Link href="/">
-                    <a className="btn btn-secondary w-100 d-block">
-                      Enviar cambios
-                    </a>
-                  </Link>
-              </Col>
-              <Col>
-                  <Link href="/">
-                    <a className="btn btn-secondary w-100">
-                      Guardar cambios
-                    </a>
-                  </Link>
-              </Col>
-              <Col>
-                  <Link href="/">
                     <a className="btn btn-secondary w-100">
                       Guardar sin enviar
                     </a>

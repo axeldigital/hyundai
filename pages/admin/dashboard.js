@@ -84,7 +84,7 @@ export default function Dashboard() {
           </Col>
         </Row>
       </Container>
-      <Container className="p-0 pt-0 pb-4">
+      <Container className="p-0 pt-0 pb-4 d-none">
         <Row>
           <Col>
             <Row>

@@ -13,8 +13,12 @@ export default function TarjetaAdmin(props) {
                 <h3>Hyundai i10</h3>
                 <h3>2021</h3>
                 <div className="detalles">
-                    <p className="desde">Desde $000,000.00</p>
-                    <p>00 Modelos</p>
+                    <div className="adminot">
+                        <p className="desde">$100,000.00</p>
+                        <p className="desde">30,000 km</p>
+                    </div>
+                    <p><span className="oppt">Alta:</span> - 2 de mayo 2021</p>
+                    <p><span className="oppt">Vencimiento:</span> - 2 de julio 2021</p>
                 </div>
                 <Link href={props.link ? props.link : ""}>
                     <Button variant="primary" className="w-50">Editar</Button>
