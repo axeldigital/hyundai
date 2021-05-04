@@ -55,6 +55,10 @@ export default function Header({id, nombre, email}) {
                   <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
                   Distribuidores
                 </NavDropdown.Item>
+                <NavDropdown.Item href="/admin/usuarios" className="d-flex">
+                  <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
+                  Usuarios
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </li>

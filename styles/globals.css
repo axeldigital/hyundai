@@ -719,7 +719,6 @@ table.filtros span.gris {
 }
 
 .card:hover {
-  box-shadow: 5px 5px 1px #f2f2f2;
   border-radius: 0;
 }
 
