@@ -19,7 +19,8 @@
     "react-image-gallery": "^1.0.9",
     "react-image-magnifiers": "^1.4.0",
     "serverless-mysql": "^1.5.4",
-    "swr": "^0.3.9"
+    "swr": "^0.3.9",
+    "web-social-share": "^7.1.0"
   },
   "devDependencies": {
     "typescript": "^4.2.4"

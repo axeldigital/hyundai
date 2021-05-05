@@ -42,19 +42,18 @@ export default function Producto() {
   const id = router.query.id
   const { entrie, isLoading } = useProducto(id)
 
-  console.log(id)
-  console.log(entrie)
-
   useEffect(() => {
     setAuto(entrie)
   }, [auto])
 
   const anterior = () => {
-    console.log("modelo anterior")
+    const ant = parseInt(id) - 1
+    router.push(`/producto/${ant}`)
   }
 
   const siguiente = () => {
-    console.log("modelo siguiente")
+    const sig = parseInt(id) + 1
+    router.push(`/producto/${sig}`)
   }
 
   if (!entrie || isLoading) {
@@ -70,6 +69,18 @@ export default function Producto() {
     },
   ];
 
+  const options = {
+    config: [{
+      facebook: {
+        socialShareUrl: 'https://peterpeterparker.io'
+      }
+    }, {
+      twitter: {
+        socialShareUrl: 'https://peterpeterparker.io'
+      }
+    }]
+  };
+
   return (
     <Layout>
       <Container className="destacados">
@@ -80,7 +91,7 @@ export default function Producto() {
         </Row>
         <Row>
           <Col>
-          <BreadCrumb />
+            <BreadCrumb />
           </Col>
         </Row>
         <Row className="p-0 m-0">
@@ -107,9 +118,9 @@ export default function Producto() {
               <Col>
                 <p className="text-right m-0 p-0">
                   <small className="pr-2">Compartir</small>
-                  <Link href="/">
+                  <web-social-share show={true} share={options}>
                     <img src="/iconos/share-alt-solid.svg" alt="" title="" />
-                  </Link>
+                  </web-social-share>
                 </p>
               </Col>
             </Row>

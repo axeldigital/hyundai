@@ -36,7 +36,7 @@ export default function FiltrosProductos({
     <Container className="filtros mb-5">
       <Row>
         <Col>
-          <table class="table borderless filtros">
+          <table className="table borderless filtros">
             <tbody>
               <tr>
                 <td style={{ 'width': '50%'}}><b>Precio</b></td>
@@ -97,17 +97,15 @@ export default function FiltrosProductos({
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Contactar al distribuidor</Modal.Title>
+          <Modal.Title>{modelo}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <h4 className="text-center">Contactar al distribuidor</h4>
         <FormaDistribuidor />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Enviar mensaje
+          <Button variant="primary" className="w-100" onClick={handleClose}>
+            Enviar
           </Button>
         </Modal.Footer>
       </Modal>
