@@ -21,7 +21,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
     let kms = kilometros.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     return (
         <Card className="mb-4">
-            <Link href={link ? link : ""}>
+            <Link href={link ? link : ""} as="/producto/id">
                 <div style={{
                     height: '150px', 
                     display: 'flex',
@@ -42,7 +42,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                 <h3>{anio}</h3>
                 <div className="detalles">
                     <div className="d-flex justify-content-between">
-                        <p className="desde producto">$000,000</p>
+                        <p className="desde producto">{formatter.format(precio)}</p>
                         <p> | </p>
                         <p className="desde producto">KM 30,000</p>
                     </div>

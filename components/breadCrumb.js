@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export default function BreadCrumb(){
+export default function BreadCrumb({id}){
   const router = useRouter();
   const [ruta, setRuta] = useState([])
   useEffect(() => {

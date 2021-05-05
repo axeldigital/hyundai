@@ -7,9 +7,9 @@ import Modal from 'react-bootstrap/Modal'
 import FormaDistribuidor from '../components/formaDistribuidor'
 import Link from 'next/link'
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ precio }) => <div>{text}</div>;
 
-export default function FiltrosProductos() {
+export default function FiltrosProductos({ precio, modelo, ano, kilometros, transmision }) {
   const [show, setShow] = useState(false);
   const [showMapa, setShowMapa] = useState(false);
 
@@ -19,6 +19,12 @@ export default function FiltrosProductos() {
   const handleCloseMapa = () => setShowMapa(false);
   const handleShowMapa = () => setShowMapa(true);
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
+
   return (
     <Container className="filtros mb-5">
       <Row>
@@ -26,18 +32,18 @@ export default function FiltrosProductos() {
           <table class="table borderless filtros">
             <tbody>
               <tr>
-                <td><b>Precio</b></td>
-                <td>$150,000.00</td>
+                <td style={{ 'width': '50%'}}><b>Precio</b></td>
+                <td>{formatter.format(precio)}</td>
               </tr>
               <tr style={{
                 borderTop: '1px solid #ccc'
               }}>
                 <td><b>Modelo</b></td>
-                <td><span className="gris">Grand i10 Sédan</span></td>
+                <td><span className="gris">{modelo}</span></td>
               </tr>
               <tr>
                 <td><b>Año</b></td>
-                <td><span className="gris">2018</span></td>
+                <td><span className="gris">{ano}</span></td>
               </tr>
               <tr>
                 <td><b>Versión</b></td>
@@ -45,7 +51,7 @@ export default function FiltrosProductos() {
               </tr>
               <tr>
                 <td><b>Kilometraje</b></td>
-                <td><span className="gris">30,000 km</span></td>
+                <td><span className="gris">{kilometros} km</span></td>
               </tr>
               <tr>
                 <td><b>Color</b></td>
@@ -53,11 +59,11 @@ export default function FiltrosProductos() {
               </tr>
               <tr>
                 <td><b>Transmisión</b></td>
-                <td><span className="gris">Automática</span></td>
+                <td><span className="gris">{transmision}</span></td>
               </tr>
               <tr>
                 <td><b>Distribuidor</b></td>
-                <td><span className="gris">Hyundai Satélite</span></td>
+                <td><span className="gris"></span></td>
               </tr>
               <tr>
                 <td>
