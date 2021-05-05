@@ -95,7 +95,11 @@ export default function Administrador() {
                         <Button disabled={submitting} variant="primary" type="submit" className="w-100">
                           Recuperar contraseña
                         </Button>
-                        <p className="btn btn-secondary olvide text-white w-100 mt-3" onClick={olvido}>Volver al inicio de sesión</p>
+                        <p 
+                          className="btn btn-secondary olvide text-white w-100 mt-3" 
+                          style={{fontSize: '0.7rem'}} onClick={olvido}>
+                            Volver al inicio de sesión
+                        </p>
                       </Form.Group>
                     </Form>
                     :

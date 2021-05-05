@@ -39,9 +39,13 @@ export default function Header() {
                   <img src="/iconos/home-solid.svg" className="pr-2" alt="" title="" />
                   Home
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/admin/dashboard" className="d-flex">
+                <NavDropdown.Item href="/admin/dashboard" className="d-flex dropdown-submenu">
                   <img src="/iconos/tasks-solid.svg" className="pr-2" alt="" title="" />
-                  Administrador
+                  Administración
+                  <NavDropdown.Item href="/admin/vehiculos" className="d-flex">
+                    <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
+                    Vehículos
+                  </NavDropdown.Item>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/admin/vehiculos" className="d-flex">
                   <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
@@ -52,12 +56,8 @@ export default function Header() {
                   Validación
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/admin/distribuidores" className="d-flex">
-                  <img src="/iconos/car-solid.svg" className="pr-2" alt="" title="" />
-                  Distribuidores
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/admin/usuarios" className="d-flex">
-                  <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
-                  Usuarios
+                  <img src="/iconos/tasks-solid.svg" className="pr-2" alt="" title="" />
+                  Leads
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
