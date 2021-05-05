@@ -72,7 +72,10 @@ export default function Producto() {
             <ImageGallery items={images} />
             <Row className="mt-3 mb-5">
               <Col>
-                <p className="text-left m-0 p-0"><small>Descarga ficha técnica</small></p>
+                <p className="text-left m-0 p-0">
+                  <small>Descarga ficha técnica</small>
+                  
+                </p>
               </Col>
               <Col className="d-flex justify-content-center align-items-center">
                 <span className="lnr lnr-chevron-left pr-3" onClick={anterior}></span>

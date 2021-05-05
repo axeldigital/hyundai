@@ -9,7 +9,14 @@ import Link from 'next/link'
 
 const AnyReactComponent = ({ precio }) => <div>{text}</div>;
 
-export default function FiltrosProductos({ precio, modelo, ano, kilometros, transmision }) {
+export default function FiltrosProductos({ 
+  precio, 
+  modelo, 
+  ano, 
+  kilometros, 
+  transmision,
+  distribuidor 
+}) {
   const [show, setShow] = useState(false);
   const [showMapa, setShowMapa] = useState(false);
 
@@ -63,7 +70,7 @@ export default function FiltrosProductos({ precio, modelo, ano, kilometros, tran
               </tr>
               <tr>
                 <td><b>Distribuidor</b></td>
-                <td><span className="gris"></span></td>
+                <td><span className="gris">{distribuidor}</span></td>
               </tr>
               <tr>
                 <td>

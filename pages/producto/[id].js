@@ -8,6 +8,7 @@ import BreadCrumb from '../../components/breadCrumb'
 import Banner from '../../components/banner';
 import FiltrosProductos from '../../components/filtrosProductos';
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Loader from '../../components/loader'
 
 const images = [
@@ -72,10 +73,9 @@ export default function Producto() {
   return (
     <Layout>
       <Container className="destacados">
-        
         <Row className="p-0 m-0">
           <Col>
-            <h2 className="m-0 p-3 pt-4 w-100 text-center">Modelos</h2>
+            <h2 className="m-0 p-3 pt-4 w-100 text-center font-bold">Modelos</h2>
           </Col>
         </Row>
         <Row>
@@ -86,13 +86,18 @@ export default function Producto() {
         <Row className="p-0 m-0">
           <Col md={9} sm={9}>
             <div className="d-flex justify-content-between">
-              <h5 className="m-0 p-0 pb-2">{entrie.modelo}</h5>
+              <h5 className="m-0 p-0 pb-2 tituloprod">{entrie.modelo}</h5>
               <p className="m-0 p-0 d-flex justify-content-between"><small>Marcar como favorito</small> <span className="lnr lnr-star ml-1"></span></p>
             </div>
             <ImageGallery items={images} />
             <Row className="mt-3 mb-5">
               <Col>
-                <p className="text-left m-0 p-0"><small>Descarga ficha técnica</small></p>
+                <p className="text-left m-0 p-0">
+                  <small className="pr-2">Descarga ficha técnica</small>
+                  <Link href="/">
+                    <img src="/iconos/file-download-solid.svg" alt="" title="" />
+                  </Link>
+                </p>
               </Col>
               <Col className="d-flex justify-content-center align-items-center">
                 <span className="lnr lnr-chevron-left pr-3" onClick={anterior}></span>
@@ -100,7 +105,12 @@ export default function Producto() {
                 <span className="lnr lnr-chevron-right pl-3" onClick={siguiente}></span>
               </Col>
               <Col>
-                <p className="text-right m-0 p-0"><small>Compartir</small></p>
+                <p className="text-right m-0 p-0">
+                  <small className="pr-2">Compartir</small>
+                  <Link href="/">
+                    <img src="/iconos/share-alt-solid.svg" alt="" title="" />
+                  </Link>
+                </p>
               </Col>
             </Row>
             <Row>
@@ -134,6 +144,7 @@ export default function Producto() {
               ano={entrie.anio}
               kilometros={entrie.kilometros}
               transmision={entrie.transmision}
+              distribuidor={entrie.distribuidor}
             />
           </Col>
         </Row>

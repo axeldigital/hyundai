@@ -660,6 +660,7 @@ table.filtros span.gris {
   font-size: 0.7rem;
   color: #333333;
   background: #fff;
+  padding-bottom: 10px;
 }
 
 .btn.btn-secondary {
@@ -762,6 +763,10 @@ span.oppt {
 .desde.producto {
   font-size: 0.8rem;
   margin-bottom: 10px;
+}
+
+.tituloprod {
+  font-family: "HyundaiMedium";
 }
 
 @media (min-width: 1200px) {
