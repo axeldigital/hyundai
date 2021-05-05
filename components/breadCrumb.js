@@ -12,7 +12,7 @@ export default function BreadCrumb(){
   }, [])
   return(
     <Row className="breadcrumb">
-      <Col>
+      <Col className="p-0">
         <ul>
           <li>
             <Link href="/">

@@ -110,7 +110,7 @@ export default function Home() {
         </div>
         <Col className="d-flex politica">
           <Row>
-            Política de privacidad - Términos y condiciones
+            Política de privacidad <img src="/iconos/infp.svg" alt="Hyundai México" title="Hyundai México" style={{width: '15px', marginLeft: '10px', marginRight: '7px'}} /> Términos y condiciones <img src="/iconos/infp.svg" alt="Hyundai México" title="Hyundai México" style={{width: '15px', marginLeft: '10px', marginRight: '7px'}} />
           </Row>
         </Col>
       </div>

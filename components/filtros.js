@@ -37,13 +37,13 @@ export default function Filtros(
       <Row>
         <Col>
           <div className="d-flex align-items-center justify-content-between">
-            <p className="p-0 m-0 pl-2"><small>Favoritos</small></p>
+            <p className="p-0 m-0 pl-0"><small>Favoritos</small></p>
             <span className="lnr lnr-star" onClick={contador}></span>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Precio</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Precio</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">$50,000</button> -
+            <button className="btn btn-default bg-white mr-3">{formatter.format(precio)}</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
           <Form className="mt-3">
@@ -63,16 +63,16 @@ export default function Filtros(
             </Form.Group>
           </Form>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button 
-              className="btn btn-default bg-white mr-3 w-100"
+              className="btn btn-default bg-white p-2 mr-2 w-100"
               onClick={() => elAnio(2021)}  
             >
                 2021
             </button> 
             <button 
-              className="btn btn-default bg-white ml-3 w-100"
+              className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2020)}
               >
                 2020
@@ -80,13 +80,13 @@ export default function Filtros(
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
           <button 
-              className="btn btn-default bg-white mr-3 w-100"
+              className="btn btn-default bg-white p-2 mr-2 w-100"
               onClick={() => elAnio(2019)}  
             >
                 2019
             </button> 
             <button 
-              className="btn btn-default bg-white ml-3 w-100"
+              className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2018)}
               >
                 2018
@@ -94,49 +94,54 @@ export default function Filtros(
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
           <button 
-              className="btn btn-default bg-white mr-3 w-100"
+              className="btn btn-default bg-white p-2 mr-2 w-100"
               onClick={() => elAnio(2017)}  
             >
                 2017
             </button> 
             <button 
-              className="btn btn-default bg-white ml-3 w-100"
+              className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2016)}
               >
                 2016
             </button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Modelo {modelo}</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Modelo {modelo}</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('TUCSON')}>TUCSON</button> 
-            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('CRETA')}>CRETA</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('TUCSON')}>TUCSON</button> 
+            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('CRETA')}>CRETA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button> 
-            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('GRAND I10 HB')}>GRAND I10 HB</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button> 
+            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('GRAND I10 HB')}>GRAND I10 HB</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button> 
-            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('ACCENT SD')}>ACCENT SD</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button> 
+            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ACCENT SD')}>ACCENT SD</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button> 
-            <button className="btn btn-default bg-white ml-3 w-100" onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button> 
+            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white mr-3 w-100" onClick={() => elModelo('IONIQ')}>IONIQ</button>
+            <button className="btn btn-default bg-white p-2 w-50 float-left" onClick={() => elModelo('IONIQ')}>IONIQ</button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Transmisión</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3 w-100">Manual</button> 
-            <button className="btn btn-default bg-white ml-3 w-100">Automática</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100">Manual</button> 
+            <button className="btn btn-default bg-white p-2 w-100">Automática</button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-2 mb-2"><small>Localización</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
           <Form.Group>
             <Form.Control as="select">
+              {estado.map(edo => (
+                <option key={edo.code}>{edo.name}</option>
+              ))}
+            </Form.Control>
+            <Form.Control as="select" className="mt-3">
               {estado.map(edo => (
                 <option key={edo.code}>{edo.name}</option>
               ))}

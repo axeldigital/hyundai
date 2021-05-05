@@ -12,8 +12,7 @@ export default function Banner({ icono, titulo, texto, boton }) {
                     width: '60px'
                 }} alt="" title="" />
             </div>
-            <h5>{titulo}</h5>
-            <p>{texto}</p>
+            <h5 style={{marginBottom: '0'}}>{titulo}</h5>
             <Link href="/categoria">
                 <Button variant="secondary">Ver más</Button>
             </Link>

@@ -75,7 +75,7 @@ a {
 }
 
 .carousel-caption p {
-  color: #333;
+  color: #898989;
 }
 
 .elfooter {
@@ -178,7 +178,7 @@ a {
 }
 
 p.desde {
-  color: #002c5e;
+  color: #002c5e !important;
   font-family: "HyundaiBold";
   font-size: 1.5rem;
 }
@@ -370,6 +370,7 @@ p.desde {
   margin: 0;
   padding: 5px 0;
   font-size: 0.7rem;
+  color: #898989;
 }
 
 .jumbotron {
@@ -657,8 +658,8 @@ table.filtros span.gris {
   padding: 0;
   padding: 5px;
   font-size: 0.7rem;
-  background: #022040;
-  color: #fff;
+  color: #333333;
+  background: #fff;
 }
 
 .btn.btn-secondary {
@@ -756,4 +757,15 @@ a.dropdown-toggle.nav-link:hover {
 span.oppt {
   color: #022040;
   font-family: "HyundaiMedium";
+}
+
+.desde.producto {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1250px;
+  }
 }

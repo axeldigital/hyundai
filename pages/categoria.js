@@ -4,7 +4,7 @@ import BreadCrumb from '../components/breadCrumb'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Tarjeta from "../components/tarjeta"
+import TarjetaCategoria from "../components/tarjetaCategoria"
 import Filtros from "../components/filtros"
 import Loader from '../components/loader'
 
@@ -43,10 +43,12 @@ export default function Categoria() {
 
   return (
     <Layout>
-      <Container fluid={true} className="destacados">
-        <BreadCrumb />
+      <Container className="destacados">
+        <Row>
+          <h2 className="m-0 p-3 pt-4 w-100 text-center">Modelos</h2>
+        </Row>
         <Row className="m-0 p-0">
-          <Col md={2} sm={2} className="m-0 p-0">
+          <Col md={3} sm={3} className="m-0 p-0">
             <Filtros
               contador={() => filtroPrecio(precio)}
               precio={precio}
@@ -59,11 +61,12 @@ export default function Categoria() {
             />
           </Col>
           <Col>
+            <BreadCrumb />
             <Row>
               {autos.map(auto => (
                 <Col key={auto.id} md={3}>
-                  <Tarjeta
-                    link="/producto"
+                  <TarjetaCategoria
+                    link={`/producto/${auto.id}`}
                     modelo={auto.modelo}
                     precio={auto.precio}
                     kilometros={auto.kilometros}

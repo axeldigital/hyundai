@@ -29,12 +29,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/categoria">
                 <a>Servicios</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/categoria">
                 <a>Financiamiento</a>
               </Link>
             </li>
@@ -47,13 +47,7 @@ export default function Header() {
         </Col>
         <Col md={2} className="p-0">
           <p className="text-right pr-0">
-            <span className="lnr lnr-map-marker m-2" style={{
-              border: '1px solid #333',
-              padding: '5px',
-              borderRadius: '50%',
-              background: '#002c5e',
-              color: '#fff'
-            }} onClick={handleShow}></span> 
+            <img src="/iconos/icono-mapa.svg" alt="Hyundai México" title="Hyundai México" style={{width: '20px', marginRight: '10px'}} onClick={handleShow} />
             Coacalco
             <Link href="/">
               <span className="lnr lnr-menu mx-2"></span>

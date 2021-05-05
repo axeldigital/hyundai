@@ -16,7 +16,7 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2
 })
 
-export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
+export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,imagen}) {
     const cuantos = Math.round(Math.random() * 100)
     let kms = kilometros.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     return (
@@ -41,12 +41,17 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                 <h3>{modelo}</h3>
                 <h3>{anio}</h3>
                 <div className="detalles">
-                    <p className="desde">Desde {formatter.format(precio)}</p>
+                    <div className="d-flex justify-content-between">
+                        <p className="desde producto">$000,000</p>
+                        <p> | </p>
+                        <p className="desde producto">KM 30,000</p>
+                    </div>
+                    
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}
-                    <p>{cuantos} Modelos...</p>
+                    <p>Planta Vallejo</p>
                 </div>
                 <Link href={link ? link : ""} className="w-100">
-                    <Button variant="primary">Ver modelos</Button>
+                    <Button variant="primary" styleName="p-2" style={{padding: '10px 30px'}}>Ver modelo</Button>
                 </Link>
             </Card.Body>
         </Card>
