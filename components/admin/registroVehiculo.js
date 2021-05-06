@@ -78,7 +78,7 @@ export default function RegistroVehiculo() {
       </Form.Group>
       <Button variant="primary" type="submit">
         Registrar
-  </Button>
+      </Button>
     </Form>
   )
 }

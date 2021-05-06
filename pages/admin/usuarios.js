@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+
 import Link from 'next/link'
-import ImageUpload from 'image-upload-react'
 import Layout from '../../components/layout';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -8,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Header from '../../components/admin/header'
 import RegistroUsuarios from '../../components/admin/registroUsuarios'
 import Table from 'react-bootstrap/Table'
-import RowTabla from "./rowTabla"
+import RowTablaUsuario from "./rowTablaUsuario"
 import Form from 'react-bootstrap/Form'
 
 
@@ -24,7 +23,7 @@ export default function Usuarios() {
       </Container>
       <Container className="p-0 mb-0 pb-0">
         <Row>
-          <Col>
+          <Col className="p-0 mb-0">
           <Form>
             <Form.Group controlId="exampleForm.ControlSelect1">
               <Form.Label>Distribuidor:</Form.Label>
@@ -40,7 +39,7 @@ export default function Usuarios() {
           </Col>
         </Row>
       </Container>
-      <Container className="p-0 pt-4 pb-4 dashtablas">
+      <Container className="p-0 pt- pb-4 dashtablas">
       <Row>
           
             <Table striped bordered hover size="sm">
@@ -48,30 +47,39 @@ export default function Usuarios() {
                 <tr>
                   <th>#</th>
                   <th>Fecha</th>
-                  <th>Distribuidor</th>
-                  <th>Tipo auto</th>
+                  <th></th>
+                  <th></th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
+                <RowTablaUsuario />
               </tbody>
             </Table>
+        </Row>
+        <Row>
+          <div align="center">
+            <Link href="/" style={{fontSize:'0.8rem'}}>
+              <a className="btn btn-primary">
+              Nuevo Distribuidor
+              </a>
+            </Link>
+          </div>
         </Row>
       </Container>
     </Layout>

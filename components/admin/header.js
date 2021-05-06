@@ -60,7 +60,7 @@ export default function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="">
+                        <Link href="/admin/roles">
                           Roles
                         </Link>
                       </li>
@@ -74,6 +74,10 @@ export default function Header() {
                 <NavDropdown.Item href="/admin/validacion" className="d-flex">
                   <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
                   Validación
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/admin/leads" className="d-flex">
+                  <img src="/iconos/check-circle-regular.svg" className="pr-2" alt="" title="" />
+                  Leads
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
