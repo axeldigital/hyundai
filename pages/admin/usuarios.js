@@ -9,6 +9,8 @@ import Header from '../../components/admin/header'
 import RegistroUsuarios from '../../components/admin/registroUsuarios'
 import Table from 'react-bootstrap/Table'
 import RowTabla from "./rowTabla"
+import Form from 'react-bootstrap/Form'
+
 
 export default function Usuarios() {
   return (
@@ -20,8 +22,27 @@ export default function Usuarios() {
         <h2>Usuarios</h2>
         <h3>Lorem ipsum dolor</h3>
       </Container>
+      <Container className="p-0 mb-0 pb-0">
+        <Row>
+          <Col>
+          <Form>
+            <Form.Group controlId="exampleForm.ControlSelect1">
+              <Form.Label>Distribuidor:</Form.Label>
+              <Form.Control as="select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </Form.Control>
+            </Form.Group>
+          </Form>
+          </Col>
+        </Row>
+      </Container>
       <Container className="p-0 pt-4 pb-4 dashtablas">
       <Row>
+          
             <Table striped bordered hover size="sm">
             <thead>
                 <tr>
