@@ -27,11 +27,8 @@ export default function Roles() {
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Roles:</Form.Label>
                 <Form.Control as="select">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>Distribuidor</option>
+                  <option>Administrador</option>
                 </Form.Control>
               </Form.Group>
             </Form>

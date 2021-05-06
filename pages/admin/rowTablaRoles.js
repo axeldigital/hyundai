@@ -14,9 +14,12 @@ export default function RowTablaRoles() {
     <tr>
       <td>Usuario</td>
       <td style={{width: '10%'}}>
-      <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}}>
-        Editar
-      </Button>
+        <Link href="/admin/editarrol">
+          <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}}>
+            Editar
+          </Button>
+        </Link>
+        
       </td>
     </tr>
   )

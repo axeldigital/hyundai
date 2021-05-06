@@ -20,7 +20,7 @@ export default function TarjetaAdmin({modelo, precio, kilometros, anio, imagen})
                     <p><span className="oppt">Alta:</span> - 2 de mayo 2021</p>
                     <p><span className="oppt">Vencimiento:</span> - 2 de julio 2021</p>
                 </div>
-                <Link href="">
+                <Link href="/admin/editarvehiculo">
                     <Button variant="primary" className="w-50 pl-1 pr-1">Editar</Button>
                 </Link>
                 <img src="/iconos/trash-solid.svg" alt="" title="" className="float-right mr-3" onClick={alerta} />

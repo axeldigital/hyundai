@@ -37,7 +37,7 @@ export default function nuevodistribuidor() {
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
           <Form>
-            <div className="mt-5">
+            <div className="mt-3">
               <Form.File id="formcheck-api-custom" custom>
                 <Form.File.Input isValid />
                 <Form.File.Label data-browse="Button text">
@@ -50,7 +50,7 @@ export default function nuevodistribuidor() {
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
             <Button variant="primary" type="submit">
-              Guardar usuario y enviar confirmación
+              Guardar distribuidor
             </Button>
           </Col>
         </Row>
