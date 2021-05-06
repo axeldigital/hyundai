@@ -477,7 +477,7 @@ table.filtros span.gris {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 230px;
+  padding: 300px;
 }
 
 .entrada.card .card-title.h5 {
@@ -640,6 +640,11 @@ table.filtros span.gris {
   padding: 0;
 }
 
+.btn.btn-default {
+  background: #012E5E;
+  color: #fff;
+}
+
 .dashtablas h3 {
   color: #898989;
   font-size: 1.3rem;
@@ -783,6 +788,29 @@ span.oppt {
 .modal-header {
   background: #f3f3f3;
   padding: 0.5rem 1rem;
+}
+
+.subermenu ul {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+}
+
+.subermenu ul li {
+  width: 100%;
+  display: block;
+  padding-left: 20px;
+}
+
+.subermenu ul li a {
+  padding: 5px;
+  display: block;
+}
+
+.subermenu ul li a:hover {
+  text-decoration: none;
+  background: #00AAD2;
+  color: #fff;
 }
 
 @media (min-width: 1200px) {

@@ -10,23 +10,23 @@ export default function Submenu() {
         <Col className="flex align-items-center justify-content-center">
           <ul>
             <li>
+              <Link href="/registrar">
+                <a>Seminuevos Certificados</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/pagina">
+                <a>Registro para toma y venta</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/pagina">
+                <a>Beneficios Hyundai Promise</a>
+              </Link>
+            </li>
+            <li>
               <Link href="/pagina">
                 <a>¿Qué es Hyundai Promise?</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/pagina">
-                <a>Beneficios de Hyundai Promise</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/pagina">
-                <a>La Certificación</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/registrar">
-                <a>Quiero vender mi auto</a>
               </Link>
             </li>
           </ul>

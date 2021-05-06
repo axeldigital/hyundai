@@ -7,7 +7,7 @@ export default function Slider({imagen}) {
         <img
           className="d-block w-100"
           src={imagen}
-          alt="HYUNDAI SEMINUEVOS"
+          alt="Conoce Hyundai Promise"
         />
       </Carousel.Item>
     </Carousel>

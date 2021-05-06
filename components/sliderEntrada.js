@@ -16,33 +16,44 @@ export default function SliderEntrada() {
           <Row>
             <Col>
               <Link href="/pagina">
-                  <Button variant="primary" className="favoritos dos">Conoce Huyndai Promise</Button>
+                  <Button variant="primary" className="favoritos dos">Encuentra tu Hyundai Promise</Button>
               </Link>
             </Col>
-            <Col>
+            <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/icono_beneficiosdelprograma_bn.svg"
-                titulo="Beneficios del programa"
+                titulo="Hyundai Finnance"
+                texto="Solo por ser parte del programa de Hyundai Promise ofrecemos productos financieros con beneficios especiales para Seminuevos Certificados."
                 boton="Búsqueda Inteligente"
               />
             </Col>
-            <Col>
+            <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/icono_beneficiosdelprograma_bn.svg"
-                titulo="Beneficios del programa"
+                titulo="Hyundai Protect"
+                texto="Como parte de los beneficios de Hyundai Promise ofrecemos seguros con coberturas especiales para Seminuevos Certificados."
                 boton="Búsqueda Inteligente"
               />
             </Col>
-            <Col>
+            <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/icono_beneficiosdelprograma_bn.svg"
-                titulo="Beneficios del programa"
+                titulo="ASSURANT"
+                texto="Líder en el segmento de Seminuevos Certificados."
+                boton="Búsqueda Inteligente"
+              />
+            </Col>
+            <Col className="p-0 m-0">
+              <BannerEntrada
+                icono="iconos/icono_beneficiosdelprograma_bn.svg"
+                titulo="TOMA Y VENTA"
+                texto="Transparencia y confianza en el proceso."
                 boton="Búsqueda Inteligente"
               />
             </Col>
             <Col>
               <Link href="/registrar">
-                  <Button variant="primary" className="favoritos dos float-right">Quiero vender mi auto</Button>
+                  <Button variant="primary" className="favoritos dos float-right">Toma y venta</Button>
               </Link>
             </Col>
           </Row>
