@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 
@@ -13,9 +14,11 @@ export default function RowTablaDistribuidor() {
     <tr>
       <td>Pellentesque ut ornare libero....</td>
       <td style={{width: '10%'}}>
-      <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}}>
-        Editar
-      </Button>
+        <Link href="/admin/editardistribuidor">
+          <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}}>
+            Editar
+          </Button>
+        </Link>
       </td>
       <td style={{width: '10%'}}>
       <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}} onClick={handleShow}>

@@ -51,7 +51,7 @@ export default function Distribuidores() {
         <Row>
           <Col>
           <div align="center">
-            <Link href="/admin/nuevousuario" style={{fontSize:'0.8rem'}}>
+            <Link href="/admin/nuevodistribuidor" style={{fontSize:'0.8rem'}}>
               <a className="btn btn-primary">
               Nuevo Distribuidor
               </a>
