@@ -17,14 +17,23 @@ export default function RowTabla() {
       </td>
       <td>Pellentesque ut ornare libero....</td>
       <td style={{width: '10%'}}>
-      <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}}>
+      <Link 
+        href="/admin/editarusuario"
+        className="btn btn-primary"
+        variant="primary" 
+        type="submit" 
+        style={{fontSize:'0.8rem'
+      }}>
+        <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}}>
         Editar
-      </Button>
+        </Button>
+        
+      </Link>
       </td>
       <td style={{width: '10%'}}>
-      <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}} onClick={handleShow}>
-        Eliminar
-      </Button>
+        <Button variant="primary" type="submit" style={{fontSize:'0.8rem'}} onClick={handleShow}>
+          Eliminar
+        </Button>
       </td>
 
       <Modal show={show} onHide={handleClose}>

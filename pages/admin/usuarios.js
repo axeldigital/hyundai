@@ -72,6 +72,7 @@ export default function Usuarios() {
             </Table>
         </Row>
         <Row>
+          <Col>
           <div align="center">
             <Link href="/admin/nuevousuario" style={{fontSize:'0.8rem'}}>
               <a className="btn btn-primary">
@@ -79,6 +80,7 @@ export default function Usuarios() {
               </a>
             </Link>
           </div>
+          </Col>
         </Row>
       </Container>
     </Layout>
