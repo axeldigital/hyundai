@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import Layout from '../../components/layout';
 import Container from 'react-bootstrap/Container'
@@ -74,9 +73,9 @@ export default function Usuarios() {
         </Row>
         <Row>
           <div align="center">
-            <Link href="/" style={{fontSize:'0.8rem'}}>
+            <Link href="/admin/nuevousuario" style={{fontSize:'0.8rem'}}>
               <a className="btn btn-primary">
-              Nuevo Distribuidor
+              Nuevo Usuario
               </a>
             </Link>
           </div>

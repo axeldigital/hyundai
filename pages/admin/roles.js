@@ -70,18 +70,20 @@ export default function Roles() {
           </Col>
         </Row>
         <Row className="mb-3">
+          <Col></Col>
           <Col className="d-flex">
             <>
               <p className="mr-3">Distribuidor</p>
-              <Form.Check type="radio" aria-label="radio 1" />
+              <Form.Check name="tipo" type="radio" aria-label="radio 1" />
             </>
           </Col>
           <Col className="d-flex">
             <>
               <p className="mr-3">Administrador</p>
-              <Form.Check type="radio" aria-label="radio 1" />
+              <Form.Check name="tipo" type="radio" aria-label="radio 1" />
             </>
           </Col>
+          <Col></Col>
         </Row>
         <Row>
           <Col>

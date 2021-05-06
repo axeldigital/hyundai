@@ -50,7 +50,7 @@ export default function Header() {
                   <div className={`subermenu ${submenux}`}>
                     <ul>
                       <li>
-                        <Link href="">
+                        <Link href="/admin/distribuidores">
                           Distribuidores
                         </Link>
                       </li>
