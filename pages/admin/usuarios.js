@@ -9,7 +9,6 @@ import Table from 'react-bootstrap/Table'
 import RowTablaUsuario from "./rowTablaUsuario"
 import Form from 'react-bootstrap/Form'
 
-
 export default function Usuarios() {
   return (
     <Layout>

@@ -123,14 +123,14 @@ a {
     justify-content: center;
     align-items: center;
 }
-
+/*
 .card-img-overlay {
   background: rgba(0,0,0,0.3);
   margin-right: 90px;
   margin-left: 0;
   transition: all 1s;
 }
-
+*/
 .card-img-overlay:hover {
   margin-right: 0;
   cursor: pointer;
@@ -522,7 +522,7 @@ table.filtros span.gris {
 }
 
 .entrada.banner {
-  background: url('/hero.png') no-repeat center bottom; 
+  background: url('/banner2.png') no-repeat center bottom; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -536,6 +536,7 @@ table.filtros span.gris {
   -o-background-size: cover;
   background-size: cover;
 }
+
 .bgn.entrada .introsub {
   text-align: center;
   padding: 90px;
@@ -675,6 +676,7 @@ table.filtros span.gris {
 
 .filtros .btn.btn-default {
   transition: all 1s;
+  color: #333;
 }
 
 .filtros .btn.btn-default:hover {
@@ -812,6 +814,7 @@ span.oppt {
   background: #00AAD2;
   color: #fff;
 }
+
 
 @media (min-width: 1200px) {
   .container {

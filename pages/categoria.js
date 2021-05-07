@@ -37,7 +37,7 @@ export default function Categoria() {
       setPrecio(precio - 20000)
     }
     
-    let filtraPrecio = autos.filter(filterprecio => filterprecio.precio > precio );
+    let filtraPrecio = autos.filter(filterprecio => filterprecio.precio > price );
     setAutos(filtraPrecio)
   }
 

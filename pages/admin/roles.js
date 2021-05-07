@@ -87,7 +87,7 @@ export default function Roles() {
             <div align="center">
               <Link href="/" style={{ fontSize: '0.8rem' }}>
                 <a className="btn btn-primary">
-                  Editar usuario
+                  Crear rol de usuario
               </a>
               </Link>
             </div>

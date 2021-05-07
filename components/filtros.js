@@ -48,17 +48,17 @@ export default function Filtros(
           </div>
           <Form className="mt-3">
             <Form.Group controlId="formBasicRange">
-              <Form.Control type="range" onChange={contador} />
+              <Form.Control type="range" min="0" max="200000" onChange={contador} />
             </Form.Group>
           </Form>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button className="btn btn-default bg-white mr-3">10,000</button> -
-            <button className="btn btn-default bg-white ml-3">{kilometros}</button>
+            <button className="btn btn-default bg-white ml-3">150,000</button>
           </div>
           <Form className="mt-3">
-            <Form.Group controlId="formBasicRange" onChange={loskilometros}>
+            <Form.Group controlId="formBasicRange" min="0" max="200000" onChange={loskilometros}>
               <Form.Control type="range" />
             </Form.Group>
           </Form>
