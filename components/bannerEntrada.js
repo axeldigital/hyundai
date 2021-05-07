@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 
 export default function BannerEntrada({icono, titulo, texto, boton}) {
     return (
-        <Container style={{marginTop: '30px'}}>
+        <Container style={{marginTop: '90px'}}>
             <div align="center">
                 <img src={icono} style={{
                     width: '30px',

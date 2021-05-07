@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import InputRange from 'react-input-range'
+import FavoritosCategoria from './favoritosCategoria';
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -39,8 +40,7 @@ export default function Filtros(
       <Row>
         <Col>
           <div className="d-flex align-items-center justify-content-between">
-            <p className="p-0 m-0 pl-0"><small>Favoritos</small></p>
-            <span className="lnr lnr-star" onClick={contador}></span>
+            <FavoritosCategoria />
           </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Precio</small></p>
@@ -49,14 +49,11 @@ export default function Filtros(
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
           <div className="mt-3">
-            <InputRange
-              maxValue={20}
-              minValue={0}
-              //disabled
-              value={value}
-              onChange={value => setValue({ value })}
-              onChangeComplete={value => console.log(value)} 
-            />
+            <Form className="mt-3">
+              <Form.Group controlId="formBasicRange" min="0" max="200000" onChange={loskilometros}>
+                <Form.Control type="range" />
+              </Form.Group>
+            </Form>
             </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>

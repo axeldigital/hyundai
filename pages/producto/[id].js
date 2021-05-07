@@ -7,6 +7,7 @@ import ImageGallery from 'react-image-gallery';
 import BreadCrumb from '../../components/breadCrumb'
 import Banner from '../../components/banner';
 import FiltrosProductos from '../../components/filtrosProductos';
+import Favoritos from '../../components/favoritos';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Loader from '../../components/loader'
@@ -108,7 +109,7 @@ export default function Producto() {
           <Col md={9} sm={9}>
             <div className="d-flex justify-content-between">
               <h5 className="m-0 p-0 pb-2 tituloprod">{entrie.modelo}</h5>
-              <p className="m-0 p-0 d-flex justify-content-between"><small>Marcar como favorito</small> <span className="lnr lnr-star ml-1"></span></p>
+              <Favoritos />
             </div>
             <ImageGallery items={images} />
             <Row className="mt-3 mb-5">
