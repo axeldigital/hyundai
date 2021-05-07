@@ -22,7 +22,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
 
     return (
         <Card className="mb-4">
-            <Link href={link ? link : ""}>
+            <Link href={link}>
                 <div style={{
                     height: '150px', 
                     display: 'flex',
@@ -51,7 +51,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}
                     <p>Planta Vallejo</p>
                 </div>
-                <Link href={link ? link : ""} className="w-100">
+                <Link href={link} className="w-100">
                     <Button variant="primary" styleName="p-2" style={{padding: '10px 30px'}}>Ver modelo</Button>
                 </Link>
             </Card.Body>
