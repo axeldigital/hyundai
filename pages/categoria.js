@@ -41,6 +41,16 @@ export default function Categoria() {
     setAutos(filtraPrecio)
   }
 
+  const filtroanio = (aniox) => {
+    console.log(entries)
+    setAutos(entries)
+    setAnio(anio)
+    let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
+    console.log(aniox)
+    setAutos(filtraAnio)
+    console.log(autos)
+  }
+
   return (
     <Layout>
       <Container className="destacados">
@@ -54,7 +64,7 @@ export default function Categoria() {
               precio={precio}
               loskilometros={() => setKilometros(kilometros + 10000)}
               kilometros={kilometros}
-              elAnio={(par) => setAnio(par)}
+              elAnio={(anio) => filtroanio(anio)}
               anio={anio}
               elModelo={(par) => setModelo(par)}
               modelo={modelo}

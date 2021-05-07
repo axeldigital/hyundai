@@ -44,7 +44,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                     <div className="d-flex justify-content-between">
                         <p className="desde producto">{formatter.format(precio)}</p>
                         <p> | </p>
-                        <p className="desde producto">KM 30,000</p>
+                        <p className="desde producto">KM {kilometros.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                     </div>
                     
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}

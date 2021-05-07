@@ -28,7 +28,7 @@ export default function Filtros(
   const [value, setValue] = useState({ min: 2, max: 10 })
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
+    fetch('https://github.com/martinciscap/json-estados-municipios-mexico/edit/master/estados-municipios.json')
     .then(response => response.json())
     .then(data => 
       setEstados(data)
