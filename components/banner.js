@@ -13,7 +13,7 @@ export default function Banner({ icono, titulo, linker }) {
                 }} alt="" title="" />
             </div>
             <h5 style={{marginBottom: '0'}}>{titulo}</h5>
-            <Link href="/">
+            <Link href="/beneficios">
                 <Button variant="secondary">Ver más</Button>
             </Link>
         </Container>
