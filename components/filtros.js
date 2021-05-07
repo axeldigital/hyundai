@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
+import InputRange from 'react-input-range'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -23,6 +24,7 @@ export default function Filtros(
   }) {
 
   const [estado, setEstados] = useState([])
+  const [value, setValue] = useState({ min: 2, max: 10 })
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
@@ -46,11 +48,16 @@ export default function Filtros(
             <button className="btn btn-default bg-white mr-3">{formatter.format(precio)}</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
-          <Form className="mt-3">
-            <Form.Group controlId="formBasicRange">
-              <Form.Control type="range" min="0" max="200000" onChange={contador} />
-            </Form.Group>
-          </Form>
+          <div className="mt-3">
+            <InputRange
+              maxValue={20}
+              minValue={0}
+              //disabled
+              value={value}
+              onChange={value => setValue({ value })}
+              onChangeComplete={value => console.log(value)} 
+            />
+            </div>
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
