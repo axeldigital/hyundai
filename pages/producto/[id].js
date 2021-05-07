@@ -48,12 +48,22 @@ export default function Producto() {
 
   const anterior = () => {
     const ant = parseInt(id) - 1
-    router.push(`/producto/${ant}`)
+    console.log(ant)
+    if(ant === 0){
+      router.push(`/producto/8`)
+    } else {
+      router.push(`/producto/${ant}`)
+    }
+    
   }
 
   const siguiente = () => {
     const sig = parseInt(id) + 1
-    router.push(`/producto/${sig}`)
+    if(sig === 9){
+      router.push(`/producto/1`)
+    } else {
+      router.push(`/producto/${sig}`)
+    }
   }
 
   if (!entrie || isLoading) {
