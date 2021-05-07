@@ -58,27 +58,27 @@ export default function Footer() {
       <div className="legales d-none">
         <ul>
           <li>
-            <Link href="">
+            <Link href="/">
               Mapa de sitio
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               Aviso Legal
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               Términos de Uso
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               Privacidad
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               Política de Cookies
             </Link>
           </li>

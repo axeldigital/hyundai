@@ -24,7 +24,7 @@ export default function BreadCrumb({id, modelo}){
           </li>
           {ruta.map(rut => (
             <li key={rut}>
-              <Link href={`/${ruta}`}>
+              <Link href={`/`}>
                 <a>
                   <span className="lnr lnr-chevron-right pr-1"></span> {id}
                 </a>
