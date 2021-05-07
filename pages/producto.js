@@ -74,7 +74,6 @@ export default function Producto() {
               <Col>
                 <p className="text-left m-0 p-0">
                   <small>Descarga ficha técnica</small>
-                  
                 </p>
               </Col>
               <Col className="d-flex justify-content-center align-items-center">

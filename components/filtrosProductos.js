@@ -121,9 +121,6 @@ export default function FiltrosProductos({
           <Button variant="secondary" onClick={handleCloseMapa}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleCloseMapa}>
-            Agregar dirección
-          </Button>
         </Modal.Footer>
       </Modal>
 
