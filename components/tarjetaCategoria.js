@@ -19,9 +19,10 @@ const formatter = new Intl.NumberFormat('en-US', {
 export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,imagen}) {
     const cuantos = Math.round(Math.random() * 100)
     let kms = kilometros.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+
     return (
         <Card className="mb-4">
-            <Link href={link ? link : ""} as="/producto/id">
+            <Link href={link ? link : ""}>
                 <div style={{
                     height: '150px', 
                     display: 'flex',

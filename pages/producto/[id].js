@@ -142,18 +142,21 @@ export default function Producto() {
                     icono="/iconos/icono_beneficiosdelprograma.svg"
                     titulo="Beneficios del programa"
                     boton="Búsqueda Inteligente"
+                    linker="/beneficios"
                   />
                   <div className="linea"></div>
                   <Banner
                     icono="/iconos/icono_beneficiosdelprograma.svg"
                     titulo="Beneficios del programa"
                     boton="Búsqueda Inteligente"
+                    linker="/beneficios"
                   />
                   <div className="linea"></div>
                   <Banner
                     icono="/iconos/icono_beneficiosdelprograma.svg"
                     titulo="Beneficios del programa"
                     boton="Búsqueda Inteligente"
+                    linker="/beneficios"
                   />
                 </div>
               </div>

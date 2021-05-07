@@ -10,17 +10,17 @@ export default function Submenu() {
         <Col className="flex align-items-center justify-content-center">
           <ul>
             <li>
-              <Link href="/registrar">
+              <Link href="/categoria">
                 <a>Seminuevos Certificados</a>
               </Link>
             </li>
             <li>
-              <Link href="/pagina">
+              <Link href="/registro">
                 <a>Registro para toma y venta</a>
               </Link>
             </li>
             <li>
-              <Link href="/pagina">
+              <Link href="/beneficios">
                 <a>Beneficios Hyundai Promise</a>
               </Link>
             </li>

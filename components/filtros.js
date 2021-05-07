@@ -14,10 +14,8 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 export default function Filtros(
   {
-    contador, 
     precio, 
-    loskilometros, 
-    kilometros,
+    loskilometros,
     elAnio,
     anio,
     elModelo,
@@ -28,7 +26,7 @@ export default function Filtros(
   const [value, setValue] = useState({ min: 2, max: 10 })
 
   useEffect(() => {
-    fetch('https://github.com/martinciscap/json-estados-municipios-mexico/edit/master/estados-municipios.json')
+    fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
     .then(response => response.json())
     .then(data => 
       setEstados(data)
@@ -50,7 +48,7 @@ export default function Filtros(
           </div>
           <div className="mt-3">
             <Form className="mt-3">
-              <Form.Group controlId="formBasicRange" min="0" max="200000" onChange={loskilometros}>
+              <Form.Group controlId="formBasicRange1" min="0" max="200000" onChange={loskilometros}>
                 <Form.Control type="range" />
               </Form.Group>
             </Form>

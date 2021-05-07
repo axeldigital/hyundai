@@ -75,18 +75,21 @@ export default function Home() {
             icono="iconos/icono_queeselprograma.svg"
             titulo="¿Qué es el programa Hyundai Promise?"
             boton="Búsqueda Inteligente"
+            linker="/pagina"
           />
           <div className="linea"></div>
           <Banner
             icono="iconos/icono_beneficiosdelprograma.svg"
             titulo="Beneficios del programa"
             boton="Búsqueda Inteligente"
+            linker="/beneficios"
           />
           <div className="linea"></div>
           <Banner
             icono="iconos/certificacion.svg"
             titulo="¿En qué consiste la certificación?"
             boton="Búsqueda Inteligente"
+            linker="/registro"
           />
         </div>
         <div className="bannerx">
@@ -94,18 +97,21 @@ export default function Home() {
             icono="iconos/162puntos.svg"
             titulo="Revisión de 162 puntos"
             boton="Búsqueda Inteligente"
+            linker="/beneficios"
           />
           <div className="linea"></div>
           <Banner
             icono="iconos/registrar.svg"
             titulo="Quiero registrar mi auto"
             boton="Búsqueda Inteligente"
+            linker="/registrar"
           />
           <div className="linea"></div>
           <Banner
             icono="iconos/contacto.svg"
-            titulo="Quiero registrar mi auto"
+            titulo="Contactar a distribuidor"
             boton="Búsqueda Inteligente"
+            linker="/registro"
           />
         </div>
         <Col className="d-flex politica">

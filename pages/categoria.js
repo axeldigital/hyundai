@@ -42,13 +42,11 @@ export default function Categoria() {
   }
 
   const filtroanio = (aniox) => {
-    console.log(entries)
     setAutos(entries)
-    setAnio(anio)
-    let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
-    console.log(aniox)
-    setAutos(filtraAnio)
     console.log(autos)
+    let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
+    console.log(autos)
+    setAutos(filtraAnio)
   }
 
   return (

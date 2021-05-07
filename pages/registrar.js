@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -5,12 +6,19 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Slider from "../components/slider"
-import Carta from "../components/card";
-import Tarjeta from "../components/tarjeta";
-import Banner from '../components/banner';
-import Filtros from '../components/filtros';
 
 export default function Registrar() {
+  const [estado, setEstados] = useState([])
+
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
+    .then(response => response.json())
+    .then(data => 
+      setEstados(data)
+    );
+  }, [])
+
+  
   return (
     <Layout>
       <Slider className="mt-3" imagen="hero3.png" />
@@ -21,8 +29,8 @@ export default function Registrar() {
           </Col>
           <Col className="bg-light">
             <div className="tarjetax p-3">
-              <h3>Lorem ipsum dolor</h3>
-              <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia, dui vitae luctus tristique, magna lectus maximus felis, nec tincidunt mi nunc ullamcorper lacus. Morbi quis enim bibendum, eleifend erat eget, luctus leo. Donec hendrerit placerat massa, eu pellentesque metus euismod eu. Mauris a sapien id tortor facilisis tempus. Pellentesque at ipsum scelerisque, tincidunt odio vitae, finibus sapien. Vivamus varius scelerisque arcu. Vivamus auctor nunc vitae diam sollicitudin sodales. Morbi tristique lorem id risus consequat, quis pellentesque dolor imperdiet. Praesent libero metus, dapibus ut laoreet vel, efficitur vel lectus. Nullam condimentum et nisi ut venenatis.</small></p>
+              <h3>Registro</h3>
+              <p><small>El siguiente paso para convertir tu auto en un Certificado Promise es completar el siguiente registro y seguir las instrucciones para agendar la inspección y valoración de tu vehículo.</small></p>
             </div>
           </Col>
         </Row>
@@ -64,10 +72,9 @@ export default function Registrar() {
                 <Col>
                   <Form.Label>Estado</Form.Label>
                   <Form.Control as="select">
-                    <option>Sr.</option>
-                    <option>Sra.</option>
-                    <option>Lic.</option>
-                    <option>Dr.</option>
+                    {estado.map(edo => (
+                      <option key={edo.code}>{edo.name}</option>
+                    ))}
                   </Form.Control>
                 </Col>
                 <Col>
