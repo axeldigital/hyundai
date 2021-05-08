@@ -13,7 +13,7 @@ export default function SliderEntrada() {
         <Container>
         <Card.Title style={{color:'#012E5E',paddingBottom:'220px'}}>Hyundai Promise</Card.Title>
         <Card.Text>
-          <Row>
+          <Row className="d-flex align-items-end">
             <Col>
               <Link href="/categoria">
                   <Button variant="primary" className="favoritos dos">Encuentra tu Hyundai Promise</Button>
