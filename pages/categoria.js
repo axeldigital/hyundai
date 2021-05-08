@@ -12,6 +12,7 @@ import { useEntries } from '../lib/swr-hooks'
 
 export default function Categoria() {
   const [autos, setAutos] = useState()
+  const [filtroautos, setFiltroAutos] = useState()
   const { entries, isLoading } = useEntries()
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState(0)
@@ -29,6 +30,11 @@ export default function Categoria() {
   }
 
   const filtroPrecio = (price) => {
+    console.log(price.target.value)
+    
+    let target = parseInt(price.target.value)
+    console.log(target)
+    {/* 
     let lastNum = 1000000
 
     if(lastNum > precio){
@@ -36,9 +42,12 @@ export default function Categoria() {
     } else {
       setPrecio(precio - 20000)
     }
-    
-    let filtraPrecio = autos.filter(filterprecio => filterprecio.precio > price );
+    */}
+    let filtraPrecio = autos.filter(filterprecio => filterprecio.precio > target );
     setAutos(filtraPrecio)
+    setPrecio(price.target.value)
+    console.log(target)
+    console.log(autos)
   }
 
   const filtroanio = (aniox) => {
@@ -58,7 +67,7 @@ export default function Categoria() {
         <Row className="m-0 p-0">
           <Col md={3} sm={3} className="m-0 p-0">
             <Filtros
-              contador={() => filtroPrecio(precio)}
+              contador={(precio) => filtroPrecio(precio)}
               precio={precio}
               loskilometros={() => setKilometros(kilometros + 10000)}
               kilometros={kilometros}

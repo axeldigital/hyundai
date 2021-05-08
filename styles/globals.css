@@ -485,7 +485,7 @@ table.filtros span.gris {
   color: #F3F3F3;
   font-family: "HyundaiRegular";
   padding: 70px;
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 120px;
   font-size: 2.5rem;
   padding-bottom: 159px;
@@ -835,6 +835,10 @@ span.oppt {
   color: #fff;
   font-family: "HyundaiMedium";
   font-size: 2.2rem;
+}
+
+p.distri {
+  font-size: 0.7rem;
 }
 
 @media (min-width: 1200px) {

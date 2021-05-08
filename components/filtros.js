@@ -14,6 +14,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 export default function Filtros(
   {
+    contador,
     precio, 
     loskilometros,
     elAnio,
@@ -48,8 +49,14 @@ export default function Filtros(
           </div>
           <div className="mt-3">
             <Form className="mt-3">
-              <Form.Group controlId="formBasicRange1" min="0" max="200000" onChange={loskilometros}>
-                <Form.Control type="range" />
+              <Form.Group controlId="formBasicRange1">
+                <Form.Control 
+                  type="range"
+                  defaultValue={precio}
+                  min="0"
+                  max="500000"
+                  onChange={contador}
+                />
               </Form.Group>
             </Form>
             </div>

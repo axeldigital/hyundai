@@ -48,7 +48,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                         <p className="desde producto">KM {kilometros.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                     </div>
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}
-                    <p>Planta Vallejo</p>
+                    <p className="distri">Planta Vallejo</p>
                 </div>
                 <Link href={link} className="w-100">
                     <Button variant="primary" styleName="p-2" style={{padding: '10px 30px'}}>Ver modelo</Button>
