@@ -37,14 +37,14 @@ export default function Layout({ children }) {
           crossOrigin=""
         />
       </Head>
-      <Header />
+      {/*<Header />*/}
       <Submenu />
 
       <main className="contenedor">
         {children}
       </main>
 
-      <Footer />
+      {/*<Footer />*/}
     </div>
   )
 }

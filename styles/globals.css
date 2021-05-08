@@ -328,7 +328,7 @@ p.desde {
 }
 
 .submenu ul li a {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin: 0 30px;
   transition: all 1s;
 }
@@ -369,7 +369,7 @@ p.desde {
 .detalles p {
   margin: 0;
   padding: 5px 0;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #898989;
 }
 
