@@ -21,7 +21,7 @@ export default function Registrar() {
   
   return (
     <Layout>
-      <Slider className="mt-3" imagen="hero3.png" />
+      <Slider className="mt-3" imagen="hero4.png" />
       <Container>
         <Row>
           <Col md={4}>

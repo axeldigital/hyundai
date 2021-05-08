@@ -321,7 +321,7 @@ p.desde {
 .submenu ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -485,6 +485,8 @@ table.filtros span.gris {
   color: #F3F3F3;
   font-family: "HyundaiRegular";
   padding: 70px;
+  padding-top: 70px;
+  padding-bottom: 120px;
   font-size: 2.5rem;
   padding-bottom: 159px;
 }
@@ -577,7 +579,7 @@ table.filtros span.gris {
 }
 
 .submenu.container-fluid {
-  padding: 10px;
+  padding: 15px 0;
 }
 
 .form-control {
@@ -824,6 +826,16 @@ span.oppt {
   color: #fff;
 }
 
+.registro.carousel .carousel-caption {
+  bottom: 15%;
+  height: 1vh;
+}
+
+.registro.carousel .carousel-caption h3 {
+  color: #fff;
+  font-family: "HyundaiMedium";
+  font-size: 2.2rem;
+}
 
 @media (min-width: 1200px) {
   .container {
