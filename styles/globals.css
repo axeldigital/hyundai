@@ -670,6 +670,7 @@ table.filtros span.gris {
   margin: 0;
   padding: 0;
   padding: 5px;
+  padding-top: 15px;
   font-size: 0.7rem;
   color: #333333;
   background: #fff;
@@ -844,5 +845,8 @@ p.distri {
 @media (min-width: 1200px) {
   .container {
     max-width: 1250px;
+  }
+  .submenu .row {
+    flex-direction: row !important;
   }
 }

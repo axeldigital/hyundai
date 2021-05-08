@@ -97,7 +97,7 @@ export default function Producto() {
       <Container className="destacados">
         <Row className="p-0 m-0">
           <Col>
-            <h2 className="m-0 p-3 pt-4 w-100 text-center font-bold">Modelos</h2>
+            <h2 className="m-0 p-3 pt-4 w-100 text-center font-bold">Modelo</h2>
           </Col>
         </Row>
         <Row>

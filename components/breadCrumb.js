@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export default function BreadCrumb({id, modelo}){
+export default function BreadCrumb({id, modelo, valor}){
   const router = useRouter();
   const [ruta, setRuta] = useState([])
   useEffect(() => {
@@ -25,7 +25,14 @@ export default function BreadCrumb({id, modelo}){
               </a>
             </Link>
           </li>
-          {ruta.map(rut => (
+          <li>
+            <Link href={`/${valor}`}>
+              <a>
+                <span className="lnr lnr-chevron-right pr-1"></span> {valor}
+              </a>
+            </Link>
+          </li>
+          {/*ruta.map(rut => (
             <li key={rut}>
               <Link href={`/`}>
                 <a>
@@ -33,7 +40,7 @@ export default function BreadCrumb({id, modelo}){
                 </a>
               </Link>
             </li>
-          ))}
+          ))*/}
           <li>{modelo}</li>
         </ul>
       </Col>

@@ -30,33 +30,26 @@ export default function Categoria() {
   }
 
   const filtroPrecio = (price) => {
-    console.log(price.target.value)
-    
     let target = parseInt(price.target.value)
-    console.log(target)
-    {/* 
-    let lastNum = 1000000
-
-    if(lastNum > precio){
-      setPrecio(precio + 20000)
+    const newList = [...autos];
+    const itemIndex = newList.filter(item => item.precio < target);
+    console.log(itemIndex)
+    if(itemIndex.length > 1){
+      setAutos(itemIndex)
     } else {
-      setPrecio(precio - 20000)
+      setAutos(entries)
     }
-    */}
-    let filtraPrecio = autos.filter(filterprecio => filterprecio.precio > target );
-    setAutos(filtraPrecio)
-    setPrecio(price.target.value)
-    console.log(target)
-    console.log(autos)
   }
 
+  {/* 
   const filtroanio = (aniox) => {
     setAutos(entries)
     console.log(autos)
     let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
-    console.log(autos)
-    setAutos(filtraAnio)
+    //console.log(autos)
+    //setAutos(...filtraAnio)
   }
+  */}
 
   return (
     <Layout>
@@ -78,7 +71,7 @@ export default function Categoria() {
             />
           </Col>
           <Col>
-            <BreadCrumb />
+            <BreadCrumb valor="/categoria" />
             <Row>
               {autos.map(auto => (
                 <Col key={auto.id} md={3}>

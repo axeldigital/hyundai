@@ -55,6 +55,7 @@ export default function Filtros(
                   defaultValue={precio}
                   min="0"
                   max="500000"
+                  step="1"
                   onChange={contador}
                 />
               </Form.Group>
