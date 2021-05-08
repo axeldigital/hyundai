@@ -53,14 +53,14 @@ export default function Home() {
       <Container>
         <Row className="mt-3 mb-5">
           <Col>
-            <div style={{ float: "right" }}>
+            <div style={{ float: "right", marginRight: '50px' }}>
               <Link href="/categoria">
                 <Button variant="primary" className="favoritos">Ver todo el inventario</Button>
               </Link>
             </div>
           </Col>
           <Col>
-            <div style={{ float: "left" }}>
+            <div style={{ float: "left", marginLeft: '50px' }}>
               <Link href="/categoria">
                 <Button variant="primary" className="favoritos">Ver favoritos</Button>
               </Link>
