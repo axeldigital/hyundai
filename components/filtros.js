@@ -12,10 +12,14 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 2
 })
 
+import {
+  RangeSlider,
+} from '@appbaseio/reactivesearch';
+
 export default function Filtros(
   {
     contador,
-    precio, 
+    precio,
     loskilometros,
     elAnio,
     anio,
@@ -28,10 +32,10 @@ export default function Filtros(
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
-    .then(response => response.json())
-    .then(data => 
-      setEstados(data)
-    );
+      .then(response => response.json())
+      .then(data =>
+        setEstados(data)
+      );
   }, [])
 
   return (
@@ -44,13 +48,26 @@ export default function Filtros(
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Precio</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">{formatter.format(precio)}</button> -
+            <button className="btn btn-default bg-white mr-3">$100,000.00</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
+          <RangeSlider
+            dataField="ratings_count"
+            componentId="BookSensor"
+            range={{
+              start: 1000,
+              end: 700000,
+            }}
+            rangeLabels={{
+              start: '$1,000.00',
+              end: '$700,000.00',
+            }}
+          />
+          {/* 
           <div className="mt-3">
             <Form className="mt-3">
               <Form.Group controlId="formBasicRange1">
-                <Form.Control 
+                <Form.Control
                   type="range"
                   defaultValue={precio}
                   min="0"
@@ -60,7 +77,8 @@ export default function Filtros(
                 />
               </Form.Group>
             </Form>
-            </div>
+          </div>
+          */}
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
@@ -75,63 +93,63 @@ export default function Filtros(
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button 
+            <button
               className="btn btn-default bg-white p-2 mr-2 w-100"
-              onClick={() => elAnio(2021)}  
+              onClick={() => elAnio(2021)}
             >
-                2021
-            </button> 
-            <button 
+              2021
+            </button>
+            <button
               className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2020)}
-              >
-                2020
+            >
+              2020
             </button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-          <button 
+            <button
               className="btn btn-default bg-white p-2 mr-2 w-100"
-              onClick={() => elAnio(2019)}  
+              onClick={() => elAnio(2019)}
             >
-                2019
-            </button> 
-            <button 
+              2019
+            </button>
+            <button
               className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2018)}
-              >
-                2018
+            >
+              2018
             </button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-          <button 
+            <button
               className="btn btn-default bg-white p-2 mr-2 w-100"
-              onClick={() => elAnio(2017)}  
+              onClick={() => elAnio(2017)}
             >
-                2017
-            </button> 
-            <button 
+              2017
+            </button>
+            <button
               className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2016)}
-              >
-                2016
+            >
+              2016
             </button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Modelo {modelo}</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('TUCSON')}>TUCSON</button> 
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('TUCSON')}>TUCSON</button>
             <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('CRETA')}>CRETA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button> 
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button>
             <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('GRAND I10 HB')}>GRAND I10 HB</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button> 
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button>
             <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ACCENT SD')}>ACCENT SD</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button> 
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button>
             <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
@@ -140,7 +158,7 @@ export default function Filtros(
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100">Manual</button> 
+            <button className="btn btn-default bg-white p-2 mr-2 w-100">Manual</button>
             <button className="btn btn-default bg-white p-2 w-100">Automática</button>
           </div>
           <hr />
