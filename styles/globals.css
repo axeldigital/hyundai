@@ -506,6 +506,11 @@ table.filtros span.gris {
   color: #012E5E;
 }
 
+.favoritos.dos:hover {
+  background: #012E5E;
+  color: #fff;
+}
+
 .entrada.card .col h5 {
   font-size: 0.8rem;
   padding: 0;
@@ -695,6 +700,11 @@ table.filtros span.gris {
 
 .favoritos.btn.btn-primary {
   min-width: 300px;
+}
+
+.favoritos.btn.btn-primary:hover {
+  background: #022040 !important;
+  color: #fff;
 }
 
 .breadcrumb ul {

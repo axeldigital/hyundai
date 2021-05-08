@@ -11,6 +11,9 @@ export default function BreadCrumb({id, modelo}){
     setRuta(router.pathname.split("/"))
     console.log(ruta)
   }, [])
+  console.log(router.pathname)
+  console.log(id)
+  console.log(modelo)
   return(
     <Row className="breadcrumb">
       <Col className="p-0">

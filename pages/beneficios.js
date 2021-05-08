@@ -47,6 +47,20 @@ export default function Beneficios() {
                 <li>El radiador se encuentra en buen estado</li>
                 <li>El ventilador se encuentra en buen estado</li>
                 <li>Depósito de recuperación en buen estado</li>
+                <li>La batería y los cables se encuentran en buen estado</li>
+                <li>Encendido, arranque y acelerador en buen estado</li>
+                <li>No hay evidencia de daños por agua</li>
+                <li>Si existen modificaciones mecánicas cumplen con las especificaciones de garantía de fábrica</li>
+                <li>El indicador de cambio de marcha identifica correctamente el cambio</li>
+                <li>Sellos de juntas de transmisión en buen estado</li>
+                <li>Buen movimiento de la columna de la dirección</li>
+                <li>Diferencial en buen estado</li>
+                <li>Bomba de dirección en buen estado (sin fugas)</li>
+                <li>Amortiguadores en buen estado</li>
+                <li>La barra estabilizadora se encuentra en buen estado</li>
+                <li>Las rotulas se encuentran en buen estado</li>
+                <li>Los baleros se encuentran en buen estado</li>
+                <li>Pintura con buen brillo y acabado</li>
               </ul>
             </div>
           </Col>

@@ -21,20 +21,14 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
     let kms = kilometros.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     return (
         <Card className="mb-4">
-            <Link href={link ? link : ""}>
+            <Link href={link}>
                 <div style={{
                     height: '150px', 
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <GlassMagnifier
-                        imageSrc="https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/accent-sedan-2021-1600X590.jpg"
-                        imageAlt="Example"
-                        largeImageSrc="https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/accent-sedan-2021-1600X590.jpg"
-                        allowOverflow="true"
-                        magnifierSize="70%"
-                    />
+                    <img src="https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/accent-sedan-2021-1600X590.jpg" alt="" title="" className="img-fluid" />
                 </div>
             </Link>
             <Card.Body>
@@ -45,7 +39,7 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}
                     <p>{cuantos} Modelos...</p>
                 </div>
-                <Link href={link ? link : ""} className="w-100">
+                <Link href={link} className="w-100">
                     <Button variant="primary">Ver modelos</Button>
                 </Link>
             </Card.Body>
