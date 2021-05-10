@@ -11,6 +11,7 @@ import Loader from '../components/loader'
 import { useEntries } from '../lib/swr-hooks'
 
 export default function Categoria() {
+  const [autosdefault, setAutosdefault] = useState()
   const [autos, setAutos] = useState()
   const [filtroautos, setFiltroAutos] = useState()
   const { entries, isLoading } = useEntries()
@@ -22,6 +23,7 @@ export default function Categoria() {
 
   useEffect(() => {
     setAutos(entries)
+    setAutosdefault(entries)
   }, [entries])
 
   const filtroPrecio = (price) => {
@@ -42,13 +44,12 @@ export default function Categoria() {
     }
 
   }
-
-
+  
   const filtroanio = (aniox) => {
+    setAutos(autosdefault)
     setAnio(aniox)
-    //let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
-    //console.log(autos)
-    //setAutos(...filtraAnio)
+    setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
+    console.log(filtroautos)
   }
 
   if (!autos || isLoading) {
@@ -82,7 +83,21 @@ export default function Categoria() {
             <Col>
               <BreadCrumb valor="/categoria" />
               <Row>
-                {autos.map(auto => (
+                {filtroautos ? 
+                filtroautos.map(auto => (
+                  <Col key={auto.id} md={3}>
+                    <TarjetaCategoria
+                      link={`/producto/${auto.id}`}
+                      modelo={auto.modelo}
+                      precio={auto.precio}
+                      kilometros={auto.kilometros}
+                      anio={auto.anio}
+                      imagen={auto.imagen}
+                    />
+                  </Col>
+                ))
+                :
+                autos.map(auto => (
                   <Col key={auto.id} md={3}>
                     <TarjetaCategoria
                       link={`/producto/${auto.id}`}
