@@ -16,7 +16,7 @@ export default function Submenu() {
               </Link>
             </li>
             <li>
-              <Link href="/certificacion">
+              <Link href="/beneficios">
                 <a>Beneficios de Hyundai Promise</a>
               </Link>
             </li>
