@@ -849,6 +849,9 @@ p.distri {
   font-family: "HyundaiBold";
 }
 
+.font-bold {
+  font-family: "HyundaiBold";
+}
 
 @media (min-width: 1200px) {
   .container {

@@ -20,7 +20,9 @@ export default function Filtros(
     elAnio,
     anio,
     elModelo,
-    modelo
+    modelo,
+    transmision,
+    laTransmision
   }) {
 
   const [estado, setEstados] = useState([])
@@ -159,10 +161,10 @@ export default function Filtros(
             </button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Modelo {modelo}</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Modelo <span className="font-bold">{modelo}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('TUCSON')}>TUCSON</button>
-            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('CRETA')}>CRETA</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('TUCSON⁠')}>TUCSON⁠</button>
+            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('CRETA⁠')}>CRETA⁠</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
             <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button>
@@ -177,23 +179,19 @@ export default function Filtros(
             <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 w-50 float-left" onClick={() => elModelo('IONIQ')}>IONIQ</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('IONIQ')}>IONIQ</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('IX35')}>IX35</button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión <span className="font-bold">{transmision}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100">Manual</button>
-            <button className="btn btn-default bg-white p-2 w-100">Automática</button>
+            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => laTransmision('Manual')}>Manual</button>
+            <button className="btn btn-default bg-white p-2 w-100" onClick={() => laTransmision('Automática')}>Automática</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
           <Form.Group>
             <Form.Control as="select">
-              {estado.map(edo => (
-                <option key={edo.code}>{edo.name}</option>
-              ))}
-            </Form.Control>
-            <Form.Control as="select" className="mt-3">
               {estado.map(edo => (
                 <option key={edo.code}>{edo.name}</option>
               ))}

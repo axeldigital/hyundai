@@ -44,6 +44,11 @@ export default function Categoria() {
     setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
   }
 
+  const filtroTransmision = (transmision) => {
+    console.log(transmision)
+    setTransmision(transmision)
+  }
+
   if (!autos || isLoading) {
     return (
       <Loader />
@@ -70,6 +75,8 @@ export default function Categoria() {
                 anio={anio}
                 elModelo={(par) => setModelo(par)}
                 modelo={modelo}
+                transmision={transmision}
+                laTransmision={(transmision) => filtroTransmision(transmision)}
               />
             </Col>
             <Col>
