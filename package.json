@@ -9,7 +9,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@appbaseio/reactivesearch": "^3.18.0",
     "bootstrap": "^4.6.0",
     "google-map-react": "^2.1.9",
     "image-upload-react": "^1.4.9",

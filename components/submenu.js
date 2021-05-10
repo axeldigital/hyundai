@@ -6,32 +6,35 @@ import Col from 'react-bootstrap/Col'
 export default function Submenu() {
   return (
     <Container fluid={true} className="submenu">
+      <Container>
       <Row className="m-0 p-0">
         <Col className="flex align-items-center justify-content-center">
           <ul>
             <li>
               <Link href="/categoria">
-                <a>Seminuevos Certificados</a>
+                <a>¿Qué es hyundai promise?</a>
               </Link>
             </li>
             <li>
               <Link href="/registro">
-                <a>Registro para toma y venta</a>
+                <a>Beneficios de Hyundai Promise</a>
               </Link>
             </li>
             <li>
               <Link href="/beneficios">
-                <a>Beneficios Hyundai Promise</a>
+                <a>La certificación</a>
               </Link>
             </li>
             <li>
               <Link href="/pagina">
-                <a>¿Qué es Hyundai Promise?</a>
+                <a>Quiero vender mi auto</a>
               </Link>
             </li>
           </ul>
         </Col>
       </Row>
+      </Container>
+      
     </Container>
   )
 }

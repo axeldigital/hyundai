@@ -10,13 +10,6 @@ import Loader from '../components/loader'
 
 import { useEntries } from '../lib/swr-hooks'
 
-import {
-  ReactiveBase,
-  SelectedFilters,
-  ResultList,
-  ReactiveList,
-} from '@appbaseio/reactivesearch';
-
 export default function Categoria() {
   const [autos, setAutos] = useState()
   const [filtroautos, setFiltroAutos] = useState()
