@@ -12,6 +12,16 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Loader from '../../components/loader'
 
+// We can use inline-style
+const style = {
+  background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  borderRadius: 3,
+  border: 0,
+  color: 'white',
+  padding: '0 30px',
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+};
+
 const images = [
   {
     original: 'https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/modelos/tucson-2022/beauty/1440x810/6.jpg',
@@ -50,17 +60,17 @@ export default function Producto() {
   const anterior = () => {
     const ant = parseInt(id) - 1
     console.log(ant)
-    if(ant === 0){
+    if (ant === 0) {
       router.push(`/producto/8`)
     } else {
       router.push(`/producto/${ant}`)
     }
-    
+
   }
 
   const siguiente = () => {
     const sig = parseInt(id) + 1
-    if(sig === 9){
+    if (sig === 9) {
       router.push(`/producto/1`)
     } else {
       router.push(`/producto/${sig}`)
@@ -96,7 +106,7 @@ export default function Producto() {
     }
   ];
 
-  const options = {
+  const share = {
     config: [{
       facebook: {
         socialShareUrl: 'https://peterpeterparker.io'
@@ -145,9 +155,7 @@ export default function Producto() {
               <Col>
                 <p className="text-right m-0 p-0">
                   <small className="pr-2">Compartir</small>
-                  <web-social-share show={true} share={options}>
-                    <img src="/iconos/share-alt-solid.svg" alt="" title="" />
-                  </web-social-share>
+                  <img src="/iconos/share-alt-solid.svg" alt="" title="" />
                 </p>
               </Col>
             </Row>
