@@ -77,7 +77,7 @@ export default function Home() {
             icono="iconos/icono_queeselprograma.svg"
             titulo="¿Qué es el programa Hyundai Promise?"
             boton="Búsqueda Inteligente"
-            linker="/pagina"
+            linker="/programa"
           />
           <div className="linea"></div>
           <Banner
@@ -91,7 +91,7 @@ export default function Home() {
             icono="iconos/162puntos.svg"
             titulo="Certificación de Seminuevos"
             boton="Certificación de Seminuevos"
-            linker="/registro"
+            linker="/certificacion"
           />
         </div>
         <div className="bannerx">
