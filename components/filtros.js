@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
-import InputRange from 'react-input-range'
 import FavoritosCategoria from './favoritosCategoria';
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -11,10 +10,6 @@ const formatter = new Intl.NumberFormat('en-US', {
   currency: 'USD',
   minimumFractionDigits: 2
 })
-
-import {
-  RangeSlider,
-} from '@appbaseio/reactivesearch';
 
 export default function Filtros(
   {
