@@ -1,0 +1,24 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.71 85.71">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #012e5e;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke-width: 2.83px;
+      }
+
+      .cls-2 {
+        stroke-width: 2.83px;
+      }
+    </style>
+  </defs>
+  <title>check-color</title>
+  <g id="_15" data-name=" 15">
+    <circle class="cls-1" cx="42.86" cy="42.86" r="41.44"/>
+    <polyline class="cls-2" points="21.75 45.52 36.12 60.1 63.79 25.57"/>
+  </g>
+</svg>
