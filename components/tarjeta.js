@@ -20,7 +20,7 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
     const cuantos = Math.round(Math.random() * 100)
     let kms = kilometros.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     return (
-        <Card className="mb-4">
+        <Card xs={6} sm={6} className="mb-4">
             <Link href={link}>
                 <div style={{
                     height: '150px', 

@@ -51,7 +51,7 @@ export default function Filtros(
             <button className="btn btn-default bg-white mr-3">$100,000.00</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
-          
+
           <div className="mt-3">
             <Form className="mt-3">
               <Form.Group controlId="formBasicRange1">
@@ -66,7 +66,7 @@ export default function Filtros(
               </Form.Group>
             </Form>
           </div>
-          
+
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
@@ -189,12 +189,15 @@ export default function Filtros(
             <button className="btn btn-default bg-white p-2 w-100" onClick={() => laTransmision('Automática')}>Automática</button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
-          <Form.Group>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Distribuidor</small></p>
+          <Form.Group controlId="formBasicEmail">
             <Form.Control as="select">
-              {estado.map(edo => (
-                <option key={edo.code}>{edo.name}</option>
-              ))}
+              <option>EXCELENCIA CDMX TEPEPAN</option>
+              <option>FARRERA MÉRIDA</option>
+              <option>PLASENCIA GUADALAJARA</option>
+              <option>PREMIER CULIACÁN</option>
+              <option>CLEBER MTY PENTA SENDERO</option>
+              <option>SONI QUERÉTARO</option>
             </Form.Control>
           </Form.Group>
         </Col>

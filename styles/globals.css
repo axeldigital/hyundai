@@ -849,11 +849,44 @@ p.distri {
   font-family: "HyundaiBold";
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 900px) {
   .container {
     max-width: 1250px;
   }
   .submenu .row {
     flex-direction: row !important;
+  }
+
+  .submenu ul {
+    flex-direction: column;
+text-align: left;
+width: 100%;
+  }
+
+  .submenu ul li {
+    width: 100%;
+  }
+
+  .submenu ul li a {
+    margin: 0;
+    font-family: "HyundaiBold";
+    color: #012E5E !important;
+    font-size: 1rem;
+  }
+
+  .submenu.container-fluid {
+    background: #F3F3F3;
+  }
+
+  .entrada.card {
+    padding: 0;
+  }
+
+  .bannerx {
+    flex-direction: column;
+  }
+
+  .bannerx .linea {
+    margin-bottom: 20px;
   }
 }

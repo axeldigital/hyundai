@@ -45,13 +45,15 @@ export default function Dashboard() {
           <Col>
             <h3>Validaciones pendientes</h3>
             <Table striped bordered hover size="sm">
+              <thead>
+                <tr>
+                  <th style={{backgroundColor: '#fefefe'}}></th>
+                  <th style={{background: '#fefefe'}}><span className="lnr lnr-calendar-full"></span> Fecha <span className="lnr lnr-chevron-down float-right"></span></th>
+                  <th style={{background: '#fefefe'}}><span className="lnr lnr-funnel"></span> Distribuidor <span className="lnr lnr-chevron-down float-right"></span></th>
+                  <th style={{background: '#fefefe'}}><span className="lnr lnr-car"></span> Tipo Auto <span className="lnr lnr-chevron-down float-right"></span></th>
+                </tr>
+              </thead>
               <tbody>
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
                 <RowTabla />
                 <RowTabla />
                 <RowTabla />
@@ -64,10 +66,19 @@ export default function Dashboard() {
                 <RowTabla />
               </tbody>
             </Table>
+            <p className="float-right"><small>1-10 de 20 autos</small></p>
           </Col>
           <Col>
             <h3>Vehículos alertados</h3>
             <Table striped bordered hover size="sm">
+            <thead>
+                <tr>
+                  <th style={{background: '#fefefe'}}></th>
+                  <th style={{background: '#fefefe'}}><span className="lnr lnr-calendar-full"></span> Fecha <span className="lnr lnr-chevron-down float-right"></span></th>
+                  <th style={{background: '#fefefe'}}><span className="lnr lnr-funnel"></span> Distribuidor <span className="lnr lnr-chevron-down float-right"></span></th>
+                  <th style={{background: '#fefefe'}}><span className="lnr lnr-car"></span> Tipo Auto <span className="lnr lnr-chevron-down float-right"></span></th>
+                </tr>
+              </thead>
               <tbody>
                 <RowCampana />
                 <RowCampana />
@@ -81,6 +92,7 @@ export default function Dashboard() {
                 <RowCampana />
               </tbody>
             </Table>
+            <p className="float-right"><small>1-10 de 20 autos</small></p>
           </Col>
         </Row>
       </Container>

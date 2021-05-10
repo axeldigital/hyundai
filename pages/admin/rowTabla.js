@@ -10,7 +10,6 @@ export default function RowTabla() {
       <td>Mayo 2021</td>
       <td>Lorem ipsum dolor</td>
       <td>Pellentesque ut ornare libero....</td>
-      <td className="text-center">sds</td>
     </tr>
   )
 }
