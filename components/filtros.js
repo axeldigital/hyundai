@@ -84,49 +84,76 @@ export default function Filtros(
               </Form.Group>
             </Form>
           </div>
-
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button
               className="btn btn-default bg-white p-2 mr-2 w-100"
+              onClick={() => elAnio(2022)}
+            >
+              2022
+            </button>
+            <button
+              className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2021)}
             >
               2021
             </button>
+          </div>
+          <div className="d-flex align-items-center justify-content-center mt-3">
             <button
-              className="btn btn-default bg-white p-2 w-100"
+              className="btn btn-default bg-white p-2 mr-2 w-100"
               onClick={() => elAnio(2020)}
             >
               2020
             </button>
-          </div>
-          <div className="d-flex align-items-center justify-content-center mt-3">
             <button
-              className="btn btn-default bg-white p-2 mr-2 w-100"
+              className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2019)}
             >
               2019
             </button>
+          </div>
+          <div className="d-flex align-items-center justify-content-center mt-3">
             <button
-              className="btn btn-default bg-white p-2 w-100"
+              className="btn btn-default bg-white p-2 mr-2 w-100"
               onClick={() => elAnio(2018)}
             >
               2018
+            </button>
+            <button
+              className="btn btn-default bg-white p-2 w-100"
+              onClick={() => elAnio(2017)}
+            >
+              2017
             </button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
             <button
               className="btn btn-default bg-white p-2 mr-2 w-100"
-              onClick={() => elAnio(2017)}
-            >
-              2017
-            </button>
-            <button
-              className="btn btn-default bg-white p-2 w-100"
               onClick={() => elAnio(2016)}
             >
               2016
+            </button>
+            <button
+              className="btn btn-default bg-white p-2 w-100"
+              onClick={() => elAnio(2015)}
+            >
+              2015
+            </button>
+          </div>
+          <div className="d-flex align-items-center justify-content-center mt-3">
+            <button
+              className="btn btn-default bg-white p-2 mr-2 w-100"
+              onClick={() => elAnio(2014)}
+            >
+              2014
+            </button>
+            <button
+              className="btn btn-default bg-white p-2 w-100"
+              onClick={() => elAnio(2013)}
+            >
+              2013
             </button>
           </div>
           <hr />

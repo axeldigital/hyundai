@@ -18,6 +18,7 @@ export default function Categoria() {
   const [kilometros, setKilometros] = useState(50000)
   const [anio, setAnio] = useState()
   const [modelo, setModelo] = useState("")
+  const [transmision, setTransmision] = useState()
 
   useEffect(() => {
     setAutos(entries)
@@ -42,15 +43,13 @@ export default function Categoria() {
 
   }
 
-  {/* 
+
   const filtroanio = (aniox) => {
-    setAutos(entries)
-    console.log(autos)
-    let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
+    setAnio(aniox)
+    //let filtraAnio = autos.filter(filteranio => filteranio.anio === aniox );
     //console.log(autos)
     //setAutos(...filtraAnio)
   }
-  */}
 
   if (!autos || isLoading) {
     return (
@@ -97,7 +96,6 @@ export default function Categoria() {
                 ))}
               </Row>
               <Row>
-                
               </Row>
             </Col>
           </Row>
