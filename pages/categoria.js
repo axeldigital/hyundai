@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import TarjetaCategoria from "../components/tarjetaCategoria"
 import Filtros from "../components/filtros"
 import Loader from '../components/loader'
-import { Twitter } from 'react-social-sharing'
+
 
 import { useEntries } from '../lib/swr-hooks'
 

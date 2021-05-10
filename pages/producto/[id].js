@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react'
-import Layout from '../../components/layout';
+import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ImageGallery from 'react-image-gallery';
+import ImageGallery from 'react-image-gallery'
 import BreadCrumb from '../../components/breadCrumb'
-import Banner from '../../components/banner';
-import FiltrosProductos from '../../components/filtrosProductos';
-import Favoritos from '../../components/favoritos';
+import Banner from '../../components/banner'
+import FiltrosProductos from '../../components/filtrosProductos'
+import Favoritos from '../../components/favoritos'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Loader from '../../components/loader'
+import Modal from 'react-bootstrap/Modal'
+import { Twitter, Facebook, Instagram } from 'react-social-sharing'
+import Button from 'react-bootstrap/Button'
 
 // We can use inline-style
 const style = {
@@ -49,9 +52,13 @@ import { useProducto } from '../../lib/swr-hooks'
 
 export default function Producto() {
   const [auto, setAuto] = useState()
+  const [showShare, setShowShare] = useState(false);
   const router = useRouter()
   const id = router.query.id
   const { entrie, isLoading } = useProducto(id)
+
+  const handleCloseShare = () => setShowShare(false);
+  const handleShowShare = () => setShowShare(true);
 
   useEffect(() => {
     setAuto(entrie)
@@ -153,7 +160,7 @@ export default function Producto() {
                 <span className="lnr lnr-chevron-right pl-3" onClick={siguiente}></span>
               </Col>
               <Col>
-                <p className="text-right m-0 p-0">
+                <p className="text-right m-0 p-0" onClick={handleShowShare}>
                   <small className="pr-2">Compartir</small>
                   <img src="/iconos/share-alt-solid.svg" alt="" title="" />
                 </p>
@@ -201,6 +208,26 @@ export default function Producto() {
           </Col>
         </Row>
       </Container>
+
+      <Modal show={showShare} onHide={handleCloseShare}>
+        <Modal.Header closeButton>
+          <Modal.Title>Compartir</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Twitter
+            link="https://seminuevos.hyundai.com.mx"
+          />
+          <Facebook
+            link="https://seminuevos.hyundai.com.mx"
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseShare}>
+            Cerrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </Layout>
   )
 }
