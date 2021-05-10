@@ -27,30 +27,34 @@ export default function Categoria() {
   }, [entries])
 
   const filtroPrecio = (price) => {
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
     let target = parseInt(price.target.value)
     setPrecio(target)
     setFiltroAutos(autos.filter(filteranio => filteranio.precio < target ))
   }
 
   const filtroKilometros = (kilometros) => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     let target = parseInt(kilometros.target.value)
     setKilometros(target)
     setFiltroAutos(autos.filter(filteranio => filteranio.kilometros < target ))
   }
   
   const filtroanio = (aniox) => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setAutos(autosdefault)
     setAnio(aniox)
     setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
   }
 
   const filtroModelo = (modelo) => {
-    console.log(modelo)
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setModelo(modelo)
     setFiltroAutos(autos.filter(filteranio => filteranio.modelo == modelo ))
   }
 
   const filtroTransmision = (transmision) => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setTransmision(transmision)
     setFiltroAutos(autos.filter(filteranio => filteranio.transmision == transmision ))
   }

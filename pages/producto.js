@@ -59,7 +59,7 @@ export default function Producto() {
   return (
     <Layout>
       <Container fluid={true} className="destacados">
-        <BreadCrumb valor="/categoria" />
+        <BreadCrumb />
         <Row className="p-0 m-0">
           <Col>
             <h3 className="text-center pt-3 pb-3" style={{

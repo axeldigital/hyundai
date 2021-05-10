@@ -118,7 +118,7 @@ export default function Producto() {
         </Row>
         <Row>
           <Col>
-            <BreadCrumb modelo={entrie.modelo}/>
+            <BreadCrumb />
           </Col>
         </Row>
         <Row className="p-0 m-0">
