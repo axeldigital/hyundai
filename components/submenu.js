@@ -11,7 +11,7 @@ export default function Submenu() {
         <Col className="flex align-items-center justify-content-center">
           <ul>
             <li>
-              <Link href="/pagina">
+              <Link href="/programa">
                 <a>¿Qué es hyundai promise?</a>
               </Link>
             </li>

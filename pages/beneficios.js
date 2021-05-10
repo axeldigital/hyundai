@@ -12,7 +12,7 @@ import Filtros from '../components/filtros';
 export default function Beneficios() {
   return (
     <Layout>
-      <Slider className="mt-3" imagen="hero.png" />
+      <Slider className="mt-3" imagen="beneficios.png" texto="Beneficios del Programa" />
       <Container className="mb-3">
         <Row className="mt-5 mb-5">
           <Col md={4}>
