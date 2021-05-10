@@ -16,8 +16,6 @@ export default function Home() {
   const [autos, setAutos] = useState()
   const { entries, isLoading } = useEntries()
 
-  console.log()
-
   useEffect(() => {
     setAutos(entries)
   }, [entries])
@@ -114,19 +112,17 @@ export default function Home() {
           <Row>
             <Link href="https://www.hyundai.com.mx/privacidad/">
               <a>
-                Política de privacidad <img src="/iconos/infp.svg" alt="Hyundai México" title="Hyundai México" style={{width: '15px', marginLeft: '10px', marginRight: '7px'}} /> 
+                Política de privacidad <img src="/iconos/infp.svg" alt="Hyundai México" title="Hyundai México" style={{ width: '15px', marginLeft: '10px', marginRight: '7px' }} />
               </a>
             </Link>
             <Link href="https://www.hyundai.com.mx/terminos/">
               <a>
-                Términos y condiciones <img src="/iconos/infp.svg" alt="Hyundai México" title="Hyundai México" style={{width: '15px', marginLeft: '10px', marginRight: '7px'}} />
+                Términos y condiciones <img src="/iconos/infp.svg" alt="Hyundai México" title="Hyundai México" style={{ width: '15px', marginLeft: '10px', marginRight: '7px' }} />
               </a>
-              
             </Link>
           </Row>
         </Col>
       </div>
-
     </Layout>
   )
 }
