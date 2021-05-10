@@ -88,30 +88,24 @@ export default function Home() {
           />
           <div className="linea"></div>
           <Banner
-            icono="iconos/certificacion.svg"
-            titulo="¿En qué consiste la certificación?"
-            boton="Búsqueda Inteligente"
+            icono="iconos/162puntos.svg"
+            titulo="Certificación de Seminuevos"
+            boton="Certificación de Seminuevos"
             linker="/registro"
           />
         </div>
         <div className="bannerx">
-          <Banner
-            icono="iconos/162puntos.svg"
-            titulo="Revisión de 162 puntos"
-            boton="Búsqueda Inteligente"
-            linker="/beneficios"
-          />
           <div className="linea"></div>
           <Banner
             icono="iconos/registrar.svg"
-            titulo="Quiero registrar mi auto"
+            titulo="Registro de Seminuevos"
             boton="Búsqueda Inteligente"
             linker="/registrar"
           />
           <div className="linea"></div>
           <Banner
             icono="iconos/contacto.svg"
-            titulo="Contactar a distribuidor"
+            titulo="Contacta un distribuidor"
             boton="Búsqueda Inteligente"
             linker="/registro"
           />
