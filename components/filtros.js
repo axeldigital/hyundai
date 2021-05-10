@@ -15,6 +15,7 @@ export default function Filtros(
   {
     contador,
     precio,
+    kilometros,
     loskilometros,
     elAnio,
     anio,
@@ -66,13 +67,24 @@ export default function Filtros(
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button className="btn btn-default bg-white mr-3">10,000</button> -
-            <button className="btn btn-default bg-white ml-3">150,000</button>
+            <button className="btn btn-default bg-white ml-3">{kilometros}</button>
           </div>
-          <Form className="mt-3">
-            <Form.Group controlId="formBasicRange" min="0" max="200000" onChange={loskilometros}>
-              <Form.Control type="range" />
-            </Form.Group>
-          </Form>
+
+          <div className="mt-3">
+            <Form className="mt-3">
+              <Form.Group controlId="formBasicRange">
+                <Form.Control
+                  type="range"
+                  defaultValue={kilometros}
+                  min="0"
+                  max="500000"
+                  step="1"
+                  onChange={loskilometros}
+                />
+              </Form.Group>
+            </Form>
+          </div>
+
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">

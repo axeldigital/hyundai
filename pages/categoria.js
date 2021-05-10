@@ -15,15 +15,13 @@ export default function Categoria() {
   const [filtroautos, setFiltroAutos] = useState()
   const { entries, isLoading } = useEntries()
   const [precio, setPrecio] = useState(50000)
-  const [kilometros, setKilometros] = useState(0)
+  const [kilometros, setKilometros] = useState(50000)
   const [anio, setAnio] = useState()
   const [modelo, setModelo] = useState("")
 
   useEffect(() => {
     setAutos(entries)
   }, [entries])
-
-  
 
   const filtroPrecio = (price) => {
     let target = parseInt(price.target.value)
