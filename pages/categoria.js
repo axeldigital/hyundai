@@ -16,7 +16,7 @@ export default function Categoria() {
   const [filtroautos, setFiltroAutos] = useState()
   const { entries, isLoading } = useEntries()
   const [precio, setPrecio] = useState(50000)
-  const [kilometros, setKilometros] = useState(50000)
+  const [kilometros, setKilometros] = useState(0)
   const [anio, setAnio] = useState()
   const [modelo, setModelo] = useState("")
   const [transmision, setTransmision] = useState()
@@ -28,28 +28,20 @@ export default function Categoria() {
 
   const filtroPrecio = (price) => {
     let target = parseInt(price.target.value)
-    console.log(target)
-
-    const newList = [...autos];
-    console.log(newList)
-    const itemIndex = newList.filter(item => item.precio < target);
-
-    console.log(itemIndex)
     setPrecio(target)
+    setFiltroAutos(autos.filter(filteranio => filteranio.precio < target ))
+  }
 
-    if (itemIndex.length) {
-      setAutos(itemIndex)
-    } else {
-      setAutos(entries)
-    }
-
+  const filtroKilometros = (kilometros) => {
+    let target = parseInt(kilometros.target.value)
+    setKilometros(target)
+    setFiltroAutos(autos.filter(filteranio => filteranio.kilometros < target ))
   }
   
   const filtroanio = (aniox) => {
     setAutos(autosdefault)
     setAnio(aniox)
     setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
-    console.log(filtroautos)
   }
 
   if (!autos || isLoading) {
@@ -72,7 +64,7 @@ export default function Categoria() {
               <Filtros
                 contador={(precio) => filtroPrecio(precio)}
                 precio={precio}
-                loskilometros={() => setKilometros(kilometros + 10000)}
+                loskilometros={(kilometros) => filtroKilometros(kilometros)}
                 kilometros={kilometros}
                 elAnio={(anio) => filtroanio(anio)}
                 anio={anio}
