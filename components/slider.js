@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel'
 
-export default function Slider({imagen}) {
+export default function Slider({imagen, texto}) {
   return (
     <Carousel className="registro">
       <Carousel.Item>
@@ -10,7 +10,7 @@ export default function Slider({imagen}) {
           alt="Conoce Hyundai Promise"
         />
         <Carousel.Caption>
-          <h3>Quiero registrar mi auto</h3>
+          <h3>{texto}</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

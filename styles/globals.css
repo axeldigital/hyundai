@@ -836,11 +836,19 @@ span.oppt {
   color: #fff;
   font-family: "HyundaiMedium";
   font-size: 2.2rem;
+  padding-left: 50px;
 }
 
 p.distri {
   font-size: 0.7rem;
 }
+
+.certipe h3 {
+  text-align: center;
+  color: #012E5E !important;
+  font-family: "HyundaiBold";
+}
+
 
 @media (min-width: 1200px) {
   .container {

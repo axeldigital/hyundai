@@ -21,7 +21,7 @@ export default function Registrar() {
   
   return (
     <Layout>
-      <Slider className="mt-3" imagen="hero4.png" />
+      <Slider className="mt-3" imagen="hero4.png" texto="Quiero registrar mi auto" />
       <Container>
         <Row>
           <Col md={4}>
