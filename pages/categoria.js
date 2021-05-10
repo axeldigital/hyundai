@@ -70,11 +70,7 @@ export default function Categoria() {
   console.log(autos)
 
   return (
-    <ReactiveBase
-      app="good-books-ds"
-      url="https://a03a1cb71321:75b6603d-9456-4a5a-af6b-a487b309eb61@appbase-demo-ansible-abxiydt-arc.searchbase.io"
-      enableAppbase
-    >
+
       <Layout>
         <Container className="destacados">
           <Row>
@@ -110,32 +106,11 @@ export default function Categoria() {
                 ))}
               </Row>
               <Row>
-                <SelectedFilters />
-                <ReactiveList
-                  componentId="SearchResult"
-                  dataField="original_title"
-                  from={0}
-                  size={3}
-                  className="result-list-container"
-                  pagination
-                  react={{
-                    and: 'Automóviles',
-                  }}
-                  render={({ data }) => (
-                    <ReactiveList.ResultListWrapper>
-                      {data.map(item => (
-                        <ResultList key={item.id}>
-                          {item.id}
-                        </ResultList>
-							        ))}
-                    </ReactiveList.ResultListWrapper>
-					        )}
-                />
+                
               </Row>
             </Col>
           </Row>
         </Container>
       </Layout>
-    </ReactiveBase>
   )
 }

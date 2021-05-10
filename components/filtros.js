@@ -51,19 +51,7 @@ export default function Filtros(
             <button className="btn btn-default bg-white mr-3">$100,000.00</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
-          <RangeSlider
-            dataField="ratings_count"
-            componentId="BookSensor"
-            range={{
-              start: 1000,
-              end: 700000,
-            }}
-            rangeLabels={{
-              start: '$1,000.00',
-              end: '$700,000.00',
-            }}
-          />
-          {/* 
+          
           <div className="mt-3">
             <Form className="mt-3">
               <Form.Group controlId="formBasicRange1">
@@ -78,7 +66,7 @@ export default function Filtros(
               </Form.Group>
             </Form>
           </div>
-          */}
+          
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
