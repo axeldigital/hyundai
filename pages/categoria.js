@@ -18,7 +18,7 @@ export default function Categoria() {
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState(0)
   const [anio, setAnio] = useState()
-  const [modelo, setModelo] = useState("")
+  const [modelo, setModelo] = useState()
   const [transmision, setTransmision] = useState()
 
   useEffect(() => {
@@ -44,9 +44,15 @@ export default function Categoria() {
     setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
   }
 
+  const filtroModelo = (modelo) => {
+    console.log(modelo)
+    setModelo(modelo)
+    setFiltroAutos(autos.filter(filteranio => filteranio.modelo == modelo ))
+  }
+
   const filtroTransmision = (transmision) => {
-    console.log(transmision)
     setTransmision(transmision)
+    setFiltroAutos(autos.filter(filteranio => filteranio.transmision == transmision ))
   }
 
   if (!autos || isLoading) {
@@ -54,8 +60,6 @@ export default function Categoria() {
       <Loader />
     )
   }
-
-  console.log(autos)
 
   return (
 
@@ -73,14 +77,14 @@ export default function Categoria() {
                 kilometros={kilometros}
                 elAnio={(anio) => filtroanio(anio)}
                 anio={anio}
-                elModelo={(par) => setModelo(par)}
+                elModelo={(par) => filtroModelo(par)}
                 modelo={modelo}
                 transmision={transmision}
                 laTransmision={(transmision) => filtroTransmision(transmision)}
               />
             </Col>
             <Col>
-              <BreadCrumb valor="/categoria" />
+              <BreadCrumb />
               <Row>
                 {filtroautos ? 
                 filtroautos.map(auto => (

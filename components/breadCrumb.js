@@ -4,16 +4,13 @@ import Link from 'next/link'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export default function BreadCrumb({id, modelo, valor}){
+export default function BreadCrumb(){
   const router = useRouter();
   const [ruta, setRuta] = useState([])
   useEffect(() => {
-    setRuta(router.pathname.split("/"))
+    setRuta(router.pathname)
     console.log(ruta)
   }, [])
-  console.log(router.pathname)
-  console.log(id)
-  console.log(modelo)
   return(
     <Row className="breadcrumb">
       <Col className="p-0">
@@ -26,22 +23,13 @@ export default function BreadCrumb({id, modelo, valor}){
             </Link>
           </li>
           <li>
-            <Link href={`/${valor}`}>
+            <Link href={`${ruta}`}>
               <a>
-                <span className="lnr lnr-chevron-right pr-1"></span> {valor}
+                <span className="lnr lnr-chevron-right pr-1"></span> {ruta}
               </a>
             </Link>
           </li>
-          {/*ruta.map(rut => (
-            <li key={rut}>
-              <Link href={`/`}>
-                <a>
-                  <span className="lnr lnr-chevron-right pr-1"></span> {id}
-                </a>
-              </Link>
-            </li>
-          ))*/}
-          <li>{modelo}</li>
+          
         </ul>
       </Col>
     </Row>

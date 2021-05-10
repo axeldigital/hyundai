@@ -721,10 +721,6 @@ table.filtros span.gris {
   padding: 0 5px;
 }
 
-.breadcrumb ul li:nth-child(2){
-  display: none;
-}
-
 .breadcrumb ul li a {
   display: flex;
   justify-content: center;
