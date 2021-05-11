@@ -849,6 +849,10 @@ p.distri {
   font-family: "HyundaiBold";
 }
 
+.image-gallery-thumbnails-container {
+  margin-top: 25px;
+}
+
 @media (max-width: 900px) {
   .container {
     max-width: 1250px;
