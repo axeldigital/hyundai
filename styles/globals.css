@@ -762,7 +762,7 @@ a.dropdown-toggle.nav-link:hover {
 
 .adminot {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 

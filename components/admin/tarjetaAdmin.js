@@ -10,20 +10,23 @@ export default function TarjetaAdmin({modelo, precio, kilometros, anio, imagen})
         <Card>
             <Card.Img variant="top" src={imagen} />
             <Card.Body>
-                <h3>{modelo}</h3>
+                <h3 className="mt-4">{modelo}</h3>
                 <h3>{anio}</h3>
                 <div className="detalles">
                     <div className="adminot">
                         <p className="desde">$ {precio}.00</p>
-                        <p className="desde">{kilometros} km</p>
+                        <p className="desde">{kilometros.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} km</p>
                     </div>
                     <p><span className="oppt">Alta:</span> - 2 de mayo 2021</p>
                     <p><span className="oppt">Vencimiento:</span> - 2 de julio 2021</p>
                 </div>
-                <Link href="/admin/editarvehiculo">
-                    <Button variant="primary" className="w-50 pl-1 pr-1">Editar</Button>
-                </Link>
-                <img src="/iconos/trash-solid.svg" alt="" title="" className="float-right mr-3" onClick={alerta} />
+                <div className="d-flex justify-content-between">
+                    <Link href="/admin/editarvehiculo">
+                        <Button variant="primary" className="w-50 pl-1 pr-1">Editar</Button>
+                    </Link>
+                    <img src="/iconos/trash-solid.svg" alt="" title="" className="float-right mr-3" onClick={alerta} />
+                </div>
+                
             </Card.Body>
         </Card>
     )

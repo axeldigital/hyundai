@@ -29,8 +29,8 @@ export default function VehiculosGeneral() {
       <Container fluid={true}>
         <Header />
       </Container>
-      <Container fluid={true} className="p-3 pt-4 dashtablas">
-        <h2>Vehículos</h2>
+      <Container className="pt-4 pl-0 dashtablas">
+        <h2 className="pl-0">Vehículos</h2>
       </Container>
       <Container className="p-0 pt-4 pb-4 dashtablas">
         <Row>

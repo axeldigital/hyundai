@@ -20,8 +20,8 @@ export default function Distribuidores() {
       <Container fluid={true}>
         <Header />
       </Container>
-      <Container fluid={true} className="p-0 pt-4 dashtablas">
-        <h2 className="p-3">Distribuidores</h2>
+      <Container className="p-0 pt-4 dashtablas">
+        <h2 className="pt-3 ml-0">Distribuidores</h2>
       </Container>
       <Container className="p-0 pt-4 pb-4 dashtablas">
         <Row>

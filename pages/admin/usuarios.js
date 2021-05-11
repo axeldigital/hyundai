@@ -15,11 +15,11 @@ export default function Usuarios() {
       <Container fluid={true}>
         <Header />
       </Container>
-      <Container fluid={true} className="p-3 pt-4 dashtablas">
+      <Container className="p-0 pt-4 dashtablas">
         <h2>Usuarios</h2>
         <h3>Lorem ipsum dolor</h3>
       </Container>
-      <Container className="p-0 mb-0 pb-0">
+      <Container className="pb-0">
         <Row>
           <Col className="p-0 mb-0">
           <Form>
@@ -37,7 +37,7 @@ export default function Usuarios() {
           </Col>
         </Row>
       </Container>
-      <Container className="p-0 pt- pb-4 dashtablas">
+      <Container className="pb-4 dashtablas">
       <Row>
           
             <Table striped bordered hover size="sm">
@@ -45,7 +45,6 @@ export default function Usuarios() {
                 <tr>
                   <th>#</th>
                   <th>Fecha</th>
-                  <th></th>
                   <th></th>
                   <th></th>
                 </tr>
