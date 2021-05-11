@@ -133,11 +133,13 @@ export default function Producto() {
             <h2 className="m-0 p-3 pt-4 w-100 text-center font-bold">Modelo</h2>
           </Col>
         </Row>
+        {/* 
         <Row>
           <Col>
             <BreadCrumb />
           </Col>
         </Row>
+        */}
         <Row className="p-0 m-0">
           <Col md={9} sm={9}>
             <div className="d-flex justify-content-between">
