@@ -103,11 +103,7 @@ export default function FiltrosProductos({
           <h4 className="text-center">Contactar al distribuidor</h4>
         <FormaDistribuidor />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" className="w-100" onClick={handleClose}>
-            Enviar
-          </Button>
-        </Modal.Footer>
+        
       </Modal>
 
       <Modal show={showMapa} onHide={handleCloseMapa}>

@@ -37,7 +37,7 @@ export default function Home() {
         </Row>
         <Row>
           {autos.map(auto => (
-            <Col key={auto.id} md={3}>
+            <Col key={auto.id} md={3} xs={6}>
               <Tarjeta
                 link="/categoria"
                 modelo={auto.modelo}

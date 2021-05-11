@@ -889,4 +889,9 @@ width: 100%;
   .bannerx .linea {
     margin-bottom: 20px;
   }
+
+  .card .btn.btn-primary {
+    padding: 10px 15px;
+    width: 100%;
+  }
 }
