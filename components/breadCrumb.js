@@ -6,11 +6,12 @@ import Col from 'react-bootstrap/Col'
 
 export default function BreadCrumb(){
   const router = useRouter();
-  const [ruta, setRuta] = useState([])
+  const [ruta, setRuta] = useState()
   console.log(router.pathname)
+
   useEffect(() => {
-    setRuta(router.pathname)
-    console.log(ruta)
+    setRuta(router.pathname.slice('/'))
+    
   }, [ruta])
 
   if(!ruta){
@@ -19,17 +20,27 @@ export default function BreadCrumb(){
     )
   }
 
+  console.log(typeof(ruta))
+
   return(
     <Row className="breadcrumb">
       <Col className="p-0">
         <ul>
           <li>
-            <Link href={ruta}>
+            <Link href="/">
               <a>
-                <span className="lnr lnr-chevron-right pr-1"></span> {ruta}
+                <span className="lnr lnr-chevron-right pr-1"></span> Inicio
               </a>
             </Link>
           </li>
+          <li>
+            <Link href={ruta}>
+              <a>
+                <span className="lnr lnr-chevron-right pr-1"></span> {ruta.substring(1)}
+              </a>
+            </Link>
+          </li>
+          
         </ul>
       </Col>
     </Row>

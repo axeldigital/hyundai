@@ -29,13 +29,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <GlassMagnifier
-                        imageSrc={imagen}
-                        imageAlt="Example"
-                        largeImageSrc={imagen}
-                        allowOverflow="true"
-                        magnifierSize="70%"
-                    />
+                    <img src={imagen} alt="" title="" className="img-fluid" />
                 </div>
             </Link>
             <Card.Body>

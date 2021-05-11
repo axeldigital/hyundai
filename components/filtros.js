@@ -48,7 +48,7 @@ export default function Filtros(
           */}
           <p className="p-0 m-0 pl-0 mb-2"><small>Precio</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">$100,000.00</button> -
+            <button className="btn btn-default bg-white mr-3">$0.00</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
 
@@ -70,7 +70,7 @@ export default function Filtros(
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">10,000</button> -
+            <button className="btn btn-default bg-white mr-3">0</button> -
             <button className="btn btn-default bg-white ml-3">{kilometros}</button>
           </div>
 

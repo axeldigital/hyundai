@@ -93,7 +93,6 @@ export default function Home() {
           />
         </div>
         <div className="bannerx">
-          <div className="linea"></div>
           <Banner
             icono="iconos/registrar.svg"
             titulo="Registro de Seminuevos"

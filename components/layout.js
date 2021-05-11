@@ -14,25 +14,25 @@ export default function Layout({ children }) {
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"></link>
         <link
           rel="preload"
-          href="/hyundai/fonts/HyundaiSansHeadOffice-Bold.ttf"
+          href="/fonts/HyundaiSansHeadOffice-Bold.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/hyundai/fonts/HyundaiSansHeadOffice-Light.ttf"
+          href="/fonts/HyundaiSansHeadOffice-Light.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/hyundai/fonts/HyundaiSansHeadOffice-Medium.ttf"
+          href="/fonts/HyundaiSansHeadOffice-Medium.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/hyundai/fonts/HyundaiSansHeadOffice-Regular.ttf"
+          href="/fonts/HyundaiSansHeadOffice-Regular.ttf"
           as="font"
           crossOrigin=""
         />
