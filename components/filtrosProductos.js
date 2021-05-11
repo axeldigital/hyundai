@@ -58,7 +58,7 @@ export default function FiltrosProductos({
               </tr>
               <tr>
                 <td><b>Kilometraje</b></td>
-                <td><span className="gris">{kilometros} km</span></td>
+                <td><span className="gris">{kilometros.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} km</span></td>
               </tr>
               <tr>
                 <td><b>Color</b></td>

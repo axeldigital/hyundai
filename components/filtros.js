@@ -60,20 +60,18 @@ export default function Filtros(
                   defaultValue={precio}
                   min="0"
                   max="500000"
-                  step="1"
+                  step="5"
                   onChange={contador}
                 />
               </Form.Group>
             </Form>
           </div>
-
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button className="btn btn-default bg-white mr-3">0</button> -
             <button className="btn btn-default bg-white ml-3">{kilometros}</button>
           </div>
-
           <div className="mt-3">
             <Form className="mt-3">
               <Form.Group controlId="formBasicRange">
@@ -82,7 +80,7 @@ export default function Filtros(
                   defaultValue={kilometros}
                   min="0"
                   max="500000"
-                  step="1"
+                  step="5"
                   onChange={loskilometros}
                 />
               </Form.Group>
@@ -144,20 +142,6 @@ export default function Filtros(
               onClick={() => elAnio(2015)}
             >
               2015
-            </button>
-          </div>
-          <div className="d-flex align-items-center justify-content-center mt-3">
-            <button
-              className="btn btn-default bg-white p-2 mr-2 w-100"
-              onClick={() => elAnio(2014)}
-            >
-              2014
-            </button>
-            <button
-              className="btn btn-default bg-white p-2 w-100"
-              onClick={() => elAnio(2013)}
-            >
-              2013
             </button>
           </div>
           <hr />
