@@ -14,10 +14,10 @@ export default function Validacion() {
       <Container fluid={true}>
         <Header />
       </Container>
-      <Container fluid={true} className="p-0 pt-4 dashtablas">
-        <h2 className="p-3">Validación</h2>
+      <Container className="p-0 pt-4 dashtablas">
+        <h2 className="pl-0 pt-3">Validación</h2>
       </Container>
-      <Container className="p-0 pt-4 pb-4 dashtablas">
+      <Container className="pt-4 pb-4 dashtablas">
         <Row>
             <Table striped bordered hover size="sm">
             <thead>

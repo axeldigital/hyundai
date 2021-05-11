@@ -17,10 +17,10 @@ export default function Roles() {
       <Container fluid={true}>
         <Header />
       </Container>
-      <Container fluid={true} className="p-3 pt-4 dashtablas">
+      <Container className="p-0 pt-4 dashtablas">
         <h2>Roles</h2>
       </Container>
-      <Container className="p-0 mb-0 pb-0">
+      <Container className="pb-0">
         <Row>
           <Col className="p-0 mb-0">
             <Form>
@@ -35,7 +35,7 @@ export default function Roles() {
           </Col>
         </Row>
       </Container>
-      <Container className="p-0 pt- pb-4 dashtablas">
+      <Container className="pb-4 dashtablas">
         <Row>
           <Table striped bordered hover size="sm">
             <tbody>
