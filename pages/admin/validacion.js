@@ -20,13 +20,12 @@ export default function Validacion() {
       <Container className="pt-4 pb-4 dashtablas">
         <Row>
             <Table striped bordered hover size="sm">
-            <thead>
+              <thead>
                 <tr>
                   <th>#</th>
                   <th>Fecha</th>
                   <th>Distribuidor</th>
                   <th>Tipo auto</th>
-                  <th></th>
                 </tr>
               </thead>
               <tbody>
