@@ -703,6 +703,7 @@ table.filtros span.gris {
 
 .favoritos.btn.btn-primary {
   min-width: 250px;
+  font-size: 0.8rem;
 }
 
 .favoritos.btn.btn-primary:hover {

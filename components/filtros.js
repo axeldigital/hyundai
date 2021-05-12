@@ -157,8 +157,8 @@ export default function Filtros({
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión <span className="font-bold">{transmision}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision == 'Manual⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Manual')}>Manual</button>
-            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision == 'Automática⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Automática')}>Automática</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision === 'Manual⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Manual')}>Manual</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision === 'Automática⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Automática')}>Automática</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
