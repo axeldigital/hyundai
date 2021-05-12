@@ -21,7 +21,7 @@ export default function Programa() {
   
   return (
     <Layout>
-      <Slider className="mt-3" imagen="programa.png" texto="¿Qué es el programa Hyundai Promise?" />
+      <Slider className="mt-3" imagen="hero6.png" texto="¿Qué es Hyundai Promise?" />
       <Container>
         <Row>
           <Col md={4}>
@@ -29,7 +29,17 @@ export default function Programa() {
           </Col>
           <Col className="bg-light d-flex align-items-center">
             <div className="tarjetax p-3">
-              <p><small>Hyundai Promise nace de la búsqueda de las personas por una experiencia segura en la compra y venta de Seminuevos.<br/><br/>Hyundai Promise es un programa que a través de una revisión exhaustiva que certifica los autos y avala que estén en buen estado, además de otros beneficios que hacen de este proceso una experiencia de completa que mantiene la confianza de una venta segura y un buen trato en todo momento.</small></p>
+              <p><small>Hyundai de Mexico es el programa de autos seminuevos certificados más enfocado en la calidad y servicio, con los mejores beneficios del mercado. </small></p>
+              <h3>Características</h3>
+              <p><small>Para garantizar que los vehículos alcancen el máximo nivel de calidad y seguridad, todos nuestros autos seminuevos han pasado por una exhaustiva revisión de 162 puntos para obtener su certificación, de esta manera tu auto estará en las mejores condiciones de acuerdo a su edad y modelo. Además de contar con beneficios exclusivos como:</small></p>
+              <h3>Hyundai Finnance</h3>
+              <p><small>Solo por ser parte del programa de Hyundai Promise ofrecemos productos financieros con beneficios especiales para Seminuevos Certificados.</small></p>
+              <h3>Hyundai Protect</h3>
+              <p><small>Como parte de los beneficios de Hyundai Promise ofrecemos seguros con coberturas especiales para Seminuevos Certificados.</small></p>
+              <h3>ASSURANT</h3>
+              <p><small>Líder en el segmento de Seminuevos Certificados.</small></p>
+              <h3>TOMA Y VENTA</h3>
+              <p><small>Transparencia y confianza en todo el proceso.</small></p>
             </div>
           </Col>
         </Row>
