@@ -11,8 +11,7 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 2
 })
 
-export default function Filtros(
-  {
+export default function Filtros({
     contador,
     precio,
     kilometros,
@@ -22,11 +21,15 @@ export default function Filtros(
     elModelo,
     modelo,
     transmision,
-    laTransmision
+    laTransmision,
+    activado,
+    elActivado
   }) {
 
   const [estado, setEstados] = useState([])
   const [value, setValue] = useState({ min: 2, max: 10 })
+
+  console.log(anio)
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
@@ -79,8 +82,8 @@ export default function Filtros(
                   type="range"
                   defaultValue={kilometros}
                   min="0"
-                  max="500000"
-                  step="5"
+                  max="50000"
+                  step="50"
                   onChange={loskilometros}
                 />
               </Form.Group>
@@ -90,13 +93,13 @@ export default function Filtros(
           <p className="p-0 m-0 pl-0 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button
-              className="btn btn-default bg-white p-2 mr-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2022 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2022)}
             >
               2022
             </button>
             <button
-              className="btn btn-default bg-white p-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2021 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2021)}
             >
               2021
@@ -104,13 +107,13 @@ export default function Filtros(
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
             <button
-              className="btn btn-default bg-white p-2 mr-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2020 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2020)}
             >
               2020
             </button>
             <button
-              className="btn btn-default bg-white p-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2019 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2019)}
             >
               2019
@@ -118,13 +121,13 @@ export default function Filtros(
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
             <button
-              className="btn btn-default bg-white p-2 mr-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2018 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2018)}
             >
               2018
             </button>
             <button
-              className="btn btn-default bg-white p-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2017 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2017)}
             >
               2017
@@ -132,13 +135,13 @@ export default function Filtros(
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
             <button
-              className="btn btn-default bg-white p-2 mr-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2016 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2016)}
             >
               2016
             </button>
             <button
-              className="btn btn-default bg-white p-2 w-100"
+              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2015 ? 'prendido' : 'noprendido'}`}
               onClick={() => elAnio(2015)}
             >
               2015
@@ -147,30 +150,30 @@ export default function Filtros(
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Modelo <span className="font-bold">{modelo}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('TUCSON⁠')}>TUCSON⁠</button>
-            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('CRETA⁠')}>CRETA⁠</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'TUCSON⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('TUCSON⁠')}>TUCSON⁠</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'CRETA⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('CRETA⁠')}>CRETA⁠</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('SANTA FE')}>SANTA FE</button>
-            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('GRAND I10 HB')}>GRAND I10 HB</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'SANTA FE⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('SANTA FE')}>SANTA FE</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'GRAND I10 HB⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('GRAND I10 HB')}>GRAND I10 HB</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button>
-            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ACCENT SD')}>ACCENT SD</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'GRAND I10 SD⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('GRAND I10 SD')}>GRAND I10 SD</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'ACCENT SD⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('ACCENT SD')}>ACCENT SD</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button>
-            <button className="btn btn-default bg-white p-2 w-100" onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'ACCENT HB⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('ACCENT HB')}>ACCENT HB</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'ELANTRA⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('ELANTRA')}>ELANTRA</button>
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('IONIQ')}>IONIQ</button>
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => elModelo('IX35')}>IX35</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'IONIQ⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('IONIQ')}>IONIQ</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'IX35⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('IX35')}>IX35</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión <span className="font-bold">{transmision}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white p-2 mr-2 w-100" onClick={() => laTransmision('Manual')}>Manual</button>
-            <button className="btn btn-default bg-white p-2 w-100" onClick={() => laTransmision('Automática')}>Automática</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision == 'Manual⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Manual')}>Manual</button>
+            <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision == 'Automática⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Automática')}>Automática</button>
           </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Distribuidor</small></p>

@@ -853,6 +853,17 @@ p.distri {
   margin-top: 25px;
 }
 
+.filtros .btn.btn-default.prendido {
+  background: #002c5e !important;
+  color: #fff;
+}
+
+.filtros .btn.btn-default.noprendido {
+  background: #fff;
+  margin-right: 0;
+  padding: 0;
+}
+
 @media (max-width: 900px) {
   .container {
     max-width: 1250px;

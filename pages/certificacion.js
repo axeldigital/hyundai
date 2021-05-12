@@ -3,12 +3,11 @@ import Layout from '../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
 import Slider from "../components/slider"
 
 export default function Certificacion() {
   const [estado, setEstados] = useState([])
+  const [tarjetas, setTarjetas] = useState()
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
@@ -18,7 +17,19 @@ export default function Certificacion() {
     );
   }, [])
 
-  
+  useEffect(() => {
+    fetch('data/certificacion.json')
+      .then(function (response) {
+        console.log(response)
+        return response.json();
+      })
+      .then(function (myJson) {
+        setTarjetas(myJson)
+      });
+  }, [tarjetas])
+
+  console.log('las tarjetas: '+tarjetas)
+
   return (
     <Layout>
       <Slider className="mt-3" imagen="certificacion.png" texto="Certificación de seminuevos" />

@@ -21,6 +21,7 @@ export default function Categoria() {
   const [anio, setAnio] = useState()
   const [modelo, setModelo] = useState()
   const [transmision, setTransmision] = useState()
+  const [activado, setActivado] = useState(false)
 
   useEffect(() => {
     setAutos(entries)
@@ -46,6 +47,7 @@ export default function Categoria() {
     setAutos(autosdefault)
     setAnio(aniox)
     setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
+    setActivado(!activado)
   }
 
   const filtroModelo = (modelo) => {
@@ -58,6 +60,10 @@ export default function Categoria() {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setTransmision(transmision)
     setFiltroAutos(autos.filter(filteranio => filteranio.transmision == transmision ))
+  }
+
+  const elActivado = (activado) => {
+    setActivado(!activado)
   }
 
   if (!autos || isLoading) {
@@ -86,6 +92,8 @@ export default function Categoria() {
                 modelo={modelo}
                 transmision={transmision}
                 laTransmision={(transmision) => filtroTransmision(transmision)}
+                activado={activado}
+                elActivado={(activado) => setActivado(activado)}
               />
             </Col>
             <Col>

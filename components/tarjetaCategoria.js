@@ -13,7 +13,7 @@ import {
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-    minimumFractionDigits: 2
+    minimumFractionDigits: 0
 })
 
 export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,imagen}) {
