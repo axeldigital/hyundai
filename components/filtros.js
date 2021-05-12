@@ -161,7 +161,7 @@ export default function Filtros({
             <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision == 'Automática⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Automática')}>Automática</button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Distribuidor</small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
           <Form.Group controlId="formBasicEmail">
           <Form.Control as="select">
                       {estado.map(edo => (

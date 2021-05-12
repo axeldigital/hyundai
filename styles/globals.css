@@ -843,7 +843,7 @@ p.distri {
 .certipe h3 {
   text-align: center;
   color: #012E5E !important;
-  font-family: "HyundaiBold";
+  font-family: "HyundaiMedium";
 }
 
 .font-bold {
@@ -867,6 +867,13 @@ p.distri {
 
 ol.carousel-indicators {
   display: none;
+}
+
+ul.certix {
+  margin: 0;
+  padding: 20px 30px;
+  text-align: justify;
+  list-style: decimal;
 }
 
 @media (max-width: 900px) {

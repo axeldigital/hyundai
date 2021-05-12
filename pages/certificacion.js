@@ -24,8 +24,8 @@ export default function Certificacion() {
     setTarjetas(JSONResult.certificacion)
   }, [])
 
-  if(!tarjetas){
-    return(
+  if (!tarjetas) {
+    return (
       'CARGANDO'
     )
   }
@@ -53,23 +53,93 @@ export default function Certificacion() {
         </Row>
       </Container>
       <Container fluid={true} className="bg-light p-3 certipe">
-        <h3>Checklist 162 puntos de certificación</h3>
-        <div>
-          <Carousel>
-            {tarjetas.map((i, tarjeta) => {
-              <Carousel.Item key={i}>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={tarjeta.imagen} />
-                  <Card.Body>
-                    <Card.Text>
-                      
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Carousel.Item>
-            })}
-          </Carousel>
-        </div>
+        <h3 className="pt-4 pb-3" style={{fontWeight: '100'}}>Checklist 162 puntos de certificación</h3>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Img variant="top" src="/certificacion/MOTOR1.png" />
+              <Card.Body style={{background: '#e8e8e8',padding:'20px 20px'}}>
+                <Card.Text>
+                  <ul className="certix">
+                    <li>Imprimir reporte de mantenimiento</li>
+                    <li>Las cubiertas de la válvula están en buen estado</li>
+                    <li>Los sellos y juntas del motor están en buen estado</li>
+                    <li>Existen restos de aceite quemado o lodoso en el motor</li>
+                    <li>El aceite se encuentra en buen estado (no mezcla con agua)</li>
+                    <li>Cintillos de motor en buen estado</li>
+                    <li>Mangueras del motor en buen estado</li>
+                    <li>Soportes del motor en buen estado</li>
+                    <li>Tensor de banda en buen estado</li>
+                    <li>Línea de vacío en buen estado (sin fugas)</li>
+                    <li>Barra de torsión en buen estado</li>
+                    <li>Condición de aislamiento del cofre</li>
+                    <li>Etiquetas / Calcomanías: presente y condición</li>
+                    <li>La bomba de gasolina funciona correctamente 15. El radiador se encuentra en buen estado</li>
+                    <li>El ventilador se encuentra en buen estado</li>
+                    <li>Deposito de recuperación en buen estado</li>
+                    <li>La batería y los cables se encuentran en buen estado (Fije los resultados de la verificación de la batería)</li>
+                  </ul>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img variant="top" src="/certificacion/MOTOR2.png" />
+              <Card.Body style={{background: '#e8e8e8',padding:'10px 20px'}}>
+                <Card.Text>
+                  <ul className="certix">
+                    <li>Imprimir reporte de mantenimiento</li>
+                    <li>Las cubiertas de la válvula están en buen estado</li>
+                    <li>Los sellos y juntas del motor están en buen estado</li>
+                    <li>Existen restos de aceite quemado o lodoso en el motor</li>
+                    <li>El aceite se encuentra en buen estado (no mezcla con agua)</li>
+                    <li>Cintillos de motor en buen estado</li>
+                    <li>Mangueras del motor en buen estado</li>
+                    <li>Soportes del motor en buen estado</li>
+                    <li>Tensor de banda en buen estado</li>
+                    <li>Línea de vacío en buen estado (sin fugas)</li>
+                    <li>Barra de torsión en buen estado</li>
+                    <li>Condición de aislamiento del cofre</li>
+                    <li>Etiquetas / Calcomanías: presente y condición</li>
+                    <li>La bomba de gasolina funciona correctamente 15. El radiador se encuentra en buen estado</li>
+                    <li>El ventilador se encuentra en buen estado</li>
+                    <li>Deposito de recuperación en buen estado</li>
+                    <li>La batería y los cables se encuentran en buen estado (Fije los resultados de la verificación de la batería)</li>
+                  </ul>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img variant="top" src="/certificacion/MOTOR3.png" />
+              <Card.Body style={{background: '#e8e8e8',padding:'10px 20px'}}>
+                <Card.Text>
+                  <ul className="certix">
+                    <li>Imprimir reporte de mantenimiento</li>
+                    <li>Las cubiertas de la válvula están en buen estado</li>
+                    <li>Los sellos y juntas del motor están en buen estado</li>
+                    <li>Existen restos de aceite quemado o lodoso en el motor</li>
+                    <li>El aceite se encuentra en buen estado (no mezcla con agua)</li>
+                    <li>Cintillos de motor en buen estado</li>
+                    <li>Mangueras del motor en buen estado</li>
+                    <li>Soportes del motor en buen estado</li>
+                    <li>Tensor de banda en buen estado</li>
+                    <li>Línea de vacío en buen estado (sin fugas)</li>
+                    <li>Barra de torsión en buen estado</li>
+                    <li>Condición de aislamiento del cofre</li>
+                    <li>Etiquetas / Calcomanías: presente y condición</li>
+                    <li>La bomba de gasolina funciona correctamente 15. El radiador se encuentra en buen estado</li>
+                    <li>El ventilador se encuentra en buen estado</li>
+                    <li>Deposito de recuperación en buen estado</li>
+                    <li>La batería y los cables se encuentran en buen estado (Fije los resultados de la verificación de la batería)</li>
+                  </ul>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

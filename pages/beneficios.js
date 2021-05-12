@@ -14,25 +14,34 @@ export default function Beneficios() {
     <Layout>
       <Slider className="mt-3" imagen="beneficios.png" texto="Beneficios del Programa" />
       <Container className="mb-3">
-        <Row className="mt-5 mb-5">
-          <Col md={4}>
+        <Row className="mt-5 mb-5 d-flex align-items-center">
+          <Col md={3}>
             <h3>Programa de grarantía extendida</h3>
+          </Col>
+          <Col md={1}>
+          <img src="/iconos/clock-color.svg" style={{width: '60px'}} alt="" title="" />
           </Col>
           <Col className="bg-light">
             <p className="p-3"><small>Hyundai Motor ofrece vehículos Seminuevos Certificados por 3 años/ 60,000 km mediante un proveedor líder en la industria de los vehículos certificados</small></p>
           </Col>
         </Row>
-        <Row className="mt-5 mb-5">
-          <Col md={4}>
+        <Row className="mt-5 mb-5 d-flex align-items-center">
+          <Col md={3}>
             <h3>Asistencia vial</h3>
+          </Col>
+          <Col md={1}>
+          <img src="/iconos/pin-color.svg" style={{width: '50px'}} alt="" title="" />
           </Col>
           <Col className="bg-light">
             <p className="p-3"><small>Cobertura complementaria de 3 años / kilometraje ilimitado; 24 horas al día, 7 días a la semana, 365 días al año. La cobertura de asistencia en el camino incluye: remolque, batería muerta / arranque con puente, cambio de llanta desinflada y entrega de combustible.</small></p>
           </Col>
         </Row>
-        <Row className="mt-5 mb-5">
-          <Col md={4}>
+        <Row className="mt-5 mb-5 d-flex align-items-center">
+          <Col md={3}>
             <h3>Inspección de todos los sistemas</h3>
+          </Col>
+          <Col md={1}>
+          <img src="/iconos/check-color.svg" style={{width: '50px'}} alt="" title="" />
           </Col>
           <Col className="bg-light">
             <p className="p-3"><small>Una exhaustiva inspección mecánica, de seguridad y de apariencia de 162 puntos, realizada de acuerdo a los estándares del programa Seminuevos Certificados.</small></p>
