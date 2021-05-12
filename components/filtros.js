@@ -82,7 +82,7 @@ export default function Filtros({
                   defaultValue={kilometros}
                   min="0"
                   max="100000"
-                  step="50"
+                  step="500"
                   onChange={loskilometros}
                 />
               </Form.Group>
