@@ -6,18 +6,25 @@ import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 
 export default function FormaDistribuidor() {
-
+  const [estado, setEstados] = useState([])
   const [enviardtt, setEnviardtt] = useState(false)
 
   const enviardt = (e) => {
     console.log(e)
     setEnviardtt(true)
   }
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
+      .then(response => response.json())
+      .then(data =>
+        setEstados(data)
+      );
+  }, [])
 
   return (
     <>
       {enviardtt ?
-        <h3 className="text-center" style={{color: '#999'}}>Gracias!, en breve uno de nuestros representantes se pondrá en contacto con usted!</h3>
+        <h3 className="text-center" style={{ color: '#999' }}>Gracias!, en breve uno de nuestros representantes se pondrá en contacto con usted!</h3>
         :
         <Form onSubmit={enviardt} className="p-2">
           <h5>Datos personales</h5>
@@ -74,9 +81,48 @@ export default function FormaDistribuidor() {
               </Form.Group>
             </Col>
           </Row>
-          <p className="pt-2"><small>Dejar un comentario (Opcional)</small></p>
-          <Modal.Footer>
-            <Button type="submit" variant="primary" className="w-100">Enviar</Button>
+          <Row>
+            <Col>
+              <p className="pt-2"><small>Dejar un comentario (Opcional)</small></p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <small><p className="m-0 p-0 d-flex align-items-center"><Form.Check aria-label="option 1" /> Deseo que me ofrezcan más modelos</p></small>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            <Form.Label>Localización</Form.Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Label>Estado</Form.Label>
+              <Form.Control as="select">
+                {estado.map(edo => (
+                  <option key={edo.code}>{edo.name}</option>
+                ))}
+              </Form.Control>
+            </Col>
+            <Col>
+              <Form.Label>Ciudad</Form.Label>
+              <Form.Control as="select">
+                <option>Álvaro Obregón</option>
+                <option>Cuajimalpa</option>
+                <option>Cuauhtemoc</option>
+                <option>Gustavo A. Madero</option>
+                <option>Iztacalco</option>
+                <option>Iztapalapa</option>
+                <option>Tlahuac</option>
+                <option>Tlalpan</option>
+                <option>Venustiano Carranza</option>
+                <option>Xochimilco</option>
+              </Form.Control>
+            </Col>
+          </Row>
+          <Modal.Footer className="p-0 m-0 mt-4">
+            <Button type="submit" variant="primary" className="w-100 m-0" style={{ fontSize: '0.8rem' }}>Enviar</Button>
           </Modal.Footer>
         </Form>
       }

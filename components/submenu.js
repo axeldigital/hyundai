@@ -22,12 +22,12 @@ export default function Submenu() {
             </li>
             <li>
               <Link href="/certificacion">
-                <a>La certificación</a>
+                <a>Cerificación de Seminuevos</a>
               </Link>
             </li>
             <li>
               <Link href="/registrar">
-                <a>Quiero vender mi auto</a>
+                <a>Vende tu Hyundai</a>
               </Link>
             </li>
           </ul>

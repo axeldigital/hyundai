@@ -126,7 +126,7 @@ export default function Producto() {
       <Container className="destacados">
         <Row className="p-0 m-0">
           <Col>
-            <h2 className="m-0 p-3 pt-4 w-100 text-center font-bold">Modelo</h2>
+            <h2 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h2>
           </Col>
         </Row>
         {/* 
@@ -139,7 +139,10 @@ export default function Producto() {
         <Row className="p-0 m-0">
           <Col md={9} sm={9}>
             <div className="d-flex justify-content-between">
+              <div>
+              <p className="m-0 p-0" style={{color:'#898989'}}><small>Hyundai Promise / <span className="azul" style={{fontWeight: 'bold', color:'#012E5E'}}>{entrie.modelo}</span></small></p>
               <h5 className="m-0 p-0 pb-2 tituloprod">{entrie.modelo}</h5>
+              </div>
               <Favoritos />
             </div>
             <ImageGallery items={images} />
@@ -168,9 +171,17 @@ export default function Producto() {
               <div className="bannercontenedor producto">
                 <div className="bannerx">
                   <Banner
+                    icono="/iconos/clock-color.svg"
+                    size="59px"
+                    titulo="Garantía extendida"
+                    boton="Búsqueda Inteligente"
+                    linker="/beneficios"
+                  />
+                  <div className="linea"></div>
+                  <Banner
                     icono="/iconos/pin-color.svg"
                     size="40px"
-                    titulo="Asistencia vial"
+                    titulo="Asistencia vial 24/7"
                     boton="Búsqueda Inteligente"
                     linker="/beneficios"
                   />
@@ -179,14 +190,6 @@ export default function Producto() {
                     icono="/iconos/check-color.svg"
                     size="50px"
                     titulo="Inspección completa de sistemas"
-                    boton="Búsqueda Inteligente"
-                    linker="/beneficios"
-                  />
-                  <div className="linea"></div>
-                  <Banner
-                    icono="/iconos/clock-color.svg"
-                    size="59px"
-                    titulo="Garantía extendida"
                     boton="Búsqueda Inteligente"
                     linker="/beneficios"
                   />
@@ -208,10 +211,7 @@ export default function Producto() {
       </Container>
 
       <Modal show={showShare} onHide={handleCloseShare}>
-        <Modal.Header closeButton>
-          <Modal.Title>Compartir</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{padding: '2px'}}>
           <Twitter
             link="https://seminuevos.hyundai.com.mx"
           />
@@ -219,11 +219,6 @@ export default function Producto() {
             link="https://seminuevos.hyundai.com.mx"
           />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseShare}>
-            Cerrar
-          </Button>
-        </Modal.Footer>
       </Modal>
 
     </Layout>

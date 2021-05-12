@@ -175,6 +175,7 @@ a {
   background: #002c5e;
   padding: 10px 50px;
   transition: all 1s;
+  font-size: 1rem;
 }
 
 p.desde {
@@ -862,6 +863,10 @@ p.distri {
   background: #fff;
   margin-right: 0;
   padding: 0;
+}
+
+ol.carousel-indicators {
+  display: none;
 }
 
 @media (max-width: 900px) {

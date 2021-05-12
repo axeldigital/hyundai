@@ -12,19 +12,19 @@ const formatter = new Intl.NumberFormat('en-US', {
 })
 
 export default function Filtros({
-    contador,
-    precio,
-    kilometros,
-    loskilometros,
-    elAnio,
-    anio,
-    elModelo,
-    modelo,
-    transmision,
-    laTransmision,
-    activado,
-    elActivado
-  }) {
+  contador,
+  precio,
+  kilometros,
+  loskilometros,
+  elAnio,
+  anio,
+  elModelo,
+  modelo,
+  transmision,
+  laTransmision,
+  activado,
+  elActivado
+}) {
 
   const [estado, setEstados] = useState([])
   const [value, setValue] = useState({ min: 2, max: 10 })
@@ -72,7 +72,6 @@ export default function Filtros({
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">0</button> -
             <button className="btn btn-default bg-white ml-3">{kilometros}</button>
           </div>
           <div className="mt-3">
@@ -82,7 +81,7 @@ export default function Filtros({
                   type="range"
                   defaultValue={kilometros}
                   min="0"
-                  max="50000"
+                  max="100000"
                   step="50"
                   onChange={loskilometros}
                 />
@@ -133,20 +132,6 @@ export default function Filtros({
               2017
             </button>
           </div>
-          <div className="d-flex align-items-center justify-content-center mt-3">
-            <button
-              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2016 ? 'prendido' : 'noprendido'}`}
-              onClick={() => elAnio(2016)}
-            >
-              2016
-            </button>
-            <button
-              className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2015 ? 'prendido' : 'noprendido'}`}
-              onClick={() => elAnio(2015)}
-            >
-              2015
-            </button>
-          </div>
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Modelo <span className="font-bold">{modelo}</span></small></p>
           <div className="d-flex align-items-center justify-content-center">
@@ -178,13 +163,24 @@ export default function Filtros({
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Distribuidor</small></p>
           <Form.Group controlId="formBasicEmail">
+          <Form.Control as="select">
+                      {estado.map(edo => (
+                        <option key={edo.code}>{edo.name}</option>
+                      ))}
+                    </Form.Control>
+          </Form.Group>
+          <Form.Group controlId="formBasicEmail">
             <Form.Control as="select">
-              <option>EXCELENCIA CDMX TEPEPAN</option>
-              <option>FARRERA MÉRIDA</option>
-              <option>PLASENCIA GUADALAJARA</option>
-              <option>PREMIER CULIACÁN</option>
-              <option>CLEBER MTY PENTA SENDERO</option>
-              <option>SONI QUERÉTARO</option>
+              <option>Álvaro Obregón</option>
+              <option>Cuajimalpa</option>
+              <option>Cuauhtemoc</option>
+              <option>Gustavo A. Madero</option>
+              <option>Iztacalco</option>
+              <option>Iztapalapa</option>
+              <option>Tlahuac</option>
+              <option>Tlalpan</option>
+              <option>Venustiano Carranza</option>
+              <option>Xochimilco</option>
             </Form.Control>
           </Form.Group>
         </Col>

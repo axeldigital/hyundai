@@ -26,7 +26,7 @@ export default function Registrar() {
 
   return (
     <Layout>
-      <Slider className="mt-3" imagen="hero4.png" texto="Quiero registrar mi auto" />
+      <Slider className="mt-3" imagen="hero5.png" texto="Quiero registrar mi auto" />
       <Container>
         <Row>
           <Col md={4}>
@@ -48,7 +48,7 @@ export default function Registrar() {
               :
               <Form onSubmit={enviarDatos}>
                 <Form.Row>
-                  <Col>
+                  <Col md={2}>
                     <Form.Label>Saludo</Form.Label>
                     <Form.Control as="select" required="required">
                       <option>Sr.</option>
@@ -57,7 +57,7 @@ export default function Registrar() {
                       <option>Dr.</option>
                     </Form.Control>
                   </Col>
-                  <Col>
+                  <Col md={4}>
                     <Form.Label>Nombre(s)*</Form.Label>
                     <Form.Control required="required" />
                   </Col>
@@ -88,10 +88,16 @@ export default function Registrar() {
                   <Col>
                     <Form.Label>Ciudad</Form.Label>
                     <Form.Control as="select">
-                      <option>Sr.</option>
-                      <option>Sra.</option>
-                      <option>Lic.</option>
-                      <option>Dr.</option>
+                      <option>Álvaro Obregón</option>
+                      <option>Cuajimalpa</option>
+                      <option>Cuauhtemoc</option>
+                      <option>Gustavo A. Madero</option>
+                      <option>Iztacalco</option>
+                      <option>Iztapalapa</option>
+                      <option>Tlahuac</option>
+                      <option>Tlalpan</option>
+                      <option>Venustiano Carranza</option>
+                      <option>Xochimilco</option>
                     </Form.Control>
                   </Col>
                 </Form.Row>
@@ -125,14 +131,17 @@ export default function Registrar() {
                     </Form.Control>
                   </Col>
                 </Form.Row>
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Kilometraje</Form.Label>
-                  <Form.Control type="number" />
-                </Form.Group>
-                <div className="text-center">
+                <Form.Row className="mt-4">
+                  <Col>
+                    <Form.Control type="number" placeholder="Kilometraje" />
+                  </Col>
+                  <Col>
+                  </Col>
+                </Form.Row>
+                <div className="text-center mt-4">
                   <Button variant="primary" type="submit" className="pl-5 pr-5 pt-1 pb-1">
                     Enviar
-              </Button>
+                  </Button>
                 </div>
 
               </Form>

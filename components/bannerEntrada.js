@@ -12,9 +12,6 @@ export default function BannerEntrada({icono, titulo, texto, boton}) {
                 }} alt="" title="" />
             </div>
             <h5>{titulo}</h5>
-            <Button variant="secondary" style={{
-                color: ''
-            }}>Ver más</Button>
         </Container>
     )
 }

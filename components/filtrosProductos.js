@@ -58,7 +58,7 @@ export default function FiltrosProductos({
               </tr>
               <tr>
                 <td><b>Kilometraje</b></td>
-                <td><span className="gris">{kilometros.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} km</span></td>
+                <td><span className="gris">{kilometros} km</span></td>
               </tr>
               <tr>
                 <td><b>Color</b></td>
@@ -82,19 +82,23 @@ export default function FiltrosProductos({
                     </p>
                   </Link>
                 </td>
-                <td><p className="p-0 m-0"><small><span className="gris">Autopista México-Queretaro 2600, Hab Valle de los Pinos 1a sección, 54540 Tlalnepantla</span></small></p></td>
+                <td>
+                  <p className="p-0 m-0" style={{fontSize: '0.8rem',lineHeight: '0.8'}}>
+                    <small>
+                      <span className="gris">Autopista México-Queretaro 2600, Hab Valle de los Pinos 1a sección, 54540 Tlalnepantla</span>
+                    </small>
+                  </p></td>
               </tr>
             </tbody>
           </table>
           <div style={{ height: '200px', width: '100%', marginTop: '10px'}}>
             <img src="/mapa.png" className="img-fluid" alt="" title="" onClick={handleShowMapa} />
           </div>
-          <Button variant="primary" className="favoritos w-100" onClick={handleShow}style={{
-            minWidth: '100%'
+          <Button variant="primary" className="favoritos w-100" onClick={handleShow} style={{
+            minWidth: '100%',fontSize: '0.7rem'
           }}>Contactar al distribuidor</Button>
         </Col>
       </Row>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{modelo}</Modal.Title>
@@ -103,9 +107,7 @@ export default function FiltrosProductos({
           <h4 className="text-center">Contactar al distribuidor</h4>
         <FormaDistribuidor />
         </Modal.Body>
-        
       </Modal>
-
       <Modal show={showMapa} onHide={handleCloseMapa}>
         <Modal.Header closeButton>
           <Modal.Title>Ubicación del distribuidor</Modal.Title>

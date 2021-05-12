@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Slider from "../components/slider"
+import Carousel from 'react-bootstrap/Carousel'
+import Card from 'react-bootstrap/Card'
+import JSONResult from './data/puntos.json';
 
 export default function Certificacion() {
   const [estado, setEstados] = useState([])
@@ -11,24 +14,23 @@ export default function Certificacion() {
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/mexico.json')
-    .then(response => response.json())
-    .then(data => 
-      setEstados(data)
-    );
+      .then(response => response.json())
+      .then(data =>
+        setEstados(data)
+      );
   }, [])
 
   useEffect(() => {
-    fetch('data/certificacion.json')
-      .then(function (response) {
-        console.log(response)
-        return response.json();
-      })
-      .then(function (myJson) {
-        setTarjetas(myJson)
-      });
-  }, [tarjetas])
+    setTarjetas(JSONResult.certificacion)
+  }, [])
 
-  console.log('las tarjetas: '+tarjetas)
+  if(!tarjetas){
+    return(
+      'CARGANDO'
+    )
+  }
+
+  console.log(tarjetas)
 
   return (
     <Layout>
@@ -40,7 +42,7 @@ export default function Certificacion() {
           </Col>
           <Col className="bg-light d-flex justify-content-center align-items-center">
             <div className="tarjetax p-3">
-              <p><small>El programa de certificación consiste en la valoración, una inspección mecánica exhaustiva de seguridad y estética de 162 puntos, realizada de acuerdo a los estándares del programa Seminuevos Certificados para asegurar su calidad, durabilidad y confianza.<br/><br/>Para cumplir con el objetivo de tener el mejor programa de certificados contamos con los siguientes 162 puntos de certificación.</small></p>
+              <p><small>El programa de certificación consiste en la valoración, una inspección mecánica exhaustiva de seguridad y estética de 162 puntos, realizada de acuerdo a los estándares del programa Seminuevos Certificados para asegurar su calidad, durabilidad y confianza.<br /><br />Para cumplir con el objetivo de tener el mejor programa de certificados contamos con los siguientes 162 puntos de certificación.</small></p>
             </div>
           </Col>
         </Row>
@@ -52,6 +54,22 @@ export default function Certificacion() {
       </Container>
       <Container fluid={true} className="bg-light p-3 certipe">
         <h3>Checklist 162 puntos de certificación</h3>
+        <div>
+          <Carousel>
+            {tarjetas.map((i, tarjeta) => {
+              <Carousel.Item key={i}>
+                <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src={tarjeta.imagen} />
+                  <Card.Body>
+                    <Card.Text>
+                      
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Carousel.Item>
+            })}
+          </Carousel>
+        </div>
       </Container>
     </Layout>
   )

@@ -120,7 +120,6 @@ export default function Administrador() {
                           onChange={(e) => setPassword(e.target.value)}
                         />
                       </Form.Group>
-                      <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo Lorem ipsum dolor sit amet,</small></p>
                       <p className="d-flex align-items-center"><Form.Check aria-label="option 1" /> Recordarme</p>
                       <p className="olvide" onClick={olvido}>Olvidé mi contraseña</p>
                       <Button disabled={submitting} /*href="/admin/dashboard"*/ variant="primary" type="submit" className="w-100">

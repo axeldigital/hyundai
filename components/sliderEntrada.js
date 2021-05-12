@@ -11,41 +11,42 @@ export default function SliderEntrada() {
     <Card className="bg-dark text-white entrada banner">
       <Card.ImgOverlay>
         <Container>
-        <Card.Title style={{color:'#012E5E',paddingBottom:'220px'}}>Hyundai Promise</Card.Title>
+        <Card.Title style={{color:'#012E5E',paddingBottom:'290px'}}>Hyundai Promise</Card.Title>
         <Card.Text>
-          <Row className="d-flex align-items-end">
+          <Row className="d-flex align-items-center">
             <Col>
               <Link href="/categoria">
-                  <Button variant="primary" className="favoritos dos">Encuentra tu Hyundai Promise</Button>
+                  <Button variant="primary" className="favoritos dos">Consulta del catálogo</Button>
               </Link>
+            </Col>
+            <Col className="p-0 m-0">
+              <BannerEntrada
+                icono="iconos/clock.svg"
+                titulo="Garantía extendida"
+                texto=""
+                boton=""
+              />
             </Col>
             <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/pin.svg"
                 titulo="Asistencia vial"
-                texto="Solo por ser parte del programa de Hyundai Promise ofrecemos productos financieros con beneficios especiales para Seminuevos Certificados."
-                boton="Búsqueda Inteligente"
+                texto=""
+                boton=""
               />
             </Col>
             <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/check.svg"
-                titulo="Inspección de todos los sistemas"
-                texto="Como parte de los beneficios de Hyundai Promise ofrecemos seguros con coberturas especiales para Seminuevos Certificados."
-                boton="Búsqueda Inteligente"
+                titulo="Inspección completa sistemas"
+                texto=""
+                boton=""
               />
             </Col>
-            <Col className="p-0 m-0">
-              <BannerEntrada
-                icono="iconos/clock.svg"
-                titulo="Programa de Garantía extendida"
-                texto="Líder en el segmento de Seminuevos Certificados."
-                boton="Búsqueda Inteligente"
-              />
-            </Col>
+            
             <Col>
               <Link href="/registrar">
-                  <Button variant="primary" className="favoritos dos float-right">Compra y venta</Button>
+                  <Button variant="primary" className="favoritos dos float-right">Vende tu Hyundai</Button>
               </Link>
             </Col>
           </Row>
