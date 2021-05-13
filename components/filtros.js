@@ -8,7 +8,7 @@ import FavoritosCategoria from './favoritosCategoria';
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
-  minimumFractionDigits: 2
+  minimumFractionDigits: 0
 })
 
 export default function Filtros({
@@ -51,7 +51,7 @@ export default function Filtros({
           */}
           <p className="p-0 m-0 pl-0 mb-2"><small>Precio</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white mr-3">$0.00</button> -
+            <button className="btn btn-default bg-white mr-3">$0</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
 

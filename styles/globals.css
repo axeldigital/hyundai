@@ -172,7 +172,7 @@ a {
 }
 
 .btn.btn-primary {
-  background: #002c5e;
+  background: #012E5E;
   padding: 10px 50px;
   transition: all 1s;
   font-size: 1rem;
@@ -185,8 +185,8 @@ p.desde {
 }
 
 .btn.btn-primary:hover {
-  background: #f3f3f3;
-  color: #333;
+  background: #001A38 !important;
+  color: #fff !important;
 }
 
 .carta p {
@@ -705,10 +705,11 @@ table.filtros span.gris {
 .favoritos.btn.btn-primary {
   min-width: 250px;
   font-size: 0.8rem;
+  background: #012E5E !important;
 }
 
 .favoritos.btn.btn-primary:hover {
-  background: #022040 !important;
+  background: #001A38 !important;
   color: #fff;
 }
 
