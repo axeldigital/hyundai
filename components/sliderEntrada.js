@@ -23,27 +23,20 @@ export default function SliderEntrada() {
               <BannerEntrada
                 icono="iconos/clock.svg"
                 titulo="Garantía extendida"
-                texto=""
-                boton=""
               />
             </Col>
             <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/pin.svg"
                 titulo="Asistencia vial"
-                texto=""
-                boton=""
               />
             </Col>
             <Col className="p-0 m-0">
               <BannerEntrada
                 icono="iconos/check.svg"
                 titulo="Inspección completa sistemas"
-                texto=""
-                boton=""
               />
             </Col>
-            
             <Col>
               <Link href="/registrar">
                   <Button variant="primary" className="favoritos dos float-right">Vende tu Hyundai</Button>

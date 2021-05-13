@@ -27,7 +27,8 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                     height: '150px', 
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    cursor: 'pointer'
                 }}>
                     <img src={imagen} alt="" title="" className="img-fluid" />
                 </div>

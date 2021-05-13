@@ -26,7 +26,8 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                     height: '150px', 
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    cursor: 'pointer'
                 }}>
                     <img src="https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/accent-sedan-2021-1600X590.jpg" alt="" title="" className="img-fluid" />
                 </div>
