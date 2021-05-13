@@ -16,7 +16,7 @@ export default function SliderEntrada() {
           <Row className="d-flex align-items-center">
             <Col>
               <Link href="/categoria">
-                  <Button variant="primary" className="favoritos dos">Consulta del catálogo</Button>
+                  <Button variant="primary" className="favoritos dos">Consulta del catálogo Hyundai Promise</Button>
               </Link>
             </Col>
             <Col className="p-0 m-0">

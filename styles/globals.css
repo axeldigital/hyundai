@@ -885,6 +885,11 @@ ul.certix {
   list-style: decimal;
 }
 
+.favoritos.dos.btn.btn-primary {
+  background: #fff !important;
+  color: #001A38 !important;
+}
+
 @media (max-width: 900px) {
   .container {
     max-width: 1250px;
