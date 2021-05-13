@@ -868,6 +868,11 @@ p.distri {
   padding: 0;
 }
 
+.filtros .btn.btn-default.noprendido:hover {
+  background: #fff !important;
+  color: #111;
+}
+
 ol.carousel-indicators {
   display: none;
 }

@@ -89,7 +89,7 @@ export default function Filtros({
             </Form>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Año <span className="font-bold">{anio}</span></small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Año</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button
               className={`btn btn-default bg-white p-2 mr-2 w-100 ${anio == 2022 ? 'prendido' : 'noprendido'}`}
@@ -133,7 +133,7 @@ export default function Filtros({
             </button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Modelo <span className="font-bold">{modelo}</span></small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Modelo</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'TUCSON⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('TUCSON⁠')}>TUCSON⁠</button>
             <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'CRETA⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('CRETA⁠')}>CRETA⁠</button>
@@ -155,7 +155,7 @@ export default function Filtros({
             <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${modelo == 'IX35⁠' ? 'prendido' : 'noprendido'}`} onClick={() => elModelo('IX35')}>IX35</button>
           </div>
           <hr />
-          <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión <span className="font-bold">{transmision}</span></small></p>
+          <p className="p-0 m-0 pl-0 mb-2"><small>Transmisión</small></p>
           <div className="d-flex align-items-center justify-content-center">
             <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision === 'Manual⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Manual')}>Manual</button>
             <button className={`btn btn-default bg-white p-2 mr-2 w-100 ${transmision === 'Automática⁠' ? 'prendido' : 'noprendido'}`} onClick={() => laTransmision('Automática')}>Automática</button>
