@@ -529,11 +529,12 @@ table.filtros span.gris {
 }
 
 .entrada.banner {
-  background: url('/banner2.png') no-repeat center bottom; 
+  background: url('/hero7.png') no-repeat center bottom; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border-radius: 0;
 }
 
 .bgn.entrada {

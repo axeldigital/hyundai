@@ -12,7 +12,7 @@ export default function Submenu() {
           <ul>
             <li>
               <Link href="/programa">
-                <a>¿Qué es hyundai promise?</a>
+                <a>Qué es hyundai promise</a>
               </Link>
             </li>
             <li>
@@ -22,12 +22,17 @@ export default function Submenu() {
             </li>
             <li>
               <Link href="/certificacion">
-                <a>Cerificación de Seminuevos</a>
+                <a>Certificación de Seminuevos</a>
               </Link>
             </li>
             <li>
               <Link href="/registrar">
                 <a>Vende tu Hyundai</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/registrar">
+                <a>Contacta a un distribuidor</a>
               </Link>
             </li>
           </ul>
