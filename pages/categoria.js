@@ -77,7 +77,7 @@ export default function Categoria() {
       <Layout>
         <Container className="destacados">
           <Row>
-            <h2 className="m-0 p-3 pt-4 w-100 text-center">Modelos</h2>
+            <h2 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h2>
           </Row>
           <Row className="m-0 p-0">
             <Col md={3} sm={3} className="m-0 p-0">

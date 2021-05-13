@@ -9,7 +9,7 @@ export default function Favoritos() {
 
   const fav = () => {
     setFavorito(!favorito)
-    setShow(true)
+    //setShow(true)
   }
 
   const handleClose = () => setShow(false);
