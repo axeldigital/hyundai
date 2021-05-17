@@ -54,7 +54,6 @@ export default function Filtros({
             <button className="btn btn-default bg-white mr-3">$0</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
-
           <div className="mt-3">
             <Form className="mt-3">
               <Form.Group controlId="formBasicRange1">

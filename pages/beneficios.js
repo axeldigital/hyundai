@@ -13,7 +13,7 @@ export default function Beneficios() {
   return (
     <Layout>
       <Slider className="mt-3" imagen="beneficios.png" texto="Beneficios del Programa" />
-      <Container className="mb-3">
+      <Container className="mb-5">
         <Row className="mt-5 mb-5 d-flex align-items-center">
           <Col md={3}>
             <h3>Programa de garantía extendida</h3>
