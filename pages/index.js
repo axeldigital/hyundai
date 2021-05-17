@@ -92,7 +92,7 @@ export default function Home() {
             linker="/certificacion"
           />
         </div>
-        <div className="bannerx">
+        <div className="bannerx dox">
           <Banner
             icono="iconos/auto_vende.svg"
             titulo="Vende tu Hyundai"
