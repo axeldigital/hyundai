@@ -32,7 +32,7 @@ export default function Home() {
       <Container className="destacados">
         <Row>
           <Col>
-            <h3 className="text-center p-4 mt-4">Seminuevos Promise</h3>
+            <h3 className="text-center p-4 mt-4">Seminuevos-Promise</h3>
           </Col>
         </Row>
         <Row>
