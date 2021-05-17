@@ -16,7 +16,7 @@ export default function Beneficios() {
       <Container className="mb-3">
         <Row className="mt-5 mb-5 d-flex align-items-center">
           <Col md={3}>
-            <h3>Programa de grarantía extendida</h3>
+            <h3>Programa de garantía extendida</h3>
           </Col>
           <Col md={1}>
           <img src="/iconos/clock-color.svg" style={{width: '60px'}} alt="" title="" />
