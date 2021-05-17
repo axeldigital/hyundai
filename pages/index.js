@@ -32,7 +32,7 @@ export default function Home() {
       <Container className="destacados">
         <Row>
           <Col>
-            <h3 className="text-center p-4 mt-4">Seminuevos-Promise</h3>
+            <h3 className="text-center p-4 mt-4">Seminuevos Promise</h3>
           </Col>
         </Row>
         <Row>
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
         <div className="bannerx">
           <Banner
-            icono="iconos/registrar.svg"
+            icono="iconos/auto_vende.svg"
             titulo="Vende tu Hyundai"
             boton="Búsqueda Inteligente"
             linker="/registrar"

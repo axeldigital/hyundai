@@ -38,9 +38,9 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                 <div className="detalles">
                     <p className="desde">Desde {formatter.format(precio)}</p>
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}
-                    <p>{cuantos} Modelos...</p>
+                    <p>{cuantos} Modelos</p>
                 </div>
-                <Link href={link} className="w-100">
+                <Link href={link} className="w-90">
                     <Button variant="primary">Ver modelos</Button>
                 </Link>
             </Card.Body>
