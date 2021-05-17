@@ -112,7 +112,7 @@ export default function FiltrosProductos({
         </Modal.Body>
       </Modal>
       <Modal show={showMapa} onHide={handleCloseMapa}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Ubicación del distribuidor</Modal.Title>
         </Modal.Header>
         <Modal.Body>

@@ -455,6 +455,7 @@ table.filtros {
 table.filtros span.gris {
   color: #898989;
   font-family: "HyundaiLight";
+  text-align: justify;
 }
 
 .bannercontenedor.producto {
@@ -903,6 +904,13 @@ ul.certix {
   width: 67%;
     margin: 0 auto;
     margin-bottom: 50px;
+}
+
+.modal-header .modal-title {
+  text-align: center;
+  color: #012E5E;
+  font-family: "HyundaiMedium";
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
