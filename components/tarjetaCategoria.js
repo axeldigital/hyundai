@@ -46,7 +46,7 @@ export default function TarjetaCategoria({link,modelo,precio,kilometros,anio,ima
                     <p className="distri">Planta Vallejo</p>
                 </div>
                 <Link href={link} className="w-100">
-                    <Button variant="primary" styleName="p-2" style={{padding: '10px 30px'}}>Ver modelo</Button>
+                    <Button variant="primary" styleName="p-2" style={{padding: '10px 30px'}}>Conoce más</Button>
                 </Link>
             </Card.Body>
         </Card>

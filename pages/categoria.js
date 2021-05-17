@@ -15,7 +15,7 @@ export default function Categoria() {
   const [autosdefault, setAutosdefault] = useState()
   const [autos, setAutos] = useState()
   const [filtroautos, setFiltroAutos] = useState()
-  const { entries, isLoading } = useEntries()
+  const {entries, isLoading} = useEntries()
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState('100,000')
   const [anio, setAnio] = useState()

@@ -72,7 +72,7 @@ export default function Filtros({
           <hr />
           <p className="p-0 m-0 pl-2 mb-2"><small>Kilometraje máximo</small></p>
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn btn-default bg-white ml-3">{kilometros}</button>
+            <button className="btn btn-default bg-white ml-3">{kilometros.toLocaleString('en-US')}</button>
           </div>
           <div className="mt-3">
             <Form className="mt-3">

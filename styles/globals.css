@@ -175,7 +175,7 @@ a {
   background: #012E5E;
   padding: 10px 50px;
   transition: all 1s;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 p.desde {
@@ -882,7 +882,7 @@ ul.certix {
   margin: 0;
   padding: 20px 30px;
   text-align: justify;
-  list-style: decimal;
+  list-style: none;
 }
 
 .favoritos.dos.btn.btn-primary {
@@ -890,7 +890,11 @@ ul.certix {
   color: #001A38 !important;
 }
 
-@media (max-width: 900px) {
+.certipe .card {
+  padding: 0;
+}
+
+@media (max-width: 1200px) {
   .container {
     max-width: 1250px;
   }
