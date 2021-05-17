@@ -913,6 +913,15 @@ ul.certix {
   width: 100%;
 }
 
+.modal-footer {
+  justify-content: center;
+}
+
+.modal-footer .btn.btn-secondary {
+  background: #002c5e !important;
+  color: #fff;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1250px;

@@ -29,7 +29,7 @@ export default function FiltrosProductos({
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-    minimumFractionDigits: 2
+    minimumFractionDigits: 0
   })
 
   return (
@@ -103,7 +103,7 @@ export default function FiltrosProductos({
         </Col>
       </Row>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>{modelo}</Modal.Title>
         </Modal.Header>
         <Modal.Body>

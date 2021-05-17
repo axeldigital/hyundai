@@ -76,7 +76,7 @@ export default function FormaDistribuidor() {
           <Row>
             <Col>
               <Form.Group controlId="exampleForm.ControlTextarea1" className="m-0">
-                <Form.Label>Mensaje</Form.Label>
+                <Form.Label>Mensaje:</Form.Label>
                 <Form.Control as="textarea" rows={3} required="required" />
               </Form.Group>
             </Col>
@@ -98,7 +98,7 @@ export default function FormaDistribuidor() {
           </Row>
           <Row>
             <Col>
-              <Form.Label>Estado</Form.Label>
+              <Form.Label>Estado:</Form.Label>
               <Form.Control as="select">
                 {estado.map(edo => (
                   <option key={edo.code}>{edo.name}</option>
@@ -106,7 +106,7 @@ export default function FormaDistribuidor() {
               </Form.Control>
             </Col>
             <Col>
-              <Form.Label>Ciudad</Form.Label>
+              <Form.Label>Ciudad:</Form.Label>
               <Form.Control as="select">
                 <option>Álvaro Obregón</option>
                 <option>Cuajimalpa</option>
