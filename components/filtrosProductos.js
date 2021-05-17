@@ -76,7 +76,10 @@ export default function FiltrosProductos({
                 <td>
                   <Link href="/categoria">
                     <p className="p-0 m-0" style={{
-                      cursor: 'pointer'
+                      cursor: 'pointer',
+                      color: '#00AAD2',
+                      lineHeight: '0.8rem',
+                      textDecoration: 'underline'
                     }}>
                       <small>Ver más modelos del distribuidor</small>
                     </p>
@@ -91,7 +94,7 @@ export default function FiltrosProductos({
               </tr>
             </tbody>
           </table>
-          <div style={{ height: '200px', width: '100%', marginTop: '10px'}}>
+          <div style={{ height: '200px', width: '100%', marginTop: '-10px'}}>
             <img src="/mapa.png" className="img-fluid" alt="" title="" onClick={handleShowMapa} />
           </div>
           <Button variant="primary" className="favoritos w-100" onClick={handleShow} style={{
