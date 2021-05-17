@@ -13,7 +13,7 @@ import {
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-    minimumFractionDigits: 2
+    minimumFractionDigits: 0
 })
 
 export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
@@ -38,7 +38,7 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                 <div className="detalles">
                     <p className="desde">Desde {formatter.format(precio)}</p>
                     {/*<p>{kms === 0 ? '' : `${kms} Kilometros`}</p>*/}
-                    <p>{cuantos} Modelos</p>
+                    <p className="modelos">{cuantos} Modelos</p>
                 </div>
                 <Link href={link} className="w-90">
                     <Button variant="primary">Ver modelos</Button>

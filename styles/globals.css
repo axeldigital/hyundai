@@ -894,6 +894,10 @@ ul.certix {
   padding: 0;
 }
 
+.detalles p.modelos {
+  font-size: 0.7rem;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1250px;
