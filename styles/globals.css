@@ -293,10 +293,11 @@ p.desde {
 .menuprincipal ul li {
   position: relative;
   float: left;
+  padding-top: 5px;
 }
 
 .menuprincipal ul li a {
-  font-family: "HyundaiBold", sans-serif;
+  font-family: "HyundaiRegular", sans-serif;
     color: #666666;
     font-size: 0.8rem;
     padding: 0px 5px;
