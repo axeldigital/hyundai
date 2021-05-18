@@ -925,6 +925,22 @@ ul.certix {
   color: #fff;
 }
 
+.extra.card-title.h5 h3 {
+  font-size: 2rem;
+}
+
+.extra.card-title.h5 p {
+  font-size: 1.3rem;
+}
+
+.extra.card-title.h5 hr {
+  margin: 5px;
+  padding: 0;
+  width: 50%;
+  margin-left: 25%;
+  border-top: 2px solid #002c5e;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1250px;
