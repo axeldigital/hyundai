@@ -11,7 +11,7 @@ export default function SliderEntrada() {
     <Card className="bg-dark text-white entrada banner">
       <Card.ImgOverlay>
         <Container>
-        <Card.Title className="extra" style={{color:'#012E5E',paddingBottom:'230px'}}>
+        <Card.Title className="extra" style={{color:'#012E5E',paddingBottom:'220px'}}>
           <h3>Hyundai Promise</h3>
           <hr/>
           <p>Seminuevos Certificados</p>
