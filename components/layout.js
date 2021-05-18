@@ -38,7 +38,7 @@ export default function Layout({ children }) {
         />
       </Head>
       <Header />
-      <Submenu />
+      {/*<Submenu />*/}
 
       <main className="contenedor">
         {children}

@@ -14,45 +14,41 @@ export default function Header() {
   return (
     <Container className="pt-3 pb-3 menuprincipal">
       <Row>
-        <Col md={2} className="m-0 p-0">
+        <Col md={1} className="m-0 p-0">
           <Link href="/">
             <img src="/logo-hyundai.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
               width: '150px'
             }} />
           </Link>
         </Col>
-        <Col md={8} className="flex align-items-center justify-content-center">
-          <ul>
+        <Col md={11} className="flex align-items-center justify-content-center">
+        <ul>
             <li>
-              <Link href="/categoria">
-                <a>Modelos</a>
+              <Link href="/programa">
+                <a>¿Qué es hyundai promise?</a>
               </Link>
             </li>
             <li>
-              <Link href="/categoria">
-                <a>Servicios</a>
+              <Link href="/beneficios">
+                <a>Beneficios de Hyundai Promise</a>
               </Link>
             </li>
             <li>
-              <Link href="/categoria">
-                <a>Financiamiento</a>
+              <Link href="/certificacion">
+                <a>Certificación de Seminuevos</a>
               </Link>
             </li>
             <li>
-              <Link href="/admin">
-                <a>Seminuevos</a>
+              <Link href="/registrar">
+                <a>Vende tu Hyundai</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/registrar">
+                <a>Contacta a un distribuidor</a>
               </Link>
             </li>
           </ul>
-        </Col>
-        <Col md={2} className="p-0">
-          <p className="text-right pr-0">
-            <img src="/iconos/icono-mapa.svg" alt="Hyundai México" title="Hyundai México" style={{width: '20px', marginRight: '10px'}} onClick={handleShow} />
-            Coacalco
-            <Link href="/">
-              <span className="lnr lnr-menu mx-2"></span>
-            </Link>
-          </p>
         </Col>
       </Row>
 

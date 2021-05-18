@@ -162,11 +162,11 @@ export default function Filtros({
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
           <Form.Group controlId="formBasicEmail">
-          <Form.Control as="select">
-                      {estado.map(edo => (
-                        <option key={edo.code}>{edo.name}</option>
-                      ))}
-                    </Form.Control>
+            <Form.Control as="select">
+              {estado.map(edo => (
+                <option key={edo.code}>{edo.name}</option>
+              ))}
+            </Form.Control>
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Control as="select">
