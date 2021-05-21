@@ -35,7 +35,7 @@ export default function Header() {
                 </li>
                 <li class="nav-item">
                   <Link href="/beneficios">
-                    <a class="nav-link">Beneficios de Hyundai Promise</a>
+                    <a class="nav-link">Beneficios de Hyundai Promise.</a>
                   </Link>
                 </li>
                 <li class="nav-item">
