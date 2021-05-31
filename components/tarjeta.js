@@ -1,14 +1,6 @@
 import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import {
-    Magnifier,
-    GlassMagnifier,
-    SideBySideMagnifier,
-    PictureInPictureMagnifier,
-    MOUSE_ACTIVATION,
-    TOUCH_ACTIVATION
-  } from "react-image-magnifiers";
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -16,8 +8,9 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 0
 })
 
-export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
+export default function Tarjeta({link,modelo,precio,anio,imagen}) {
     const cuantos = Math.round(Math.random() * 100)
+
     return (
         <Card xs={6} sm={6} className="mb-4">
             <Link href={link}>
@@ -28,19 +21,7 @@ export default function Tarjeta({link,modelo,precio,kilometros,anio,imagen}) {
                     alignItems: 'center',
                     cursor: 'pointer'
                 }}>
-                    <img src={
-                        modelo === "IONIQ" ? "/ioniq.png" :
-                        modelo === "ELANTRA" ? "/elantra.png" :
-                        modelo === "ACCENT HB" ? "/accent_hb.png" :
-                        modelo === "ACCENT SD" ? "/accent_sd.png" :
-                        modelo === "CRETA" ? "/creta.png" :
-                        modelo === "GRAND I10 HB" ? "/grani10_hb.png" :
-                        modelo === "GRAND I10 SD" ? "/grani10_sd.png" :
-                        modelo === "SANTA FÉ" ? "/santa_fe.png" :
-                        modelo === "SONATA" ? "/sonata.png" :
-                        modelo === "TUCSON" ? "/tucson.png" :
-                        "/creta.png"
-                    } alt="" title="" className="img-fluid" />
+                    <img src={imagen} alt="Seminuevos hyundai" title="Seminuevos hyundai" className="img-fluid" />
                 </div>
             </Link>
             <Card.Body>
