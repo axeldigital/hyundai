@@ -8,7 +8,7 @@ import BannerEntrada from '../components/bannerEntrada';
 
 export default function SliderEntrada() {
   return (
-    <Card className="bg-dark text-white entrada banner">
+    <Card className="bg-dark text-white entrada banner d-none .d-sm-block">
       <Card.ImgOverlay>
         <Container>
         <Card.Title className="extra" style={{color:'#012E5E',paddingBottom:'220px'}}>

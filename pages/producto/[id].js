@@ -12,7 +12,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Loader from '../../components/loader'
 import Modal from 'react-bootstrap/Modal'
-import { Twitter, Facebook, Instagram } from 'react-social-sharing'
+//import { Twitter, Facebook, Instagram } from 'react-social-sharing'
 import Button from 'react-bootstrap/Button'
 
 // We can use inline-style
@@ -212,12 +212,7 @@ export default function Producto() {
 
       <Modal show={showShare} onHide={handleCloseShare}>
         <Modal.Body style={{padding: '2px'}}>
-          <Twitter
-            link="https://seminuevos.hyundai.com.mx"
-          />
-          <Facebook
-            link="https://seminuevos.hyundai.com.mx"
-          />
+          
         </Modal.Body>
       </Modal>
 

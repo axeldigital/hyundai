@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "google-map-react": "^2.1.9",
     "image-upload-react": "^1.4.9",

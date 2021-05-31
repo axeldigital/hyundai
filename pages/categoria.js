@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import TarjetaCategoria from "../components/tarjetaCategoria"
 import Filtros from "../components/filtros"
 import Loader from '../components/loader'
-
+import axios from 'axios'
 
 import { useEntries } from '../lib/swr-hooks'
 
@@ -23,10 +23,17 @@ export default function Categoria() {
   const [transmision, setTransmision] = useState()
   const [activado, setActivado] = useState(false)
 
-  useEffect(() => {
-    setAutos(entries)
-    setAutosdefault(entries)
-  }, [entries])
+  useEffect(async () => {
+    let url = `http://seminuevos.hyundai.com.mx/hyundai_back/api/read_modelo.php`;
+    await axios.get(url)
+        .then(respuesta => {
+          setAutos(respuesta.data)
+          setAutosdefault(respuesta.data)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+  }, [autos])
 
   const filtroPrecio = (price) => {
     window.scroll({top: 0, left: 0, behavior: 'smooth' })
@@ -50,8 +57,6 @@ export default function Categoria() {
     setActivado(!activado)
   }
 
-  console.log(anio)
-
   const filtroModelo = (modelo) => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setModelo(modelo)
@@ -73,6 +78,8 @@ export default function Categoria() {
       <Loader />
     )
   }
+
+  console.log(autos.data);
 
   return (
 
@@ -115,15 +122,15 @@ export default function Categoria() {
                   </Col>
                 ))
                 :
-                autos.map(auto => (
+                autos.data.map(auto => (
                   <Col key={auto.id} md={3}>
                     <TarjetaCategoria
                       link={`/producto/${auto.id}`}
                       modelo={auto.modelo}
                       precio={auto.precio}
-                      kilometros={auto.kilometros}
-                      anio={auto.anio}
-                      imagen={auto.imagen}
+                      kilometros={auto.kilometraje}
+                      anio={auto.anhio}
+                      imagen={auto.foto1}
                     />
                   </Col>
                 ))}

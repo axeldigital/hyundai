@@ -12,7 +12,7 @@ export default function Banner({ icono, titulo, size, linker }) {
                     width: size ? size : '60px'
                 }} alt="" title="" />
             </div>
-            <h5 style={{marginBottom: '0'}}>{titulo}</h5>
+            <h5 style={{marginBottom: '0',color: '#333'}}>{titulo}</h5>
             <Link href={linker ? linker : '/'}>
                 <Button variant="secondary">Conoce más</Button>
             </Link>

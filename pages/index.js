@@ -17,14 +17,19 @@ export default function Home() {
   const { entries, isLoading } = useEntries()
 
   useEffect(() => {
-    setAutos(entries)
+    setAutos(entries);
   }, [entries])
+
+  
 
   if (!autos || isLoading) {
     return (
       <Loader />
     )
   }
+
+  const unique = [...new Map(autos.map(auto => [auto['modelo'], auto])).values()];
+  console.log(unique);
 
   return (
     <Layout titulo="">
@@ -36,13 +41,13 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          {autos.map(auto => (
+          {unique.map(auto => (
             <Col key={auto.id} md={3} xs={6}>
               <Tarjeta
                 link="/categoria"
                 modelo={auto.modelo}
                 precio={auto.precio}
-                kilometros={auto.kilometros}
+                kilometros={auto.kilometraje}
                 anio={auto.anio}
                 imagen={auto.imagen}
               />
