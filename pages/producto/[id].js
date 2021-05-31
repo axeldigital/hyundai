@@ -92,10 +92,6 @@ export default function Producto() {
 
   const images = [
     {
-      original: entrie.imagen,
-      thumbnail: entrie.imagen,
-    },
-    {
       original: 'https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/tucson-2022-1600X590.jpg',
       thumbnail: 'https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/tucson-2022-1600X590.jpg',
     },
@@ -126,7 +122,7 @@ export default function Producto() {
       <Container className="destacados">
         <Row className="p-0 m-0">
           <Col>
-            <h2 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h2>
+            <h3 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h3>
           </Col>
         </Row>
         {/* 

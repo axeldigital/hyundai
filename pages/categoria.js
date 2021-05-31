@@ -78,9 +78,7 @@ export default function Categoria() {
       <Loader />
     )
   }
-
-  console.log(autos.data);
-
+  
   return (
 
       <Layout>
