@@ -24,7 +24,7 @@ export default function Programa() {
       <Slider className="mt-3" imagen="hero6.png" texto="¿Qué es Hyundai Promise?" />
       <Container style={{marginBottom: '50px'}}>
         <Row>
-          <Col md={4}>
+          <Col md={4} className="p-0 m-0">
             <img src="programa1.png" className="img-fluid" alt="" title="" />
           </Col>
           <Col className="bg-light d-flex align-items-center" style={{paddingBottom: '100px'}}>

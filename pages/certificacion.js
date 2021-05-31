@@ -37,7 +37,7 @@ export default function Certificacion() {
       <Slider className="mt-3" imagen="certificacion.png" texto="Certificación de seminuevos" />
       <Container>
         <Row>
-          <Col md={4}>
+          <Col md={4} className="p-0 m-0">
             <img src="certificacion2.png" className="img-fluid" alt="" title="" />
           </Col>
           <Col className="bg-light d-flex justify-content-center align-items-center">

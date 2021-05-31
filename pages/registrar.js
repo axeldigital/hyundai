@@ -35,7 +35,7 @@ export default function Registrar() {
           <Col className="bg-light">
             <div className="tarjetax p-3">
               <h3 className="mt-3">Registra tu vehículo</h3>
-              <p><small>El siguiente paso para convertir tu auto en un Certificado Promise es completar el siguiente registro y seguir las instrucciones para agendar la inspección y valoración de tu vehículo.</small></p>
+              <p style={{color:'#898989'}}><small>El siguiente paso para convertir tu auto en un Certificado Promise es completar el siguiente registro y seguir las instrucciones para agendar la inspección y valoración de tu vehículo.</small></p>
             </div>
           </Col>
         </Row>
