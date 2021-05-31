@@ -12,7 +12,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Loader from '../../components/loader'
 import Modal from 'react-bootstrap/Modal'
-//import { Twitter, Facebook, Instagram } from 'react-social-sharing'
+import { Twitter, Facebook, Instagram } from 'react-social-sharing'
 import Button from 'react-bootstrap/Button'
 
 // We can use inline-style
@@ -92,6 +92,10 @@ export default function Producto() {
 
   const images = [
     {
+      original: entrie.imagen,
+      thumbnail: entrie.imagen,
+    },
+    {
       original: 'https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/tucson-2022-1600X590.jpg',
       thumbnail: 'https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/tucson-2022-1600X590.jpg',
     },
@@ -122,7 +126,7 @@ export default function Producto() {
       <Container className="destacados">
         <Row className="p-0 m-0">
           <Col>
-            <h3 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h3>
+            <h2 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h2>
           </Col>
         </Row>
         {/* 
@@ -208,7 +212,12 @@ export default function Producto() {
 
       <Modal show={showShare} onHide={handleCloseShare}>
         <Modal.Body style={{padding: '2px'}}>
-          
+          <Twitter
+            link="https://seminuevos.hyundai.com.mx"
+          />
+          <Facebook
+            link="https://seminuevos.hyundai.com.mx"
+          />
         </Modal.Body>
       </Modal>
 

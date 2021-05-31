@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import TarjetaCategoria from "../components/tarjetaCategoria"
 import Filtros from "../components/filtros"
 import Loader from '../components/loader'
-import axios from 'axios'
+
 
 import { useEntries } from '../lib/swr-hooks'
 
@@ -23,17 +23,10 @@ export default function Categoria() {
   const [transmision, setTransmision] = useState()
   const [activado, setActivado] = useState(false)
 
-  useEffect(async () => {
-    let url = `http://seminuevos.hyundai.com.mx/hyundai_back/api/read_modelo.php`;
-    await axios.get(url)
-        .then(respuesta => {
-          setAutos(respuesta.data)
-          setAutosdefault(respuesta.data)
-        })
-        .catch(error => {
-            console.log(error)
-        })
-  }, [autos])
+  useEffect(() => {
+    setAutos(entries)
+    setAutosdefault(entries)
+  }, [entries])
 
   const filtroPrecio = (price) => {
     window.scroll({top: 0, left: 0, behavior: 'smooth' })
@@ -57,6 +50,8 @@ export default function Categoria() {
     setActivado(!activado)
   }
 
+  console.log(anio)
+
   const filtroModelo = (modelo) => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setModelo(modelo)
@@ -78,13 +73,13 @@ export default function Categoria() {
       <Loader />
     )
   }
-  
+
   return (
 
       <Layout>
         <Container className="destacados">
           <Row>
-            <h3 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h3>
+            <h2 className="m-0 p-3 pt-4 w-100 text-center">Seminuevos Promise</h2>
           </Row>
           <Row className="m-0 p-0">
             <Col md={3} sm={3} className="m-0 p-0">
@@ -120,15 +115,15 @@ export default function Categoria() {
                   </Col>
                 ))
                 :
-                autos.data.map(auto => (
+                autos.map(auto => (
                   <Col key={auto.id} md={3}>
                     <TarjetaCategoria
                       link={`/producto/${auto.id}`}
                       modelo={auto.modelo}
                       precio={auto.precio}
-                      kilometros={auto.kilometraje}
-                      anio={auto.anhio}
-                      imagen={auto.foto1}
+                      kilometros={auto.kilometros}
+                      anio={auto.anio}
+                      imagen={auto.imagen}
                     />
                   </Col>
                 ))}
