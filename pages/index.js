@@ -20,8 +20,6 @@ export default function Home() {
     setAutos(entries);
   }, [entries])
 
-  
-
   if (!autos || isLoading) {
     return (
       <Loader />

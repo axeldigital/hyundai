@@ -8,7 +8,7 @@ import BannerEntrada from '../components/bannerEntrada';
 
 export default function SliderEntrada() {
   return (
-    <Card className="bg-dark text-white entrada banner d-none .d-sm-block">
+    <Card className="bg-dark text-white entrada banner d-none d-sm-block">
       <Card.ImgOverlay>
         <Container>
         <Card.Title className="extra" style={{color:'#012E5E',paddingBottom:'220px'}}>
@@ -23,22 +23,25 @@ export default function SliderEntrada() {
                   <Button variant="primary" className="favoritos dos">Consulta del catálogo Hyundai Promise</Button>
               </Link>
             </Col>
-            <Col className="p-0 m-0">
+            <Col className="p-0 m-0 justify-content-baseline">
               <BannerEntrada
                 icono="iconos/clock.svg"
                 titulo="Garantía extendida"
+                width="45px"
               />
             </Col>
-            <Col className="p-0 m-0">
+            <Col className="p-0 m-0 justify-content-baseline">
               <BannerEntrada
                 icono="iconos/pin.svg"
                 titulo="Asistencia vial"
+                width="30px"
               />
             </Col>
-            <Col className="p-0 m-0">
+            <Col className="p-0 m-0 justify-content-baseline">
               <BannerEntrada
                 icono="iconos/check.svg"
                 titulo="Inspección completa sistemas"
+                width="30px"
               />
             </Col>
             <Col>
