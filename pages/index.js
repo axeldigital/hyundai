@@ -26,9 +26,6 @@ export default function Home() {
     )
   }
 
-  const unique = [...new Map(autos.map(auto => [auto['modelo'], auto])).values()];
-  console.log(unique);
-
   return (
     <Layout titulo="">
       <SliderEntrada className="mt-3" />
@@ -39,13 +36,13 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          {unique.map(auto => (
+          {autos.map(auto => (
             <Col key={auto.id} md={3} xs={6}>
               <Tarjeta
                 link="/categoria"
                 modelo={auto.modelo}
                 precio={auto.precio}
-                kilometros={auto.kilometraje}
+                kilometros={auto.kilometros}
                 anio={auto.anio}
                 imagen={auto.imagen}
               />
