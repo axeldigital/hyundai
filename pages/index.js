@@ -26,6 +26,8 @@ export default function Home() {
     )
   }
 
+  console.log(autos);
+
   return (
     <Layout titulo="">
       <SliderEntrada className="mt-3" />
@@ -44,7 +46,7 @@ export default function Home() {
                 precio={auto.precio}
                 kilometros={auto.kilometros}
                 anio={auto.anio}
-                imagen={auto.imagen}
+                imagen={auto.foto1}
               />
             </Col>
           ))}

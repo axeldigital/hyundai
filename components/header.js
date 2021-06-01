@@ -22,35 +22,35 @@ export default function Header() {
           </Link>
         </Col>
         <Col md={11}>
-          <nav class="navbar-expand-md navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+          <nav className="navbar-expand-md navbar-light">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
                   <Link href="/programa">
-                    <a class="nav-link">¿Qué es hyundai promise?</a>
+                    <a className="nav-link">¿Qué es hyundai promise?</a>
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/beneficios">
-                    <a class="nav-link">Beneficios de Hyundai Promise.</a>
+                    <a className="nav-link">Beneficios de Hyundai Promise.</a>
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/certificacion">
-                    <a class="nav-link">Certificación de Seminuevos</a>
+                    <a className="nav-link">Certificación de Seminuevos</a>
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/registrar">
-                    <a class="nav-link">Vende tu Hyundai</a>
+                    <a className="nav-link">Vende tu Hyundai</a>
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/registrar">
-                    <a class="nav-link">Contacta a un distribuidor</a>
+                    <a className="nav-link">Contacta a un distribuidor</a>
                   </Link>
                 </li>
               </ul>
