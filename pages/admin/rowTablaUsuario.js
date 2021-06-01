@@ -2,20 +2,34 @@ import { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Link from 'next/link'
 import Modal from 'react-bootstrap/Modal'
+import axios from 'axios';
 
-export default function RowTabla() {
+export default function RowTabla({usuario}) {
+  const { nombre, apellidos } = usuario
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const alerta = () => {
     alert('Mensaje')
   }
+
+  const handleBorrar = (id) => {
+    axios.delete(`https://seminuevos.hyundai.com.mx/hyundai_back/api/delete_user.php?id=${id}`)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(e => {
+          console.log(e);
+        })
+  }
+
   return (
     <tr>
-      <td className="text-center">
-        <img src="/iconos/envelope-solid.svg" alt="hyndai seminuevos" title="hyundai seminuevos" onClick={alerta} />
+      <td className="text-center align-middle" style={{width: '5%'}}>
+        <img src="/iconos/envelope-solid.svg" alt="hyndai seminuevos" title="hyundai seminuevos" onClick={alerta} style={{width: '20px'}} />
       </td>
-      <td>Pellentesque ut ornare libero....</td>
+      <td className="align-middle">{nombre}, {apellidos}</td>
       <td style={{width: '10%'}}>
       <Link 
         href="/admin/editarusuario"
@@ -45,7 +59,7 @@ export default function RowTabla() {
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={() => handleBorrar(usuario.id)}>
             Eliminar Usuario
           </Button>
         </Modal.Footer>

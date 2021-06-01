@@ -14,18 +14,14 @@ export default function Header() {
     const nombre = sessionStorage.getItem('nombre');
     const email = sessionStorage.getItem('email');
     setUsuario({ id, nombre, email })
-  }, [usuario])
+  }, [])
   const ensenarSubmenu = () => {
     setSubmenux(!submenux)
   }
   return (
     <Row className="usuario">
       <Col md={3} className="d-flex justify-content-center align-items-center">
-        <Link href="/admin/dashboard">
-          <img src="/logo-hyundai-blanco.svg" alt="hyndai seminuevos" title="hyundai seminuevos" style={{
-            width: '150px'
-          }} />
-        </Link>
+
       </Col>
       <Col className="d-flex justify-content-end align-items-center headdash">
         <ul>

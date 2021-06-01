@@ -15,7 +15,7 @@ export default function Home() {
   const [autos, setAutos] = useState()
 
   useEffect(() => {
-    axios.get('https://seminuevos.hyundai.com.mx/hyundai_back/api/read_modelo.php')
+    axios.get('http://seminuevos.hyundai.com.mx/hyundai_back/api/read_modelo.php')
     .then(response => {
         setAutos(response.data);
     })
@@ -129,24 +129,3 @@ export default function Home() {
     </Layout>
   )
 }
-{/* 
-export async function getStaticProps(context) {
-  
-  const { entries, isLoading } = useEntries()
-
-  if (!entries) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
-  
-  const { entries, isLoading } = useEntries()
-  return {
-    props: { entries }, // will be passed to the page component as props
-  }
-  
-}
-*/}
