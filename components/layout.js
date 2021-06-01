@@ -38,13 +38,11 @@ export default function Layout({ children }) {
         />
       </Head>
       <Header />
-      {/*<Submenu />*/}
 
       <main className="contenedor">
         {children}
       </main>
 
-      {/*<Footer />*/}
     </div>
   )
 }

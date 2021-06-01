@@ -9,24 +9,26 @@ import SliderEntrada from "../components/sliderEntrada"
 import Tarjeta from "../components/tarjeta"
 import Banner from '../components/banner'
 import Loader from '../components/loader'
-
-import { useEntries } from '../lib/swr-hooks'
+import axios from 'axios';
 
 export default function Home() {
   const [autos, setAutos] = useState()
-  const { entries, isLoading } = useEntries()
 
   useEffect(() => {
-    setAutos(entries);
-  }, [entries])
+    axios.get('http://seminuevos.hyundai.com.mx/hyundai_back/api/read_modelo.php')
+    .then(response => {
+        setAutos(response.data);
+    })
+    .catch(e => {
+        console.log(e);
+    })
+  }, [])
 
-  if (!autos || isLoading) {
+  if (!autos) {
     return (
       <Loader />
     )
   }
-
-  console.log(autos);
 
   return (
     <Layout titulo="">
@@ -38,14 +40,14 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          {autos.map(auto => (
+          {autos.data.map(auto => (
             <Col key={auto.id} md={3} xs={6}>
               <Tarjeta
                 link="/categoria"
                 modelo={auto.modelo}
                 precio={auto.precio}
-                kilometros={auto.kilometros}
-                anio={auto.anio}
+                kilometros={auto.kilometraje}
+                anio={auto.anhio}
                 imagen={auto.foto1}
               />
             </Col>
