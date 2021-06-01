@@ -25,7 +25,7 @@ export default function SliderEntrada() {
             </Col>
             <Col className="p-0 m-0 justify-content-baseline">
               <BannerEntrada
-                icono="iconos/clock.svg"
+                icono="iconos/garantia_extendida.svg"
                 titulo="Garantía extendida"
                 width="45px"
               />
@@ -41,7 +41,7 @@ export default function SliderEntrada() {
               <BannerEntrada
                 icono="iconos/check.svg"
                 titulo="Inspección completa sistemas"
-                width="30px"
+                width="35px"
               />
             </Col>
             <Col>

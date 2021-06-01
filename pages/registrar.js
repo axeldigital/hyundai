@@ -55,7 +55,7 @@ export default function Registrar() {
       }
     }
 
-    axios.post('http://seminuevos.hyundai.com.mx/hyundai_back/api/create_user.php', usuario, optionAxios)
+    axios.post('https://seminuevos.hyundai.com.mx/hyundai_back/api/create_user.php', usuario, optionAxios)
       .then(function (response) {
         console.log(response);
         if(response.status === 200){

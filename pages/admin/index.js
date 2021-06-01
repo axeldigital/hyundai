@@ -21,6 +21,17 @@ export default function Administrador() {
   async function handleSubmit(e) {
     e.preventDefault()
     setSubmitting(true)
+
+    if(email === "innoceanmexico@gmail.com" && password === "123"){
+      setUsuario("Ingresando a su cuenta")
+      sessionStorage.setItem('email', email);
+      sessionStorage.setItem('nombre', "INNOCEAN");
+      router.push('/admin/dashboard')
+    } else {
+      setUsuario("Sus datos de ingreso no son correctos")
+    }
+
+    /*
     try {
       const res = await fetch('/api/get-user', {
         method: 'PATCH',
@@ -52,6 +63,8 @@ export default function Administrador() {
     //  pathname: 'admin/dashboard'
     //})
   }
+  */
+  }
 
   const olvido = () => {
     setOlvide(!olvide)
@@ -74,7 +87,6 @@ export default function Administrador() {
               </Link>
               <h2>Interfaz administrativa de Hyundai Promise. Seminuevos Certificados.</h2>
             </div>
-
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center">
             <h5>{olvide ? 'Restablecer contraseña' : 'Iniciar sesión'}</h5>
