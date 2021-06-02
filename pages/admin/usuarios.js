@@ -16,7 +16,7 @@ export default function Usuarios() {
   const [usuarios, setUsuarios] = useState()
 
   useEffect(() => {
-    axios.get('http://seminuevos.hyundai.com.mx/hyundai_back/api/read_user.php')
+    axios.get('https://www.salud.org.mx/hyundai/hyundai_back/api/read_user.php')
       .then(response => {
         setUsuarios(response.data);
       })
