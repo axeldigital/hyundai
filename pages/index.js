@@ -15,7 +15,7 @@ export default function Home() {
   const [autos, setAutos] = useState()
 
   useEffect(() => {
-    axios.get('http://seminuevos.hyundai.com.mx/hyundai_back/api/read_modelo.php')
+    axios.get('https://www.salud.org.mx/hyundai/hyundai_back/api/read_modelo.php')
     .then(response => {
         setAutos(response.data);
     })

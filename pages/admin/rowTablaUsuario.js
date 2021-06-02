@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Modal from 'react-bootstrap/Modal'
 import axios from 'axios';
 
-export default function RowTabla({usuario}) {
+export default function RowTablaUsuario({usuario}) {
   const { nombre, apellidos } = usuario
 
   const [show, setShow] = useState(false);
@@ -15,13 +15,7 @@ export default function RowTabla({usuario}) {
   }
 
   const handleBorrar = (id) => {
-    axios.delete(`https://seminuevos.hyundai.com.mx/hyundai_back/api/delete_user.php?id=${id}`)
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(e => {
-          console.log(e);
-        })
+    console.log(id);
   }
 
   return (
