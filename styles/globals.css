@@ -175,7 +175,7 @@ a {
   background: #012E5E;
   padding: 10px 50px;
   transition: all 1s;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 p.desde {
@@ -293,14 +293,18 @@ p.desde {
 .menuprincipal ul li {
   position: relative;
   float: left;
+  padding-top: 5px;
 }
 
 .menuprincipal ul li a {
-  font-family: "HyundaiBold", sans-serif;
-  color: #666666;
-  font-size: 0.8rem;
-  padding: 10px 15px;
-  text-align: center;
+  font-family: "HyundaiRegular", sans-serif;
+    color: #666666;
+    font-size: 0.8rem;
+    padding: 0px 5px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-right: 5px;
 }
 
 .menuprincipal p {
@@ -454,6 +458,8 @@ table.filtros {
 
 table.filtros span.gris {
   color: #898989;
+  font-family: "HyundaiLight";
+  text-align: justify;
 }
 
 .bannercontenedor.producto {
@@ -704,7 +710,7 @@ table.filtros span.gris {
 
 .favoritos.btn.btn-primary {
   min-width: 250px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   background: #012E5E !important;
   color: #fff !important;
 }
@@ -835,7 +841,7 @@ span.oppt {
 
 .registro.carousel .carousel-caption h3 {
   color: #fff;
-  font-family: "HyundaiMedium";
+  font-family: "HyundaiRegular";
   font-size: 2.2rem;
   padding-left: 50px;
 }
@@ -847,7 +853,7 @@ p.distri {
 .certipe h3 {
   text-align: center;
   color: #012E5E !important;
-  font-family: "HyundaiMedium";
+  font-family: "HyundaiRegular";
 }
 
 .font-bold {
@@ -882,7 +888,7 @@ ul.certix {
   margin: 0;
   padding: 20px 30px;
   text-align: justify;
-  list-style: decimal;
+  list-style: none;
 }
 
 .favoritos.dos.btn.btn-primary {
@@ -890,7 +896,53 @@ ul.certix {
   color: #001A38 !important;
 }
 
-@media (max-width: 900px) {
+.certipe .card {
+  padding: 0;
+}
+
+.detalles p.modelos {
+  font-size: 0.7rem;
+}
+
+.bannerx.dox {
+  width: 67%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.modal-header .modal-title {
+  text-align: center;
+  color: #012E5E;
+  font-family: "HyundaiMedium";
+  width: 100%;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.modal-footer .btn.btn-secondary {
+  background: #002c5e !important;
+  color: #fff;
+}
+
+.extra.card-title.h5 h3 {
+  font-size: 2rem;
+}
+
+.extra.card-title.h5 p {
+  font-size: 1.3rem;
+}
+
+.extra.card-title.h5 hr {
+  margin: 5px;
+  padding: 0;
+  width: 30%;
+  margin-left: 35%;
+  border-top: 2px solid #002c5e;
+}
+
+@media (max-width: 1200px) {
   .container {
     max-width: 1250px;
   }
@@ -934,5 +986,22 @@ width: 100%;
   .card .btn.btn-primary {
     padding: 10px 15px;
     width: 100%;
+  }
+
+  ul.mprincipal {
+    flex-direction: column;
+    float: right;
+  }
+
+  ul.mprincipal li {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px){
+  .navbar-expand-md .navbar-collapse {
+      display: flex!important;
+      flex-basis: auto;
+      justify-content: flex-end;
   }
 }

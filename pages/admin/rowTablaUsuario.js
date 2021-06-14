@@ -2,20 +2,28 @@ import { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Link from 'next/link'
 import Modal from 'react-bootstrap/Modal'
+import axios from 'axios';
 
-export default function RowTabla() {
+export default function RowTablaUsuario({usuario}) {
+  const { nombre, apellidos } = usuario
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const alerta = () => {
     alert('Mensaje')
   }
+
+  const handleBorrar = (id) => {
+    console.log(id);
+  }
+
   return (
     <tr>
-      <td className="text-center">
-        <img src="/iconos/envelope-solid.svg" alt="hyndai seminuevos" title="hyundai seminuevos" onClick={alerta} />
+      <td className="text-center align-middle" style={{width: '5%'}}>
+        <img src="/iconos/envelope-solid.svg" alt="hyndai seminuevos" title="hyundai seminuevos" onClick={alerta} style={{width: '20px'}} />
       </td>
-      <td>Pellentesque ut ornare libero....</td>
+      <td className="align-middle">{nombre}, {apellidos}</td>
       <td style={{width: '10%'}}>
       <Link 
         href="/admin/editarusuario"
@@ -45,7 +53,7 @@ export default function RowTabla() {
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={() => handleBorrar(usuario.id)}>
             Eliminar Usuario
           </Button>
         </Modal.Footer>

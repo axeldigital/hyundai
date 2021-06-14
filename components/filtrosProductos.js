@@ -29,7 +29,7 @@ export default function FiltrosProductos({
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-    minimumFractionDigits: 2
+    minimumFractionDigits: 0
   })
 
   return (
@@ -76,7 +76,10 @@ export default function FiltrosProductos({
                 <td>
                   <Link href="/categoria">
                     <p className="p-0 m-0" style={{
-                      cursor: 'pointer'
+                      cursor: 'pointer',
+                      color: '#00AAD2',
+                      lineHeight: '0.8rem',
+                      textDecoration: 'underline'
                     }}>
                       <small>Ver más modelos del distribuidor</small>
                     </p>
@@ -91,7 +94,7 @@ export default function FiltrosProductos({
               </tr>
             </tbody>
           </table>
-          <div style={{ height: '200px', width: '100%', marginTop: '10px'}}>
+          <div style={{ height: '200px', width: '100%', marginTop: '-10px'}}>
             <img src="/mapa.png" className="img-fluid" alt="" title="" onClick={handleShowMapa} />
           </div>
           <Button variant="primary" className="favoritos w-100" onClick={handleShow} style={{
@@ -100,7 +103,7 @@ export default function FiltrosProductos({
         </Col>
       </Row>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>{modelo}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -109,7 +112,7 @@ export default function FiltrosProductos({
         </Modal.Body>
       </Modal>
       <Modal show={showMapa} onHide={handleCloseMapa}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Ubicación del distribuidor</Modal.Title>
         </Modal.Header>
         <Modal.Body>

@@ -54,7 +54,6 @@ export default function Filtros({
             <button className="btn btn-default bg-white mr-3">$0</button> -
             <button className="btn btn-default bg-white ml-3">{formatter.format(precio)}</button>
           </div>
-
           <div className="mt-3">
             <Form className="mt-3">
               <Form.Group controlId="formBasicRange1">
@@ -163,11 +162,11 @@ export default function Filtros({
           <hr />
           <p className="p-0 m-0 pl-0 mb-2"><small>Localización</small></p>
           <Form.Group controlId="formBasicEmail">
-          <Form.Control as="select">
-                      {estado.map(edo => (
-                        <option key={edo.code}>{edo.name}</option>
-                      ))}
-                    </Form.Control>
+            <Form.Control as="select">
+              {estado.map(edo => (
+                <option key={edo.code}>{edo.name}</option>
+              ))}
+            </Form.Control>
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Control as="select">

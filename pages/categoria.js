@@ -15,10 +15,10 @@ export default function Categoria() {
   const [autosdefault, setAutosdefault] = useState()
   const [autos, setAutos] = useState()
   const [filtroautos, setFiltroAutos] = useState()
-  const { entries, isLoading } = useEntries()
+  const {entries, isLoading} = useEntries()
   const [precio, setPrecio] = useState(50000)
   const [kilometros, setKilometros] = useState('100,000')
-  const [anio, setAnio] = useState()
+  const [anio, setAnio] = useState([])
   const [modelo, setModelo] = useState()
   const [transmision, setTransmision] = useState()
   const [activado, setActivado] = useState(false)
@@ -45,10 +45,12 @@ export default function Categoria() {
   const filtroanio = (aniox) => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
     setAutos(autosdefault)
-    setAnio(aniox)
+    setAnio(anio => [...anio, aniox])
     setFiltroAutos(autos.filter(filteranio => filteranio.anio == aniox ))
     setActivado(!activado)
   }
+
+  console.log(anio)
 
   const filtroModelo = (modelo) => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });

@@ -92,8 +92,8 @@ export default function Producto() {
 
   const images = [
     {
-      original: entrie.imagen,
-      thumbnail: entrie.imagen,
+      original: `https://hyundai-innoceanmexico.vercel.app/${entrie.imagen}`,
+      thumbnail: `https://hyundai-innoceanmexico.vercel.app/${entrie.imagen}`,
     },
     {
       original: 'https://www.hyundai.com.mx/content/dam/hyundaimx/mx/image/home/carrusel/tucson-2022-1600X590.jpg',

@@ -9,18 +9,22 @@ import SliderEntrada from "../components/sliderEntrada"
 import Tarjeta from "../components/tarjeta"
 import Banner from '../components/banner'
 import Loader from '../components/loader'
-
-import { useEntries } from '../lib/swr-hooks'
+import axios from 'axios';
 
 export default function Home() {
   const [autos, setAutos] = useState()
-  const { entries, isLoading } = useEntries()
 
   useEffect(() => {
-    setAutos(entries)
-  }, [entries])
+    axios.get('https://www.salud.org.mx/hyundai/hyundai_back/api/read_modelo.php')
+    .then(response => {
+        setAutos(response.data);
+    })
+    .catch(e => {
+        console.log(e);
+    })
+  }, [])
 
-  if (!autos || isLoading) {
+  if (!autos) {
     return (
       <Loader />
     )
@@ -32,19 +36,19 @@ export default function Home() {
       <Container className="destacados">
         <Row>
           <Col>
-            <h3 className="text-center p-4 mt-4">Seminuevos-Promise</h3>
+            <h3 className="text-center p-4 mt-4">Seminuevos Promise</h3>
           </Col>
         </Row>
         <Row>
-          {autos.map(auto => (
+          {autos.data.map(auto => (
             <Col key={auto.id} md={3} xs={6}>
               <Tarjeta
                 link="/categoria"
                 modelo={auto.modelo}
                 precio={auto.precio}
-                kilometros={auto.kilometros}
-                anio={auto.anio}
-                imagen={auto.imagen}
+                kilometros={auto.kilometraje}
+                anio={auto.anhio}
+                imagen={auto.foto1}
               />
             </Col>
           ))}
@@ -92,9 +96,9 @@ export default function Home() {
             linker="/certificacion"
           />
         </div>
-        <div className="bannerx">
+        <div className="bannerx dox">
           <Banner
-            icono="iconos/registrar.svg"
+            icono="iconos/auto_vende.svg"
             titulo="Vende tu Hyundai"
             boton="Búsqueda Inteligente"
             linker="/registrar"
@@ -125,24 +129,3 @@ export default function Home() {
     </Layout>
   )
 }
-{/* 
-export async function getStaticProps(context) {
-  
-  const { entries, isLoading } = useEntries()
-
-  if (!entries) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
-  
-  const { entries, isLoading } = useEntries()
-  return {
-    props: { entries }, // will be passed to the page component as props
-  }
-  
-}
-*/}

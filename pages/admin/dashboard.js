@@ -55,15 +55,7 @@ export default function Dashboard() {
               </thead>
               <tbody>
                 <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
-                <RowTabla />
+
               </tbody>
             </Table>
             <p className="float-right"><small>1-10 de 20 autos</small></p>
@@ -81,15 +73,7 @@ export default function Dashboard() {
               </thead>
               <tbody>
                 <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
-                <RowCampana />
+
               </tbody>
             </Table>
             <p className="float-right"><small>1-10 de 20 autos</small></p>
