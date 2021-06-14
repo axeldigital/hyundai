@@ -2,7 +2,6 @@
   "name": "seminuevos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://seminuevos.hyundai.com.mx/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

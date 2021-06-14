@@ -23,7 +23,7 @@ export default function Auto(){
           </Col>
           <Col>
             <hr/>
-            <h1>Grand i10 Sedán GL TM</h1>
+            <h1>Grand i10 Sedán GL TM...</h1>
             <h2>$209,500 MXN</h2>
             <hr/>
             <ul>
