@@ -24,12 +24,12 @@ export default function Auto(){
           <Col>
             <hr/>
             <h1>Grand i10 Sedán GL TM...</h1>
-            <h2>$209,500 MXN</h2>
+            <h2>$209,500MXN</h2>
             <hr/>
             <ul>
-              <li>Motor: 1.2L</li>
-              <li>Desplazamiento (cc): 1197</li>
-              <li>Cilindros: 4 en línea</li>
+              <li>Motor:1.2L</li>
+              <li>Desplazamiento (cc):1197</li>
+              <li>Cilindros:4 en línea</li>
               <li>Radio de compresión: 10.5:1</li>
               <li>Potencia (hp @ rpm): 83 @ 6,000</li>
               <li>Torque (lb-ft @ rpm): 84 @ 4,000</li>
